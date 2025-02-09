@@ -36,7 +36,8 @@ const unsigned long fireDuration = 1000; // Fade duration (ms)
 // Create a web server on port 80.
 ESP8266WebServer server(80);
 
-void handleRoot() {
+void handleRoot()
+{
   // Build a status page showing the current state.
   String html = "<html><head><title>LED Status</title>";
   html += "<meta name='viewport' content='width=device-width, initial-scale=1'>";
@@ -54,57 +55,73 @@ void handleRoot() {
   server.send(200, "text/html", html);
 }
 
-void handleStart() {
+void handleStart()
+{
   blinkingEnabled = true;
   server.sendHeader("Access-Control-Allow-Origin", "*");
   server.send(200, "text/plain", "Blinking started");
 }
 
-void handleStop() {
+void handleStop()
+{
   blinkingEnabled = false;
   // Turn off all external LEDs when stopping.
-  for (int i = 0; i < numLeds; i++) {
+  for (int i = 0; i < numLeds; i++)
+  {
     digitalWrite(ledPins[i], LOW);
   }
   server.sendHeader("Access-Control-Allow-Origin", "*");
   server.send(200, "text/plain", "Blinking stopped");
 }
 
-void handleSetFade() {
-  if (server.hasArg("fade")) {
+void handleSetFade()
+{
+  if (server.hasArg("fade"))
+  {
     fadeAmount = server.arg("fade").toInt();
     analogWrite(pulsatingPin, fadeAmount);
     server.sendHeader("Access-Control-Allow-Origin", "*");
     server.send(200, "text/plain", "Fade amount updated: " + String(fadeAmount));
-  } else {
+  }
+  else
+  {
     server.sendHeader("Access-Control-Allow-Origin", "*");
     server.send(400, "text/plain", "Missing fade parameter");
   }
 }
 
-void handleSetInterval() {
-  if (server.hasArg("interval")) {
+void handleSetInterval()
+{
+  if (server.hasArg("interval"))
+  {
     interval = server.arg("interval").toInt();
     server.sendHeader("Access-Control-Allow-Origin", "*");
     server.send(200, "text/plain", "Blink interval updated: " + String(interval) + " ms");
-  } else {
+  }
+  else
+  {
     server.sendHeader("Access-Control-Allow-Origin", "*");
     server.send(400, "text/plain", "Missing interval parameter");
   }
 }
 
-void handleSetBlinkChance() {
-  if (server.hasArg("chance")) {
+void handleSetBlinkChance()
+{
+  if (server.hasArg("chance"))
+  {
     blinkingChance = server.arg("chance").toInt();
     server.sendHeader("Access-Control-Allow-Origin", "*");
     server.send(200, "text/plain", "Blinking chance updated: " + String(blinkingChance) + "%");
-  } else {
+  }
+  else
+  {
     server.sendHeader("Access-Control-Allow-Origin", "*");
     server.send(400, "text/plain", "Missing chance parameter");
   }
 }
 
-void handleFire() {
+void handleFire()
+{
   firingSequence = true;
   fireStartTime = millis();
   // Start at max PWM.
@@ -113,11 +130,13 @@ void handleFire() {
   server.send(200, "text/plain", "Fire sequence initiated");
 }
 
-void setup() {
+void setup()
+{
   Serial.begin(115200);
 
   // Initialize external LED pins.
-  for (int i = 0; i < numLeds; i++) {
+  for (int i = 0; i < numLeds; i++)
+  {
     pinMode(ledPins[i], OUTPUT);
     digitalWrite(ledPins[i], LOW);
   }
@@ -138,8 +157,8 @@ void setup() {
   randomSeed(analogRead(A0));
 
   // Start Wi-Fi access point.
-  const char* ssid = "Exocomp";
-  const char* password = "exocomp42";
+  const char *ssid = "Exocomp";
+  const char *password = "exocomp42";
   WiFi.softAP(ssid, password);
   Serial.print("\nAP IP address: ");
   Serial.println(WiFi.softAPIP());
@@ -151,22 +170,27 @@ void setup() {
   server.on("/setfade", handleSetFade);
   server.on("/setinterval", handleSetInterval);
   server.on("/setblinkchance", handleSetBlinkChance);
-  server.on("/fire", handleFire);   // New endpoint for fire sequence.
+  server.on("/fire", handleFire); // New endpoint for fire sequence.
   server.begin();
   Serial.println("HTTP server started");
 }
 
-void loop() {
+void loop()
+{
   // Handle incoming client requests.
   server.handleClient();
 
   // Process the non-blocking fire sequence.
-  if (firingSequence) {
+  if (firingSequence)
+  {
     unsigned long elapsed = millis() - fireStartTime;
-    if (elapsed < fireDuration) {
+    if (elapsed < fireDuration)
+    {
       int pwmValue = map(fireDuration - elapsed, 0, fireDuration, 0, pulsatingMaxPWM);
       analogWrite(firePin, pwmValue);
-    } else {
+    }
+    else
+    {
       analogWrite(firePin, 0); // Ensure it's off
       firingSequence = false;
     }
@@ -174,18 +198,23 @@ void loop() {
 
   // Blink the onboard LED as long as Wi-Fi is active.
   unsigned long currentMillisOnboard = millis();
-  if (currentMillisOnboard - previousMillisOnboard >= onboardInterval) {
+  if (currentMillisOnboard - previousMillisOnboard >= onboardInterval)
+  {
     previousMillisOnboard = currentMillisOnboard;
     digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
   }
 
   // Only perform external LED blinking if enabled.
-  if (blinkingEnabled) {
+  if (blinkingEnabled)
+  {
     unsigned long currentMillis = millis();
-    if (currentMillis - previousMillis >= interval) {
+    if (currentMillis - previousMillis >= interval)
+    {
       previousMillis = currentMillis;
-      for (int i = 0; i < numLeds; i++) {
-        if (random(100) < blinkingChance) {
+      for (int i = 0; i < numLeds; i++)
+      {
+        if (random(100) < blinkingChance)
+        {
           digitalWrite(ledPins[i], !digitalRead(ledPins[i]));
         }
       }
