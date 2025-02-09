@@ -8,6 +8,7 @@ const int numLeds = sizeof(ledPins) / sizeof(ledPins[0]);
 
 // Pin for the pulsating LED.
 const int pulsatingPin = D5;
+const int pulsatingMaxPWM = 512;
 
 // Timing variables for external LEDs.
 unsigned long previousMillis = 0;
@@ -123,7 +124,7 @@ void loop() {
     previousMillisPulse = currentMillisPulse;
     brightness += fadeAmount;
     // Reverse the direction of the fading at the ends.
-    if (brightness <= 0 || brightness >= 1023) {
+    if (brightness <= 0 || brightness >= pulsatingMaxPWM) {
       fadeAmount = -fadeAmount;
     }
     analogWrite(pulsatingPin, brightness);
