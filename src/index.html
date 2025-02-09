@@ -1,0 +1,311 @@
+<html charset="utf-8" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Exocomp Control</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.amber.min.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Exocomp Control</h1>
+
+      <section>
+        <div>
+          <label for="backendUrl">Backend URL:</label>
+          <input type="text" id="backendUrl" value="http://192.168.4.1:80" />
+        </div>
+      </section>
+
+      <section>
+        <div class="grid">
+          <div>
+            <button id="ledOnButton" type="button">LED On</button>
+            <button id="ledOffButton" type="button">LED Off</button>
+          </div>
+
+          <!-- New fields for blink interval and blink chance -->
+          <div>
+            <label for="blinkInterval">Blink Interval (ms):</label>
+            <input type="range" id="blinkInterval" value="200" min="50" step="50" max="2000" />
+            <span id="blinkIntervalValue">200</span>
+          </div>
+
+          <div>
+            <label for="blinkChanceSlider">Blink Chance (%):</label>
+            <input type="range" id="blinkChanceSlider" min="0" max="100" value="30" />
+            <span id="blinkChanceValue">30</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <label for="fadeSlider">Max PWM for Voice LED:</label>
+          <input type="range" id="fadeSlider" min="0" max="1023" value="256" />
+          <span id="fadeValue">256</span>
+        </div>
+
+        <div>
+          <label>Microphone Volume:</label>
+          <span id="micVolume">0</span>
+        </div>
+
+        <!-- Updated threshold sliders for 0-1023 volume levels -->
+        <div class="grid">
+          <div>
+            <label for="lowVolumeSlider">Low Volume Threshold (0-1023):</label>
+            <input type="range" id="lowVolumeSlider" min="0" max="1023" value="1" />
+            <span id="lowVolumeValue">1</span>
+          </div>
+
+          <div>
+            <label for="highVolumeSlider">High Volume Threshold (0-1023):</label>
+            <input type="range" id="highVolumeSlider" min="0" max="1023" value="1023" />
+            <span id="highVolumeValue">1023</span>
+          </div>
+        </div>
+
+        <div>
+          <label>Adjusted Fade Value:</label>
+          <span id="adjustedFade">0</span>
+        </div>
+
+        <!-- Buttons to start/stop microphone listening -->
+        <div>
+          <button id="startMicButton" type="button">Start Mic</button>
+          <button id="stopMicButton" type="button">Stop Mic</button>
+          <button id="pauseMicButton" type="button">Pause Mic</button>
+          <button id="resumeMicButton" type="button">Resume Mic</button>
+        </div>
+
+        <!-- New field for volume refresh rate -->
+        <div>
+          <label for="micRefreshRate">Volume Refresh Rate (ms):</label>
+          <input type="range" id="micRefreshRate" value="100" min="50" step="50" max="1000" />
+          <span id="micRefreshRateValue">100</span>
+        </div>
+      </section>
+
+      <section>
+        <button id="phaserFire" type="button">Fire Phaser</button>
+      </section>
+    </main>
+
+    <script>
+      let micRefreshInterval = 100
+      const backendInput = document.getElementById('backendUrl')
+
+      document.getElementById('ledOnButton').addEventListener('click', () => {
+        const backendUrl = backendInput.value
+        fetch(backendUrl + '/start')
+          .then((response) => response.text())
+          .then((text) => console.log('LED On:', text))
+          .catch((err) => console.error(err))
+      })
+
+      document.getElementById('ledOffButton').addEventListener('click', () => {
+        const backendUrl = backendInput.value
+        fetch(backendUrl + '/stop')
+          .then((response) => response.text())
+          .then((text) => console.log('LED Off:', text))
+          .catch((err) => console.error(err))
+      })
+
+      const fadeSlider = document.getElementById('fadeSlider')
+      const fadeValueSpan = document.getElementById('fadeValue')
+
+      fadeSlider.addEventListener('input', () => {
+        fadeValueSpan.textContent = fadeSlider.value
+      })
+
+      fadeSlider.addEventListener('change', () => {
+        const backendUrl = backendInput.value
+        fetch(backendUrl + '/setfade?fade=' + fadeSlider.value)
+          .then((response) => response.text())
+          .then((text) => console.log('Fade updated:', text))
+          .catch((err) => console.error(err))
+      })
+
+      // Threshold sliders
+      const lowVolumeSlider = document.getElementById('lowVolumeSlider')
+      const lowVolumeValue = document.getElementById('lowVolumeValue')
+      const highVolumeSlider = document.getElementById('highVolumeSlider')
+      const highVolumeValue = document.getElementById('highVolumeValue')
+      const adjustedFadeSpan = document.getElementById('adjustedFade')
+
+      lowVolumeSlider.addEventListener('input', () => {
+        lowVolumeValue.textContent = lowVolumeSlider.value
+      })
+
+      highVolumeSlider.addEventListener('input', () => {
+        highVolumeValue.textContent = highVolumeSlider.value
+      })
+
+      // Blink interval field
+      const blinkIntervalInput = document.getElementById('blinkInterval')
+      const blinkIntervalValue = document.getElementById('blinkIntervalValue')
+
+      blinkIntervalInput.addEventListener('input', () => {
+        blinkIntervalValue.textContent = blinkIntervalInput.value
+      })
+
+      blinkIntervalInput.addEventListener('change', () => {
+        const backendUrl = backendInput.value
+        fetch(backendUrl + '/setinterval?interval=' + blinkIntervalInput.value)
+          .then((response) => response.text())
+          .then((text) => console.log('Blink interval updated:', text))
+          .catch((err) => console.error(err))
+      })
+
+      // Blink chance slider
+      const blinkChanceSlider = document.getElementById('blinkChanceSlider')
+      const blinkChanceValue = document.getElementById('blinkChanceValue')
+
+      blinkChanceSlider.addEventListener('input', () => {
+        blinkChanceValue.textContent = blinkChanceSlider.value
+      })
+
+      blinkChanceSlider.addEventListener('change', () => {
+        const backendUrl = backendInput.value
+        fetch(backendUrl + '/setblinkchance?chance=' + blinkChanceSlider.value)
+          .then((response) => response.text())
+          .then((text) => console.log('Blink chance updated:', text))
+          .catch((err) => console.error(err))
+      })
+
+      const phaserFireButton = document.getElementById('phaserFire')
+      phaserFireButton.addEventListener('click', () => {
+        const backendUrl = backendInput.value
+        fetch(backendUrl + '/fire')
+          .then((response) => response.text())
+          .then((text) => console.log('Phaser fired:', text))
+          .catch((err) => console.error(err))
+      })
+
+      // Microphone refresh rate input
+      const micRefreshRateInput = document.getElementById('micRefreshRate')
+      const micRefreshRateValue = document.getElementById('micRefreshRateValue')
+      micRefreshRateInput.addEventListener('input', () => {
+        micRefreshRateValue.textContent = micRefreshRateInput.value
+      })
+      micRefreshRateInput.addEventListener('change', () => {
+        micRefreshInterval = parseInt(micRefreshRateInput.value, 10)
+        // If mic listening is active, restart the update interval with new refresh rate.
+        if (micInterval) {
+          clearInterval(micInterval)
+          micInterval = setInterval(updateVolume, micRefreshInterval)
+          console.log('Mic refresh rate updated to:', micRefreshInterval)
+        }
+      })
+
+      const pauseMicButton = document.getElementById('pauseMicButton')
+      pauseMicButton.addEventListener('click', () => {
+        if (micInterval) {
+          clearInterval(micInterval)
+          micInterval = null
+          console.log('Mic volume checking paused.')
+        } else {
+          console.log('Mic volume checking is already paused.')
+        }
+      })
+
+      const resumeMicButton = document.getElementById('resumeMicButton')
+      resumeMicButton.addEventListener('click', () => {
+        if (!micInterval) {
+          micInterval = setInterval(updateVolume, micRefreshInterval)
+          console.log('Mic volume checking resumed.')
+        } else {
+          console.log('Mic volume checking is already resumed.')
+        }
+      })
+
+      // Microphone listening variables
+      const micVolumeSpan = document.getElementById('micVolume')
+      const startMicButton = document.getElementById('startMicButton')
+      const stopMicButton = document.getElementById('stopMicButton')
+      let micStream = null
+      let micInterval = null
+      let audioContext, analyser, microphone, dataArray, bufferLength
+
+      function updateVolume() {
+        analyser.getByteTimeDomainData(dataArray)
+        let sum = 0
+        for (let i = 0; i < bufferLength; i++) {
+          const normalized = (dataArray[i] - 128) / 128 // normalize between -1 and 1
+          sum += normalized * normalized
+        }
+        const rms = Math.sqrt(sum / bufferLength)
+        // Map the RMS value to 1024 discrete steps (0 to 1023)
+        const discreteVolume = Math.round(rms * 1023)
+        micVolumeSpan.textContent = discreteVolume
+
+        // Retrieve current thresholds and fade max
+        const lowThreshold = Number(lowVolumeSlider.value)
+        const highThreshold = Number(highVolumeSlider.value)
+        const fadeMax = Number(fadeSlider.value)
+        let adjusted = 0
+
+        // Ensure highThreshold > lowThreshold to avoid division by zero.
+        if (highThreshold > lowThreshold) {
+          // Clamp discreteVolume within thresholds
+          const clamped = Math.min(Math.max(discreteVolume, lowThreshold), highThreshold)
+          // Map the clamped value to a value between 0 and fadeMax
+          adjusted = ((clamped - lowThreshold) / (highThreshold - lowThreshold)) * fadeMax
+        }
+        const adjustedFade = Math.round(adjusted)
+        adjustedFadeSpan.textContent = adjustedFade
+
+        // Send adjusted fade to backend
+        const backendUrl = backendInput.value
+        fetch(backendUrl + '/setfade?fade=' + adjustedFade)
+          .then((response) => response.text())
+          .then((text) => console.log('Mic fade updated:', text))
+          .catch((err) => console.error(err))
+      }
+
+      function startMicListening() {
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+          navigator.mediaDevices
+            .getUserMedia({ audio: true })
+            .then((stream) => {
+              micStream = stream
+              audioContext = new (window.AudioContext || window.webkitAudioContext)()
+              analyser = audioContext.createAnalyser()
+              microphone = audioContext.createMediaStreamSource(stream)
+              microphone.connect(analyser)
+              analyser.fftSize = 256
+              bufferLength = analyser.frequencyBinCount
+              dataArray = new Uint8Array(bufferLength)
+              // Start updating volume every micRefreshInterval ms
+              micInterval = setInterval(updateVolume, micRefreshInterval)
+            })
+            .catch((err) => {
+              console.error('Error accessing microphone: ', err)
+              micVolumeSpan.textContent = 'Error'
+            })
+        } else {
+          console.log('getUserMedia not supported in this browser.')
+          micVolumeSpan.textContent = 'Not Supported'
+        }
+      }
+
+      function stopMicListening() {
+        if (micInterval) {
+          clearInterval(micInterval)
+          micInterval = null
+        }
+        if (micStream) {
+          micStream.getTracks().forEach((track) => track.stop())
+          micStream = null
+        }
+        fetch(backendInput.value + '/setfade?fade=0')
+          .then((response) => response.text())
+          .then((text) => console.log('Mic fade updated:', text))
+          .catch((err) => console.error(err))
+      }
+
+      startMicButton.addEventListener('click', startMicListening)
+      stopMicButton.addEventListener('click', stopMicListening)
+    </script>
+  </body>
+</html>
