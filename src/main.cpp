@@ -6,6 +6,8 @@
 
 // Global ticker for external LED blinking.
 Ticker externalLedTicker;
+// Global ticker for onboard LED update.
+Ticker onboardLedTicker;
 
 // Specify the array of D-pins connected to your external LEDs.
 const int ledPins[] = {D8, D7, D6, D5, D3}; // <-- Change or add pins as needed.
@@ -19,14 +21,9 @@ const int pulsatingMaxPWM = 1023;
 const int firePin = D2;
 
 // Timing variables for external LEDs.
-// Made mutable so they can be updated at runtime.
 unsigned long interval = 200;
 unsigned long previousMillis = 0;
 int blinkingChance = 30; // in percent
-
-// Timing variables for onboard LED.
-unsigned long previousMillisOnboard = 0;
-const unsigned long onboardInterval = 500;
 
 // Other globals.
 int fadeAmount = 5; // PWM step (0-1023)
@@ -51,6 +48,20 @@ void updateExternalLEDs()
         digitalWrite(ledPins[i], !digitalRead(ledPins[i]));
       }
     }
+  }
+}
+
+void updateOnboardLED()
+{
+  // If any device is connected, keep LED steady on.
+  if (WiFi.softAPgetStationNum() > 0)
+  {
+    digitalWrite(LED_BUILTIN, LOW); // LOW turns LED on.
+  }
+  else
+  {
+    // Else, toggle the onboard LED.
+    digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
   }
 }
 
@@ -165,11 +176,13 @@ void setup()
 
   server.begin();
   Serial.println("Async HTTP server started");
+
+  // Start the onboard LED ticker to update every second.
+  onboardLedTicker.attach(0.5, updateOnboardLED);
 }
 
 void loop()
 {
-
   // Process the non-blocking fire sequence.
   if (firingSequence)
   {
@@ -185,19 +198,5 @@ void loop()
       firingSequence = false;
     }
   }
-
-  // Update onboard LED.
-  if (WiFi.softAPgetStationNum() > 0)
-  {
-    digitalWrite(LED_BUILTIN, LOW);
-  }
-  else
-  {
-    unsigned long currentMillisOnboard = millis();
-    if (currentMillisOnboard - previousMillisOnboard >= onboardInterval)
-    {
-      previousMillisOnboard = currentMillisOnboard;
-      digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
-    }
-  }
+  // No need to poll onboard LED here; it's updated every second via onboardLedTicker.
 }
