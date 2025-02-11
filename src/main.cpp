@@ -130,6 +130,14 @@ void handleFire()
   server.send(200, "text/plain", "Fire sequence initiated");
 }
 
+void handleRestart()
+{
+  server.sendHeader("Access-Control-Allow-Origin", "*");
+  server.send(200, "text/plain", "Restarting device...");
+  delay(100); // Allow time for the response to be sent
+  ESP.restart();
+}
+
 void setup()
 {
   Serial.begin(115200);
@@ -170,7 +178,8 @@ void setup()
   server.on("/setfade", handleSetFade);
   server.on("/setinterval", handleSetInterval);
   server.on("/setblinkchance", handleSetBlinkChance);
-  server.on("/fire", handleFire); // New endpoint for fire sequence.
+  server.on("/fire", handleFire);
+  server.on("/restart", handleRestart);
   server.begin();
   Serial.println("HTTP server started");
 }

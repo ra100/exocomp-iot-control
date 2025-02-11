@@ -89,6 +89,10 @@
       <section>
         <button id="phaserFire" type="button">Fire Phaser</button>
       </section>
+
+      <section>
+        <button id="restartButton" type="button">Restart Device</button>
+      </section>
     </main>
 
     <script>
@@ -179,6 +183,15 @@
         fetch(backendUrl + '/fire')
           .then((response) => response.text())
           .then((text) => console.log('Phaser fired:', text))
+          .catch((err) => console.error(err))
+      })
+
+      const restartButton = document.getElementById('restartButton')
+      restartButton.addEventListener('click', () => {
+        const backendUrl = backendInput.value
+        fetch(backendUrl + '/restart')
+          .then((response) => response.text())
+          .then((text) => console.log('Restart response:', text))
           .catch((err) => console.error(err))
       })
 
