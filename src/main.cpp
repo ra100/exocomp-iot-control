@@ -8,6 +8,8 @@
 Ticker externalLedTicker;
 // Global ticker for onboard LED update.
 Ticker onboardLedTicker;
+// Global ticker for fire PWM effect.
+Ticker fireTicker;
 
 // Specify the array of D-pins connected to your external LEDs.
 const int ledPins[] = {D8, D7, D6, D5, D3}; // <-- Change or add pins as needed.
@@ -62,6 +64,25 @@ void updateOnboardLED()
   {
     // Else, toggle the onboard LED.
     digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
+  }
+}
+
+void updateFireSequence()
+{
+  if (firingSequence)
+  {
+    unsigned long elapsed = millis() - fireStartTime;
+    if (elapsed < fireDuration)
+    {
+      int pwmValue = map(fireDuration - elapsed, 0, fireDuration, 0, pulsatingMaxPWM);
+      analogWrite(firePin, pwmValue);
+    }
+    else
+    {
+      analogWrite(firePin, 0); // Turn off fire LED
+      firingSequence = false;
+      fireTicker.detach(); // Stop fire sequence updates
+    }
   }
 }
 
@@ -163,10 +184,13 @@ void setup()
 
   server.on("/fire", HTTP_GET, [](AsyncWebServerRequest *request)
             {
-    firingSequence = true;
-    fireStartTime = millis();
-    analogWrite(firePin, pulsatingMaxPWM);
-    request->send(200, "text/plain", "Fire sequence initiated"); });
+      firingSequence = true;
+      fireStartTime = millis();
+      analogWrite(firePin, pulsatingMaxPWM);
+      // Attach the ticker to update fire sequence every 50ms.
+      fireTicker.detach();
+      fireTicker.attach_ms(50, updateFireSequence);
+      request->send(200, "text/plain", "Fire sequence initiated"); });
 
   server.on("/restart", HTTP_GET, [](AsyncWebServerRequest *request)
             {
@@ -183,20 +207,4 @@ void setup()
 
 void loop()
 {
-  // Process the non-blocking fire sequence.
-  if (firingSequence)
-  {
-    unsigned long elapsed = millis() - fireStartTime;
-    if (elapsed < fireDuration)
-    {
-      int pwmValue = map(fireDuration - elapsed, 0, fireDuration, 0, pulsatingMaxPWM);
-      analogWrite(firePin, pwmValue);
-    }
-    else
-    {
-      analogWrite(firePin, 0); // Ensure it's off
-      firingSequence = false;
-    }
-  }
-  // No need to poll onboard LED here; it's updated every second via onboardLedTicker.
 }
