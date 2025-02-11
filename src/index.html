@@ -240,7 +240,13 @@
       let micInterval = null
       let audioContext, analyser, microphone, dataArray, bufferLength
 
+      let updatingVolume = false
+
       function updateVolume() {
+        if (updatingVolume) {
+          return
+        }
+        updatingVolume = true
         analyser.getByteTimeDomainData(dataArray)
         let sum = 0
         for (let i = 0; i < bufferLength; i++) {
@@ -274,6 +280,9 @@
           .then((response) => response.text())
           .then((text) => console.log('Mic fade updated:', text))
           .catch((err) => console.error(err))
+          .then(() => {
+            updatingVolume = false
+          })
       }
 
       function startMicListening() {

@@ -1,6 +1,11 @@
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
-#include <ESP8266WebServer.h>
+#include <ESPAsyncWebServer.h> // New async server include
+#include <ESPAsyncTCP.h>       // Required library for async server
+#include <Ticker.h>            // Required library for pulsating LED
+
+// Global ticker for external LED blinking.
+Ticker externalLedTicker;
 
 // Specify the array of D-pins connected to your external LEDs.
 const int ledPins[] = {D8, D7, D6, D5, D3}; // <-- Change or add pins as needed.
@@ -17,125 +22,36 @@ const int firePin = D2;
 // Made mutable so they can be updated at runtime.
 unsigned long interval = 200;
 unsigned long previousMillis = 0;
-int blinkingChance = 30; // Blinking chance in percent (0-100)
+int blinkingChance = 30; // in percent
 
 // Timing variables for onboard LED.
 unsigned long previousMillisOnboard = 0;
-const unsigned long onboardInterval = 500; // Blink onboard LED every 500ms
+const unsigned long onboardInterval = 500;
 
-int brightness = 0;
-int fadeAmount = 5; // PWM step (0-1023 range for ESP8266)
-
-// Global flag to control blinking of external LEDs.
+// Other globals.
+int fadeAmount = 5; // PWM step (0-1023)
 bool blinkingEnabled = false;
-
 bool firingSequence = false;
 unsigned long fireStartTime = 0;
 const unsigned long fireDuration = 1000; // Fade duration (ms)
 
-// Create a web server on port 80.
-ESP8266WebServer server(80);
+// Create an async web server on port 80.
+AsyncWebServer server(80);
+AsyncCorsMiddleware *cors = new AsyncCorsMiddleware();
 
-void handleRoot()
+void updateExternalLEDs()
 {
-  // Build a status page showing the current state.
-  String html = "<html><head><title>LED Status</title>";
-  html += "<meta name='viewport' content='width=device-width, initial-scale=1'>";
-  html += "</head><body>";
-  html += "<h1>LED Status</h1>";
-  html += "<p>External LED Blinking: ";
-  html += (blinkingEnabled ? "Enabled" : "Disabled");
-  html += "</p>";
-  html += "<p>Pulsating LED Fade Amount: " + String(fadeAmount) + "</p>";
-  html += "<p>Blink Interval: " + String(interval) + " ms</p>";
-  html += "<p>Blinking Chance: " + String(blinkingChance) + "%</p>";
-  html += "</body></html>";
-
-  server.sendHeader("Access-Control-Allow-Origin", "*");
-  server.send(200, "text/html", html);
-}
-
-void handleStart()
-{
-  blinkingEnabled = true;
-  server.sendHeader("Access-Control-Allow-Origin", "*");
-  server.send(200, "text/plain", "Blinking started");
-}
-
-void handleStop()
-{
-  blinkingEnabled = false;
-  // Turn off all external LEDs when stopping.
-  for (int i = 0; i < numLeds; i++)
+  if (blinkingEnabled)
   {
-    digitalWrite(ledPins[i], LOW);
+    // For each LED, randomly toggle based on blinkingChance.
+    for (int i = 0; i < numLeds; i++)
+    {
+      if (random(100) < blinkingChance)
+      {
+        digitalWrite(ledPins[i], !digitalRead(ledPins[i]));
+      }
+    }
   }
-  server.sendHeader("Access-Control-Allow-Origin", "*");
-  server.send(200, "text/plain", "Blinking stopped");
-}
-
-void handleSetFade()
-{
-  if (server.hasArg("fade"))
-  {
-    fadeAmount = server.arg("fade").toInt();
-    analogWrite(pulsatingPin, fadeAmount);
-    server.sendHeader("Access-Control-Allow-Origin", "*");
-    server.send(200, "text/plain", "Fade amount updated: " + String(fadeAmount));
-  }
-  else
-  {
-    server.sendHeader("Access-Control-Allow-Origin", "*");
-    server.send(400, "text/plain", "Missing fade parameter");
-  }
-}
-
-void handleSetInterval()
-{
-  if (server.hasArg("interval"))
-  {
-    interval = server.arg("interval").toInt();
-    server.sendHeader("Access-Control-Allow-Origin", "*");
-    server.send(200, "text/plain", "Blink interval updated: " + String(interval) + " ms");
-  }
-  else
-  {
-    server.sendHeader("Access-Control-Allow-Origin", "*");
-    server.send(400, "text/plain", "Missing interval parameter");
-  }
-}
-
-void handleSetBlinkChance()
-{
-  if (server.hasArg("chance"))
-  {
-    blinkingChance = server.arg("chance").toInt();
-    server.sendHeader("Access-Control-Allow-Origin", "*");
-    server.send(200, "text/plain", "Blinking chance updated: " + String(blinkingChance) + "%");
-  }
-  else
-  {
-    server.sendHeader("Access-Control-Allow-Origin", "*");
-    server.send(400, "text/plain", "Missing chance parameter");
-  }
-}
-
-void handleFire()
-{
-  firingSequence = true;
-  fireStartTime = millis();
-  // Start at max PWM.
-  analogWrite(firePin, pulsatingMaxPWM);
-  server.sendHeader("Access-Control-Allow-Origin", "*");
-  server.send(200, "text/plain", "Fire sequence initiated");
-}
-
-void handleRestart()
-{
-  server.sendHeader("Access-Control-Allow-Origin", "*");
-  server.send(200, "text/plain", "Restarting device...");
-  delay(100); // Allow time for the response to be sent
-  ESP.restart();
 }
 
 void setup()
@@ -151,17 +67,15 @@ void setup()
 
   // Initialize onboard LED.
   pinMode(LED_BUILTIN, OUTPUT);
-  digitalWrite(LED_BUILTIN, HIGH); // Note: On many ESP8266 boards, LOW turns the LED on.
+  digitalWrite(LED_BUILTIN, HIGH);
 
-  // Initialize pulsating LED pin.
+  // Initialize pulsating LED and fire PWM pin.
   pinMode(pulsatingPin, OUTPUT);
-  analogWriteRange(1023); // Ensure the PWM range is set to 0-1023.
-
-  // Initialize fire PWM pin.
+  analogWriteRange(1023);
   pinMode(firePin, OUTPUT);
   digitalWrite(firePin, LOW);
 
-  // Seed the random number generator.
+  // Seed random number generator.
   randomSeed(analogRead(A0));
 
   // Start Wi-Fi access point.
@@ -171,23 +85,90 @@ void setup()
   Serial.print("\nAP IP address: ");
   Serial.println(WiFi.softAPIP());
 
-  // Setup web server routes.
-  server.on("/", handleRoot);
-  server.on("/start", handleStart);
-  server.on("/stop", handleStop);
-  server.on("/setfade", handleSetFade);
-  server.on("/setinterval", handleSetInterval);
-  server.on("/setblinkchance", handleSetBlinkChance);
-  server.on("/fire", handleFire);
-  server.on("/restart", handleRestart);
+  server.addMiddleware(cors);
+
+  // Setup async web server routes.
+  server.on("/", HTTP_GET, [](AsyncWebServerRequest *request)
+            {
+    String html = "<html><head><title>LED Status</title>";
+    html += "<meta name='viewport' content='width=device-width, initial-scale=1'>";
+    html += "</head><body>";
+    html += "<h1>LED Status</h1>";
+    html += "<p>External LED Blinking: " + String(blinkingEnabled ? "Enabled" : "Disabled") + "</p>";
+    html += "<p>Pulsating LED Fade Amount: " + String(fadeAmount) + "</p>";
+    html += "<p>Blink Interval: " + String(interval) + " ms</p>";
+    html += "<p>Blinking Chance: " + String(blinkingChance) + "%</p>";
+    html += "</body></html>";
+    request->send(200, "text/html", html); });
+
+  server.on("/start", HTTP_GET, [](AsyncWebServerRequest *request)
+            {
+      blinkingEnabled = true;
+      // Start the ticker callback with the current interval.
+      externalLedTicker.attach_ms(interval, updateExternalLEDs);
+      request->send(200, "text/plain", "Blinking started"); });
+
+  server.on("/stop", HTTP_GET, [](AsyncWebServerRequest *request)
+            {
+      blinkingEnabled = false;
+      externalLedTicker.detach(); // Stop the ticker callback.
+      for (int i = 0; i < numLeds; i++) {
+        digitalWrite(ledPins[i], LOW);
+      }
+      request->send(200, "text/plain", "Blinking stopped"); });
+
+  server.on("/setfade", HTTP_GET, [](AsyncWebServerRequest *request)
+            {
+    if (request->hasArg("fade")) {
+      fadeAmount = request->arg("fade").toInt();
+      analogWrite(pulsatingPin, fadeAmount);
+      request->send(200, "text/plain", "Fade amount updated: " + String(fadeAmount));
+    } else {
+      request->send(400, "text/plain", "Missing fade parameter");
+    } });
+
+  server.on("/setinterval", HTTP_GET, [](AsyncWebServerRequest *request)
+            {
+      if (request->hasArg("interval")) {
+        interval = request->arg("interval").toInt();
+        // If blinking is active, update the ticker period.
+        if (blinkingEnabled) {
+          externalLedTicker.detach();
+          externalLedTicker.attach_ms(interval, updateExternalLEDs);
+        }
+        request->send(200, "text/plain", "Blink interval updated: " + String(interval) + " ms");
+      } else {
+        request->send(400, "text/plain", "Missing interval parameter");
+      } });
+
+  server.on("/setblinkchance", HTTP_GET, [](AsyncWebServerRequest *request)
+            {
+    if (request->hasArg("chance")) {
+      blinkingChance = request->arg("chance").toInt();
+      request->send(200, "text/plain", "Blinking chance updated: " + String(blinkingChance) + "%");
+    } else {
+      request->send(400, "text/plain", "Missing chance parameter");
+    } });
+
+  server.on("/fire", HTTP_GET, [](AsyncWebServerRequest *request)
+            {
+    firingSequence = true;
+    fireStartTime = millis();
+    analogWrite(firePin, pulsatingMaxPWM);
+    request->send(200, "text/plain", "Fire sequence initiated"); });
+
+  server.on("/restart", HTTP_GET, [](AsyncWebServerRequest *request)
+            {
+    request->send(200, "text/plain", "Restarting device...");
+    delay(100); // Allow time for the response to be sent
+    ESP.restart(); });
+
   server.begin();
-  Serial.println("HTTP server started");
+  Serial.println("Async HTTP server started");
 }
 
 void loop()
 {
-  // Handle incoming client requests.
-  server.handleClient();
 
   // Process the non-blocking fire sequence.
   if (firingSequence)
@@ -205,28 +186,18 @@ void loop()
     }
   }
 
-  // Blink the onboard LED as long as Wi-Fi is active.
-  unsigned long currentMillisOnboard = millis();
-  if (currentMillisOnboard - previousMillisOnboard >= onboardInterval)
+  // Update onboard LED.
+  if (WiFi.softAPgetStationNum() > 0)
   {
-    previousMillisOnboard = currentMillisOnboard;
-    digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
+    digitalWrite(LED_BUILTIN, LOW);
   }
-
-  // Only perform external LED blinking if enabled.
-  if (blinkingEnabled)
+  else
   {
-    unsigned long currentMillis = millis();
-    if (currentMillis - previousMillis >= interval)
+    unsigned long currentMillisOnboard = millis();
+    if (currentMillisOnboard - previousMillisOnboard >= onboardInterval)
     {
-      previousMillis = currentMillis;
-      for (int i = 0; i < numLeds; i++)
-      {
-        if (random(100) < blinkingChance)
-        {
-          digitalWrite(ledPins[i], !digitalRead(ledPins[i]));
-        }
-      }
+      previousMillisOnboard = currentMillisOnboard;
+      digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
     }
   }
 }
