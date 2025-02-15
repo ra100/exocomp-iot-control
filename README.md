@@ -6,9 +6,9 @@
 | --- | ----------------- |
 | D1  | Voice pulse       |
 | D2  | Phaser fire       |
-| D3  | Random blink      |
 | D4  | onboard "WiFi on" |
-| D5  | Random blink      |
-| D6  | Random blink      |
-| D7  | Random blink      |
-| D8  | Random blink      |
+| D6  | ST_CP             |
+| D7  | SH_CP             |
+| D8  | DS                |
+
+![alt text](./docs/Exocomp-layout.svg)

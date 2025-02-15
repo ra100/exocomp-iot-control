@@ -1,0 +1,862 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="svg-layout" width="365" height="436.911865234375" viewBox="0 0 365 436.911865234375"><defs><marker id="arrowHead-layout" viewBox="0 0 10 10" markerWidth="6" markerHeight="6" refX="5" refY="5" orient="auto" fill="#404660"><path d="M 0 0 L 10 5 L 0 10 z"/></marker></defs><style type="text/css">
+#svg-layout text {
+  font-weight: 400;
+  font-family: "Nunito", sans-serif;
+}
+
+#svg-layout .wireGroup {
+  stroke: #2d3142;
+  stroke-width: 2;
+  stroke-linecap: round;
+  fill: none;
+}
+
+#svg-layout .arrowGroup path {
+  stroke: #404660;
+  stroke-width: 1;
+  stroke-linecap: round;
+  fill: none;
+}
+
+#svg-layout .wireGroup.wire-color-metal path,
+#svg-layout .arrowGroup.arrow-color-metal path {
+  stroke: #7b7d86;
+}
+#svg-layout .wireGroup.wire-color-black path,
+#svg-layout .arrowGroup.arrow-color-black path {
+  stroke: #2d3142;
+}
+#svg-layout .wireGroup.wire-color-red path,
+#svg-layout .arrowGroup.arrow-color-red path {
+  stroke: #e86b59;
+}
+#svg-layout .wireGroup.wire-color-white path,
+#svg-layout .arrowGroup.arrow-color-white path {
+  stroke: #f0f0f0;
+}
+#svg-layout .wireGroup.wire-color-yellow path,
+#svg-layout .arrowGroup.arrow-color-yellow path {
+  stroke: #fbdd71;
+}
+#svg-layout .wireGroup.wire-color-orange path,
+#svg-layout .arrowGroup.arrow-color-orange path {
+  stroke: #f7a541;
+}
+#svg-layout .wireGroup.wire-color-brown path,
+#svg-layout .arrowGroup.arrow-color-brown path {
+  stroke: #bf6030;
+}
+#svg-layout .wireGroup.wire-color-gray pat,
+#svg-layout .arrowGroup.arrow-color-gray path {
+  stroke: #a4a7b3;
+}
+#svg-layout .wireGroup.wire-color-green path,
+#svg-layout .arrowGroup.arrow-color-green path {
+  stroke: #67b262;
+}
+#svg-layout .wireGroup.wire-color-purple path,
+#svg-layout .arrowGroup.arrow-color-purple path {
+  stroke: #614d99;
+}
+#svg-layout .wireGroup.wire-color-blue path,
+#svg-layout .arrowGroup.arrow-color-blue path {
+  stroke: #2297bf;
+}
+
+</style><g class="circuit-contents layout" transform="translate(-2290, -2190)"><g data-source-id="830e8c0da86bc2290f3470c3df18e3f2" data-source-name="74HC595" data-width="62.5" data-height="27.5" class="component" id="part_26" transform="translate(2392.5,2452.5) scale(1,1) rotate(90,31.25,13.75)"><rect class="helper-box" x="0" y="1.5" width="62.5" height="24.5" fill="none"/>
+ <g fill="#fff">
+  <rect x="3.6146e-8" y="3.75" width="62.5" height="20" rx="1" ry="1"/>
+  <path d="m7.25 5v1.25h-3.25v-3.74c0-0.55 0.45-1 1-1s1 0.45 1 1v1.24z"/>
+  <path d="m55.25 5v1.25h3.25v-3.74c0-0.55-0.45-1-1-1-0.55 0-1 0.45-1 1v1.24z"/>
+  <path d="m37.25 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1 0.55 0 1 0.45 1 1v1.24z"/>
+  <path d="m44.75 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1 0.55 0 1 0.45 1 1v1.24z"/>
+  <path d="m7.25 22.5v-1.25h-3.25v3.74c0 0.55 0.45 1 1 1s1-0.45 1-1v-1.24z"/>
+  <path d="m55.25 22.5v-1.25h3.25v3.74c0 0.55-0.45 1-1 1-0.55 0-1-0.45-1-1v-1.24z"/>
+  <path d="m37.25 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1 0.55 0 1-0.45 1-1v-1.24z"/>
+  <path d="m44.75 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1 0.55 0 1-0.45 1-1v-1.24z"/>
+  <path d="m52.25 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1 0.55 0 1 0.45 1 1v1.24z"/>
+  <path d="m52.25 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1 0.55 0 1-0.45 1-1v-1.24z"/>
+  <path d="m22.25 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1s1 0.45 1 1v1.24z"/>
+  <path d="m29.75 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1s1 0.45 1 1v1.24z"/>
+  <path d="m22.25 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1s1-0.45 1-1v-1.24z"/>
+  <path d="m14.75 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1s1 0.45 1 1v1.24z"/>
+  <path d="m14.75 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1s1-0.45 1-1v-1.24z"/>
+  <path d="m29.75 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1s1-0.45 1-1v-1.24z"/>
+  <path d="m0 7.5h62.5v12.5h-62.5v-2.5c2.07 0 3.75-1.68 3.75-3.75 0-2.07-1.68-3.75-3.75-3.75z"/>
+ </g>
+ <g fill="#fff">
+  <circle cx="5.62" cy="16.87" r="1.87"/>
+  <circle cx="5" cy="2.5" r="1"/>
+  <circle cx="12.5" cy="2.5" r="1"/>
+  <circle cx="20" cy="2.5" r="1"/>
+  <circle cx="27.5" cy="2.5" r="1"/>
+  <circle cx="35" cy="2.5" r="1"/>
+  <circle cx="42.5" cy="2.5" r="1"/>
+  <circle cx="50" cy="2.5" r="1"/>
+  <circle cx="57.5" cy="2.5" r="1"/>
+  <circle cx="5" cy="25" r="1"/>
+  <circle cx="12.5" cy="25" r="1"/>
+  <circle cx="20" cy="25" r="1"/>
+  <circle cx="27.5" cy="25" r="1"/>
+  <circle cx="35" cy="25" r="1"/>
+  <circle cx="42.5" cy="25" r="1"/>
+  <circle cx="50" cy="25" r="1"/>
+  <circle cx="57.5" cy="25" r="1"/>
+ </g>
+ <rect x="3.6146e-8" y="3.75" width="62.5" height="20" rx="1" ry="1" fill="#2d3142"/>
+ <g fill="#a4a7b3">
+  <path d="m7.25 5v1.25h-3.25v-3.74c0-0.55 0.45-1 1-1s1 0.45 1 1v1.24z"/>
+  <path d="m55.25 5v1.25h3.25v-3.74c0-0.55-0.45-1-1-1-0.55 0-1 0.45-1 1v1.24z"/>
+  <path d="m37.25 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1 0.55 0 1 0.45 1 1v1.24z"/>
+  <path d="m44.75 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1 0.55 0 1 0.45 1 1v1.24z"/>
+  <path d="m7.25 22.5v-1.25h-3.25v3.74c0 0.55 0.45 1 1 1s1-0.45 1-1v-1.24z"/>
+  <path d="m55.25 22.5v-1.25h3.25v3.74c0 0.55-0.45 1-1 1-0.55 0-1-0.45-1-1v-1.24z"/>
+  <path d="m37.25 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1 0.55 0 1-0.45 1-1v-1.24z"/>
+  <path d="m44.75 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1 0.55 0 1-0.45 1-1v-1.24z"/>
+  <path d="m52.25 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1 0.55 0 1 0.45 1 1v1.24z"/>
+  <path d="m52.25 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1 0.55 0 1-0.45 1-1v-1.24z"/>
+  <path d="m22.25 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1s1 0.45 1 1v1.24z"/>
+  <path d="m29.75 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1s1 0.45 1 1v1.24z"/>
+  <path d="m22.25 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1s1-0.45 1-1v-1.24z"/>
+  <path d="m14.75 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1s1 0.45 1 1v1.24z"/>
+  <path d="m14.75 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1s1-0.45 1-1v-1.24z"/>
+  <path d="m29.75 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1s1-0.45 1-1v-1.24z"/>
+ </g>
+ <path d="m0 7.5h62.5v12.5h-62.5v-2.5c2.07 0 3.75-1.68 3.75-3.75 0-2.07-1.68-3.75-3.75-3.75z" fill="#404660"/>
+ <circle cx="5.62" cy="16.87" r="1.87" fill="#2d3142"/>
+ <text x="7.5" y="15.5" fill="#e7e8eb" font-family="Nunito" font-size="5px" font-weight="bold">74HC595</text>
+ <g fill="#a4a7b3">
+  <circle class="connection_point" cx="5" cy="25" r="1" data-pin-name="pin1"/>
+  <circle class="connection_point" cx="12.5" cy="25" r="1" data-pin-name="pin2"/>
+  <circle class="connection_point" cx="20" cy="25" r="1" data-pin-name="pin3"/>
+  <circle class="connection_point" cx="27.5" cy="25" r="1" data-pin-name="pin4"/>
+  <circle class="connection_point" cx="35" cy="25" r="1" data-pin-name="pin5"/>
+  <circle class="connection_point" cx="42.5" cy="25" r="1" data-pin-name="pin6"/>
+  <circle class="connection_point" cx="50" cy="25" r="1" data-pin-name="pin7"/>
+  <circle class="connection_point" cx="57.5" cy="25" r="1" data-pin-name="pin8"/>
+  <circle class="connection_point" cx="57.5" cy="2.5" r="1" data-pin-name="pin9"/>
+  <circle class="connection_point" cx="50" cy="2.5" r="1" data-pin-name="pin10"/>
+  <circle class="connection_point" cx="42.5" cy="2.5" r="1" data-pin-name="pin11"/>
+  <circle class="connection_point" cx="35" cy="2.5" r="1" data-pin-name="pin12"/>
+  <circle class="connection_point" cx="27.5" cy="2.5" r="1" data-pin-name="pin13"/>
+  <circle class="connection_point" cx="20" cy="2.5" r="1" data-pin-name="pin14"/>
+  <circle class="connection_point" cx="12.5" cy="2.5" r="1" data-pin-name="pin15"/>
+  <circle class="connection_point" cx="5" cy="2.5" r="1" data-pin-name="pin16"/>
+ </g>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="31.25" y="-5" text-anchor="middle" style="display: none;"/><text class="component-value component-text moveable-text locked" font-size="4.5px" x="31.25" y="0" text-anchor="middle" style="display: none;"/></g><g data-source-id="830e8c0da86bc2290f3470c3df18e3f2" data-source-name="74HC595" data-width="62.5" data-height="27.5" class="component" id="part_27" transform="translate(2392.5,2380) scale(1,1) rotate(90,31.25,13.75)"><rect class="helper-box" x="0" y="1.5" width="62.5" height="24.5" fill="none"/>
+ <g fill="#fff">
+  <rect x="3.6146e-8" y="3.75" width="62.5" height="20" rx="1" ry="1"/>
+  <path d="m7.25 5v1.25h-3.25v-3.74c0-0.55 0.45-1 1-1s1 0.45 1 1v1.24z"/>
+  <path d="m55.25 5v1.25h3.25v-3.74c0-0.55-0.45-1-1-1-0.55 0-1 0.45-1 1v1.24z"/>
+  <path d="m37.25 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1 0.55 0 1 0.45 1 1v1.24z"/>
+  <path d="m44.75 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1 0.55 0 1 0.45 1 1v1.24z"/>
+  <path d="m7.25 22.5v-1.25h-3.25v3.74c0 0.55 0.45 1 1 1s1-0.45 1-1v-1.24z"/>
+  <path d="m55.25 22.5v-1.25h3.25v3.74c0 0.55-0.45 1-1 1-0.55 0-1-0.45-1-1v-1.24z"/>
+  <path d="m37.25 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1 0.55 0 1-0.45 1-1v-1.24z"/>
+  <path d="m44.75 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1 0.55 0 1-0.45 1-1v-1.24z"/>
+  <path d="m52.25 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1 0.55 0 1 0.45 1 1v1.24z"/>
+  <path d="m52.25 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1 0.55 0 1-0.45 1-1v-1.24z"/>
+  <path d="m22.25 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1s1 0.45 1 1v1.24z"/>
+  <path d="m29.75 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1s1 0.45 1 1v1.24z"/>
+  <path d="m22.25 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1s1-0.45 1-1v-1.24z"/>
+  <path d="m14.75 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1s1 0.45 1 1v1.24z"/>
+  <path d="m14.75 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1s1-0.45 1-1v-1.24z"/>
+  <path d="m29.75 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1s1-0.45 1-1v-1.24z"/>
+  <path d="m0 7.5h62.5v12.5h-62.5v-2.5c2.07 0 3.75-1.68 3.75-3.75 0-2.07-1.68-3.75-3.75-3.75z"/>
+ </g>
+ <g fill="#fff">
+  <circle cx="5.62" cy="16.87" r="1.87"/>
+  <circle cx="5" cy="2.5" r="1"/>
+  <circle cx="12.5" cy="2.5" r="1"/>
+  <circle cx="20" cy="2.5" r="1"/>
+  <circle cx="27.5" cy="2.5" r="1"/>
+  <circle cx="35" cy="2.5" r="1"/>
+  <circle cx="42.5" cy="2.5" r="1"/>
+  <circle cx="50" cy="2.5" r="1"/>
+  <circle cx="57.5" cy="2.5" r="1"/>
+  <circle cx="5" cy="25" r="1"/>
+  <circle cx="12.5" cy="25" r="1"/>
+  <circle cx="20" cy="25" r="1"/>
+  <circle cx="27.5" cy="25" r="1"/>
+  <circle cx="35" cy="25" r="1"/>
+  <circle cx="42.5" cy="25" r="1"/>
+  <circle cx="50" cy="25" r="1"/>
+  <circle cx="57.5" cy="25" r="1"/>
+ </g>
+ <rect x="3.6146e-8" y="3.75" width="62.5" height="20" rx="1" ry="1" fill="#2d3142"/>
+ <g fill="#a4a7b3">
+  <path d="m7.25 5v1.25h-3.25v-3.74c0-0.55 0.45-1 1-1s1 0.45 1 1v1.24z"/>
+  <path d="m55.25 5v1.25h3.25v-3.74c0-0.55-0.45-1-1-1-0.55 0-1 0.45-1 1v1.24z"/>
+  <path d="m37.25 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1 0.55 0 1 0.45 1 1v1.24z"/>
+  <path d="m44.75 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1 0.55 0 1 0.45 1 1v1.24z"/>
+  <path d="m7.25 22.5v-1.25h-3.25v3.74c0 0.55 0.45 1 1 1s1-0.45 1-1v-1.24z"/>
+  <path d="m55.25 22.5v-1.25h3.25v3.74c0 0.55-0.45 1-1 1-0.55 0-1-0.45-1-1v-1.24z"/>
+  <path d="m37.25 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1 0.55 0 1-0.45 1-1v-1.24z"/>
+  <path d="m44.75 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1 0.55 0 1-0.45 1-1v-1.24z"/>
+  <path d="m52.25 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1 0.55 0 1 0.45 1 1v1.24z"/>
+  <path d="m52.25 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1 0.55 0 1-0.45 1-1v-1.24z"/>
+  <path d="m22.25 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1s1 0.45 1 1v1.24z"/>
+  <path d="m29.75 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1s1 0.45 1 1v1.24z"/>
+  <path d="m22.25 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1s1-0.45 1-1v-1.24z"/>
+  <path d="m14.75 5v1.25h-4.5v-1.25l1.25-1.25v-1.24c0-0.55 0.45-1 1-1s1 0.45 1 1v1.24z"/>
+  <path d="m14.75 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1s1-0.45 1-1v-1.24z"/>
+  <path d="m29.75 22.5v-1.25h-4.5v1.25l1.25 1.25v1.24c0 0.55 0.45 1 1 1s1-0.45 1-1v-1.24z"/>
+ </g>
+ <path d="m0 7.5h62.5v12.5h-62.5v-2.5c2.07 0 3.75-1.68 3.75-3.75 0-2.07-1.68-3.75-3.75-3.75z" fill="#404660"/>
+ <circle cx="5.62" cy="16.87" r="1.87" fill="#2d3142"/>
+ <text x="7.5" y="15.5" fill="#e7e8eb" font-family="Nunito" font-size="5px" font-weight="bold">74HC595</text>
+ <g fill="#a4a7b3">
+  <circle class="connection_point" cx="5" cy="25" r="1" data-pin-name="pin1"/>
+  <circle class="connection_point" cx="12.5" cy="25" r="1" data-pin-name="pin2"/>
+  <circle class="connection_point" cx="20" cy="25" r="1" data-pin-name="pin3"/>
+  <circle class="connection_point" cx="27.5" cy="25" r="1" data-pin-name="pin4"/>
+  <circle class="connection_point" cx="35" cy="25" r="1" data-pin-name="pin5"/>
+  <circle class="connection_point" cx="42.5" cy="25" r="1" data-pin-name="pin6"/>
+  <circle class="connection_point" cx="50" cy="25" r="1" data-pin-name="pin7"/>
+  <circle class="connection_point" cx="57.5" cy="25" r="1" data-pin-name="pin8"/>
+  <circle class="connection_point" cx="57.5" cy="2.5" r="1" data-pin-name="pin9"/>
+  <circle class="connection_point" cx="50" cy="2.5" r="1" data-pin-name="pin10"/>
+  <circle class="connection_point" cx="42.5" cy="2.5" r="1" data-pin-name="pin11"/>
+  <circle class="connection_point" cx="35" cy="2.5" r="1" data-pin-name="pin12"/>
+  <circle class="connection_point" cx="27.5" cy="2.5" r="1" data-pin-name="pin13"/>
+  <circle class="connection_point" cx="20" cy="2.5" r="1" data-pin-name="pin14"/>
+  <circle class="connection_point" cx="12.5" cy="2.5" r="1" data-pin-name="pin15"/>
+  <circle class="connection_point" cx="5" cy="2.5" r="1" data-pin-name="pin16"/>
+ </g>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="31.25" y="-5" text-anchor="middle" style="display: none;"/><text class="component-value component-text moveable-text locked" font-size="4.5px" x="31.25" y="0" text-anchor="middle" style="display: none;"/></g><g data-source-id="27b02de12fa776d7269d1bdce832dcbf" data-source-name="Capacitor Electrolytic" data-variant-group="capacitor_polarized" data-width="17.5" data-height="47.5" class="component" id="part_29" transform="translate(2547.5,2400) scale(1,1) rotate(0,0,0)"><rect class="helper-box" x="0" y="-0.0000019073486328125" width="17.5" height="46" fill="none"/>
+ <g stroke-linecap="round" stroke-linejoin="round">
+   <path class="draggable1" d="m5 30v15" fill="none" stroke="#7b7d86" stroke-width="2"/>
+   <path class="draggable2" d="m12.5 30v15" fill="none" stroke="#7b7d86" stroke-width="2"/>
+   <circle class="connection_point draggable" cx="5" cy="45" r="1" fill="#7b7d86" stroke-width="1.6" data-draggable-path="draggable1" data-pin-name="pin1"/>
+   <circle class="connection_point draggable" cx="12.5" cy="45" r="1" fill="#7b7d86" stroke-width="1.6" data-draggable-path="draggable2" data-pin-name="pin2"/>
+ </g>
+ <path d="m17.5 19.85v-17.85c0-1.1-0.9-2-2-2h-13.5c-1.1 0-2 0.9-2 2v17.85c0 0.65 0.3 1.29 0.85 1.63 1.36 0.84 1.36 3.69 0 4.53-0.55 0.34-0.85 0.98-0.85 1.63v0.35c0 1.1 0.9 2 2 2h13.5c1.1 0 2-0.9 2-2v-0.35c0-0.65-0.3-1.29-0.85-1.63-1.36-0.84-1.36-3.69 0-4.53 0.55-0.34 0.85-0.98 0.85-1.63z" fill="#404660" stroke-width="0"/>
+ <path d="m7.5 30h-3.75v-4.03c0-0.47 0.23-0.88 0.52-1.25 0.56-0.69 0.56-2.5 0-3.19-0.29-0.37-0.52-0.78-0.52-1.25v-20.28h3.75v20.28c0 0.47 0.23 0.88 0.52 1.25 0.56 0.69 0.56 2.5 0 3.19-0.29 0.37-0.52 0.78-0.52 1.25z" fill="#d8d9db" stroke-width="0"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="17.5" y="22.75" style="display: none;">C1</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="17.5" y="27.75" style="display: none;">100nF</text></g><g data-source-id="f602d742d033557ca922d3a0195c3b33" data-source-name="Resistor 1k" data-width="10" data-height="35" class="component" id="part_30" transform="translate(2520,2565) scale(1,1) rotate(90,5,17.5)"><rect class="helper-box" x="1.2499899864196777" y="1.5" width="7.500010013580322" height="32" fill="none"/>
+  <metadata>
+		<handlevalueas>resistor-bands</handlevalueas>
+	</metadata>
+	<defs>
+    <clipPath id="clippath">
+      <path d="m2.25,7.5h5.5c.55228,0,1,.44772,1,1v2.51393c0,.15525-.03615.30836-.10557.44721l-1.03886,2.07771c-.06943.13886-.10557.29197-.10557.44721v7.02786c0,.15525.03614.30836.10557.44721l1.03885,2.07771c.06943.13886.10557.29197.10557.44721v2.51393c0,.55228-.44772,1-1,1H2.24999c-.55228,0-1-.44772-1-1v-2.51393c0-.15525.03615-.30836.10557-.44721l1.03886-2.07771c.06943-.13886.10557-.29197.10557-.44721v-7.02786c0-.15525-.03614-.30836-.10557-.44721l-1.03885-2.07771c-.06943-.13886-.10557-.29197-.10557-.44721v-2.51393c0-.55228.44772-1,1-1Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <path class="draggable1" d="m5 7.5v-5" fill="none" stroke="#7b7d86" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+  <path class="draggable2" d="m5 27.5v5" fill="none" stroke="#7b7d86" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+  <path d="m2.25,7.5h5.5c.55228,0,1,.44772,1,1v2.51393c0,.15525-.03615.30836-.10557.44721l-1.03886,2.07771c-.06943.13886-.10557.29197-.10557.44721v7.02786c0,.15525.03614.30836.10557.44721l1.03885,2.07771c.06943.13886.10557.29197.10557.44721v2.51393c0,.55228-.44772,1-1,1H2.24999c-.55228,0-1-.44772-1-1v-2.51393c0-.15525.03615-.30836.10557-.44721l1.03886-2.07771c.06943-.13886.10557-.29197.10557-.44721v-7.02786c0-.15525-.03614-.30836-.10557-.44721l-1.03885-2.07771c-.06943-.13886-.10557-.29197-.10557-.44721v-2.51393c0-.55228.44772-1,1-1Z" fill="#fab66e"/>
+  <g clip-path="url(#clippath)" fill="none" stroke-miterlimit="10">
+    <line x1="8.75" x2="1.25" y1="25" y2="25" stroke="#fbdd71"/>
+    <g stroke-width="2">
+      <line class="colorband-1" x1="8.75" x2="1.25" y1="11.25" y2="11.25" stroke="#fbdd71"/>
+      <line class="colorband-2" x1="8.75" x2="1.25" y1="15" y2="15" stroke="#614d99"/>
+      <line class="colorband-3" x1="8.75" x2="1.25" y1="18.75" y2="18.75" stroke="#bf6030"/>
+    </g>
+  </g>
+  <circle class="connection_point draggable" data-draggable-path="draggable1" cx="5" cy="2.5" r="1" fill="#7b7d86" data-pin-name="pin1"/>
+  <circle class="connection_point draggable" data-draggable-path="draggable2" cx="5" cy="32.5" r="1" fill="#7b7d86" data-pin-name="pin2"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="10" y="16.5" style="display: none;">R1</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="10" y="21.5" style="display: none;">470</text></g><g data-source-id="imported" data-source-name="WeMos-D1-mini-female-headers-above.svg" data-width="72.567" data-height="96.945" class="component" id="part_44" transform="translate(2551.42236328125,2282.774658203125) scale(1,1) rotate(0,36.2835,48.4725)"><rect class="helper-box" x="0" y="0" width="72.5999984741211" height="97" fill="none"/><defs id="defs269"/><sodipodi:namedview id="namedview269" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:document-units="cm" inkscape:zoom="6.723157" inkscape:cx="35.771885" inkscape:cy="61.057625" inkscape:window-width="2527" inkscape:window-height="1416" inkscape:window-x="33" inkscape:window-y="0" inkscape:window-maximized="1" inkscape:current-layer="svg269"/><g id="groupForScaling" transform="scale(1, 1) translate(NaN, 1.4)">
+<g id="breadboard">
+	<g id="icon">
+		<g class="micro-usb" transform="translate(23.4 93.2)" id="g6">
+			<polygon fill="#B3B3B3" points="1.037,1.44 1.037,1.918 0.376,3 0,3" id="polygon1"/>
+			<polygon fill="#CCCCCC" points="1.037,1.918 1.038,1.918 1.037,2.457 0.376,3" id="polygon2"/>
+			<polygon fill="#B3B3B3" points="22,3 21.624,3 20.963,1.918 20.963,1.44" id="polygon3"/>
+			<polygon fill="#CCCCCC" points="21.624,3 20.963,2.457 20.962,1.918 20.963,1.918" id="polygon4"/>
+			<rect x="1.039" fill="#E6E6E6" width="19.923" height="1.808" id="rect4"/>
+			<polygon fill="#F2F2F2" points="1.586,0 1.039,0 1.039,1.808 1.458,1.808" id="polygon5"/>
+			<rect x="2.015" y="0.947" fill="#B3B3B3" width="17.973" height="0.66" id="rect5"/>
+			<rect x="2.015" y="1.497" fill="#CCCCCC" width="17.973" height="0.313" id="rect6"/>
+		</g>
+
+		<g class="PCB" id="g7">
+			<path class="Board" fill="#0d4c75" d="M59.8,0h-47C5.8,0,0,5.7,0,12.8v61.7c0,0.2,0.1,0.4,0.3,0.5l5,2.3c0.2,0.1,0.3,0.3,0.3,0.5v17.2c0.2,1.1,1.1,2,2.2,2h13.6c0.3,0,0.6-0.3,0.6-0.6V94c0-0.5,0.4-0.8,0.8-0.8H46c0.5,0,0.9,0.4,0.9,0.8v2.3c0,0.3,0.3,0.6,0.6,0.6h23.1c1.1,0,2-0.9,2-2V12.8C72.6,5.7,66.9,0,59.8,0z M3.9,72.3c-0.7,0-1.3-0.6-1.3-1.3s0.6-1.3,1.3-1.3s1.3,0.6,1.3,1.3S4.6,72.3,3.9,72.3z M3.9,65.1c-0.7,0-1.3-0.6-1.3-1.3c0-0.7,0.6-1.3,1.3-1.3s1.3,0.6,1.3,1.3C5.2,64.5,4.6,65.1,3.9,65.1z M3.9,57.9c-0.7,0-1.3-0.6-1.3-1.3c0-0.7,0.6-1.3,1.3-1.3s1.3,0.6,1.3,1.3C5.2,57.3,4.6,57.9,3.9,57.9z M3.9,50.7c-0.7,0-1.3-0.6-1.3-1.3s0.6-1.3,1.3-1.3s1.3,0.6,1.3,1.3S4.6,50.7,3.9,50.7z M3.9,43.5c-0.7,0-1.3-0.6-1.3-1.3s0.6-1.3,1.3-1.3s1.3,0.6,1.3,1.3S4.6,43.5,3.9,43.5z M3.9,36.3c-0.7,0-1.3-0.6-1.3-1.3s0.6-1.3,1.3-1.3s1.3,0.6,1.3,1.3S4.6,36.3,3.9,36.3z M3.9,29.1c-0.7,0-1.3-0.6-1.3-1.3c0-0.7,0.6-1.3,1.3-1.3s1.3,0.6,1.3,1.3C5.2,28.5,4.6,29.1,3.9,29.1z M3.9,21.9c-0.7,0-1.3-0.6-1.3-1.3c0-0.7,0.6-1.3,1.3-1.3s1.3,0.6,1.3,1.3C5.2,21.3,4.6,21.9,3.9,21.9z M68.7,72.3c-0.7,0-1.3-0.6-1.3-1.3s0.6-1.3,1.3-1.3c0.7,0,1.3,0.6,1.3,1.3S69.4,72.3,68.7,72.3z M68.7,65.1c-0.7,0-1.3-0.6-1.3-1.3c0-0.7,0.6-1.3,1.3-1.3c0.7,0,1.3,0.6,1.3,1.3C70,64.5,69.4,65.1,68.7,65.1z M68.7,57.9c-0.7,0-1.3-0.6-1.3-1.3c0-0.7,0.6-1.3,1.3-1.3c0.7,0,1.3,0.6,1.3,1.3C70,57.3,69.4,57.9,68.7,57.9z M68.7,50.7c-0.7,0-1.3-0.6-1.3-1.3s0.6-1.3,1.3-1.3c0.7,0,1.3,0.6,1.3,1.3S69.4,50.7,68.7,50.7z M68.7,43.5c-0.7,0-1.3-0.6-1.3-1.3s0.6-1.3,1.3-1.3c0.7,0,1.3,0.6,1.3,1.3S69.4,43.5,68.7,43.5z M68.7,36.3c-0.7,0-1.3-0.6-1.3-1.3s0.6-1.3,1.3-1.3c0.7,0,1.3,0.6,1.3,1.3S69.4,36.3,68.7,36.3z M68.7,29.1c-0.7,0-1.3-0.6-1.3-1.3c0-0.7,0.6-1.3,1.3-1.3c0.7,0,1.3,0.6,1.3,1.3C70,28.5,69.4,29.1,68.7,29.1z M68.7,21.9c-0.7,0-1.3-0.6-1.3-1.3c0-0.7,0.6-1.3,1.3-1.3c0.7,0,1.3,0.6,1.3,1.3C70,21.3,69.4,21.9,68.7,21.9z" id="path6"/>
+		</g>
+
+		<g class="centered" transform="translate(0.2835 0)" id="g9">
+			<g class="esp-placeholder" display="none" id="g8">
+				<rect fill="#FFFFFF" opacity="0.1" x="13.323" y="0" width="45.354" height="68.031" id="rect7"/>
+			</g>
+		</g>
+
+		<g class="centered" transform="translate(0.2835 0)" id="g27">
+			<g class="labels1" fill="none" stroke="#EEEEEE" stroke-width="0.4" stroke-linecap="round" id="g26">
+				<g class="left-labels" transform="translate(0 17) rotate(-90 28.8 28.8) translate(0 6.7)" id="g17">
+					<g id="g16">
+						<path class="RST" d="M50.997,4.73V2.47 M50.997,2.47h1.098 M52.095,2.47l0.387,0.387 M52.482,2.857v0.775 M52.482,3.632l-0.387,0.323 M52.095,3.955h-1.098 M51.707,3.955l0.775,0.775 M54.743,2.857L54.355,2.47 M54.355,2.47h-0.71 M53.645,2.47l-0.388,0.387 M53.257,2.857v0.388 M53.257,3.245l0.388,0.387 M53.645,3.632h0.71 M54.355,3.632l0.388,0.323 M54.743,3.955v0.388 M54.743,4.343L54.355,4.73 M54.355,4.73h-0.71 M53.645,4.73l-0.388-0.387 M56.293,4.73V2.47 M55.518,2.47h1.485" id="path9"/>
+						<path class="A0" d="M44.927,4.698V3.212 M44.927,3.212l0.71-0.71 M45.637,2.502l0.775,0.71 M46.412,3.212v1.486 M44.927,3.6h1.485 M47.188,4.375v-1.55 M47.188,2.825l0.387-0.323 M47.575,2.502h0.71 M48.285,2.502l0.388,0.323 M48.673,2.825v1.55 M48.673,4.375l-0.388,0.323 M48.285,4.698h-0.71 M47.575,4.698l-0.387-0.323 M47.188,4.375l1.485-1.55" id="path10"/>
+						<path class="D0" d="M37.727,2.47v2.26 M37.727,4.73h1.098 M38.825,4.73l0.387-0.387 M39.212,4.343V2.857 M39.212,2.857L38.825,2.47 M38.825,2.47h-1.098 M39.987,4.343V2.857 M39.987,2.857l0.388-0.387 M40.375,2.47h0.71 M41.085,2.47l0.388,0.387 M41.473,2.857v1.486 M41.473,4.343L41.085,4.73 M41.085,4.73h-0.71 M40.375,4.73l-0.388-0.387 M39.987,4.343l1.486-1.486" id="path11"/>
+						<path class="D5" d="M30.527,2.47v2.26 M30.527,4.73h1.098 M31.625,4.73l0.388-0.387 M32.013,4.343V2.857 M32.013,2.857L31.625,2.47 M31.625,2.47h-1.098 M34.273,2.47h-1.485 M32.788,2.47v1.098 M32.788,3.568l0.775-0.388 M33.563,3.18h0.322 M33.885,3.18l0.388,0.388 M34.273,3.568v0.775 M34.273,4.343L33.885,4.73 M33.885,4.73h-0.71 M33.175,4.73l-0.387-0.387" id="path12"/>
+						<path class="D6" d="M23.327,2.47v2.26 M23.327,4.73h1.098 M24.425,4.73l0.387-0.387 M24.812,4.343V2.857 M24.812,2.857L24.425,2.47 M24.425,2.47h-1.098 M27.073,2.47l-0.71,0.387 M26.363,2.857l-0.775,0.775 M25.588,3.632v0.711 M25.588,4.343l0.387,0.387 M25.975,4.73h0.71 M26.685,4.73l0.388-0.387 M27.073,4.343V3.955 M27.073,3.955l-0.388-0.323 M26.685,3.632h-1.097" id="path13"/>
+						<path class="D7" d="M16.127,2.47v2.26 M16.127,4.73h1.098 M17.225,4.73l0.387-0.387 M17.612,4.343V2.857 M17.612,2.857L17.225,2.47 M17.225,2.47h-1.098 M18.388,2.47h1.485 M19.873,2.47v0.387 M19.873,2.857l-1.485,1.486 M18.388,4.343V4.73" id="path14"/>
+						<path class="D8" d="M8.927,2.47v2.26 M8.927,4.73h1.098 M10.025,4.73l0.387-0.387 M10.412,4.343V2.857 M10.412,2.857L10.025,2.47 M10.025,2.47H8.927 M11.188,2.857l0.387-0.387 M11.575,2.47h0.71 M12.285,2.47l0.388,0.387 M12.673,2.857v0.388 M12.673,3.245l-0.388,0.387 M12.285,3.632l0.388,0.388 M12.673,4.02v0.323 M12.673,4.343L12.285,4.73 M12.285,4.73h-0.71 M11.575,4.73l-0.387-0.387 M11.188,4.343V4.02 M11.188,4.02l0.387-0.388 M11.575,3.632l-0.387-0.387 M11.188,3.245V2.857 M11.575,3.632h0.71" id="path15"/>
+						<path class="3V3" d="M0.597,2.857L0.984,2.47 M0.984,2.47h0.711 M1.695,2.47l0.387,0.387 M2.082,2.857V3.18 M2.082,3.18L1.695,3.568 M1.695,3.568H1.307 M1.695,3.568l0.387,0.387 M2.082,3.955v0.388 M2.082,4.343L1.695,4.73 M1.695,4.73H0.984 M0.984,4.73L0.597,4.343 M2.857,2.47v1.485 M2.857,3.955L3.632,4.73 M3.632,4.73l0.711-0.775 M4.343,3.955V2.47 M5.118,2.857L5.505,2.47 M5.505,2.47H6.28 M6.28,2.47l0.323,0.387 M6.603,2.857V3.18 M6.603,3.18L6.28,3.568 M6.28,3.568H5.893 M6.28,3.568l0.323,0.387 M6.603,3.955v0.388 M6.603,4.343L6.28,4.73 M6.28,4.73H5.505 M5.505,4.73L5.118,4.343" id="path16"/>
+					</g>
+				</g>
+				<g class="right-labels" transform="translate(50.4 17) rotate(-90 28.8 28.8) translate(0 7.7)" id="g25">
+					<g id="g24">
+						<path class="5V" d="M3.212,2.47H1.727 M1.727,2.47v1.098 M1.727,3.568l0.71-0.388 M2.437,3.18h0.388 M2.825,3.18l0.387,0.388 M3.212,3.568v0.775 M3.212,4.343L2.825,4.73 M2.825,4.73h-0.71 M2.115,4.73L1.727,4.343 M3.988,2.47v1.485 M3.988,3.955L4.763,4.73 M4.763,4.73l0.71-0.775 M5.473,3.955V2.47" id="path17"/>
+						<path class="G" d="M11.543,2.857L11.155,2.47 M11.155,2.47h-0.71 M10.445,2.47l-0.388,0.387 M10.057,2.857v1.486 M10.057,4.343l0.388,0.387 M10.445,4.73h0.71 M11.155,4.73l0.388-0.387 M11.543,4.343V3.568 M11.543,3.568h-0.775" id="path18"/>
+						<path class="D4" d="M16.127,2.47v2.26 M16.127,4.73h1.098 M17.225,4.73l0.387-0.387 M17.612,4.343V2.857 M17.612,2.857L17.225,2.47 M17.225,2.47h-1.098 M19.485,4.73V2.47 M19.485,2.47l-1.097,1.162 M18.388,3.632h1.485" id="path19"/>
+						<path class="D3" d="M23.327,2.47v2.26 M23.327,4.73h1.098 M24.425,4.73l0.387-0.387 M24.812,4.343V2.857 M24.812,2.857L24.425,2.47 M24.425,2.47h-1.098 M25.588,2.857l0.387-0.387 M25.975,2.47h0.71 M26.685,2.47l0.388,0.387 M27.073,2.857V3.18 M27.073,3.18l-0.388,0.388 M26.685,3.568h-0.322 M26.685,3.568l0.388,0.387 M27.073,3.955v0.388 M27.073,4.343L26.685,4.73 M26.685,4.73h-0.71 M25.975,4.73l-0.387-0.387" id="path20"/>
+						<path class="D2" d="M30.527,2.47v2.26 M30.527,4.73h1.098 M31.625,4.73l0.388-0.387 M32.013,4.343V2.857 M32.013,2.857L31.625,2.47 M31.625,2.47h-1.098 M34.273,4.73h-1.485 M32.788,4.73l1.485-1.485 M34.273,3.245V2.857 M34.273,2.857L33.885,2.47 M33.885,2.47h-0.71 M33.175,2.47l-0.387,0.387" id="path21"/>
+						<path class="D1" d="M37.727,2.502v2.196 M37.727,4.698h1.098 M38.825,4.698l0.387-0.323 M39.212,4.375v-1.55 M39.212,2.825l-0.387-0.323 M38.825,2.502h-1.098 M39.987,3.212l0.776-0.71 M40.763,2.502v2.196 M39.987,4.698h1.486" id="path22"/>
+						<path class="RX" d="M44.927,4.73V2.47 M44.927,2.47h1.098 M46.025,2.47l0.387,0.387 M46.412,2.857v0.775 M46.412,3.632l-0.387,0.323 M46.025,3.955h-1.098 M45.637,3.955l0.775,0.775 M47.188,2.47l1.485,2.26 M48.673,2.47l-1.485,2.26" id="path23"/>
+						<path class="TX" d="M52.837,4.698V2.502 M52.127,2.502h1.485 M54.388,2.502l1.485,2.196 M55.873,2.502l-1.485,2.196" id="path24"/>
+					</g>
+				</g>
+			</g>
+		</g>
+
+		<g class="labels2" fill="none" stroke="#EEEEEE" stroke-linecap="round" id="g31">
+			<g class="label-reset" stroke-width="0.4" transform="translate(11 83)" id="g28">
+				<path d="M0,2.26V0 M0,0h1.098 M1.098,0l0.387,0.388 M1.485,0.388v0.775 M1.485,1.163L1.098,1.55 M1.098,1.55H0 M0.71,1.55l0.775,0.71 M3.746,0H2.26 M2.26,0v2.26 M2.26,2.26h1.486 M2.26,1.163h0.775 M6.071,0.388L5.683,0 M5.683,0H4.908 M4.908,0L4.521,0.388 M4.521,0.388v0.387 M4.521,0.775l0.387,0.388 M4.908,1.163h0.775 M5.683,1.163L6.071,1.55 M6.071,1.55v0.323 M6.071,1.873L5.683,2.26 M5.683,2.26H4.908 M4.908,2.26L4.521,1.873 M8.331,0H6.846 M6.846,0v2.26 M6.846,2.26h1.485 M6.846,1.163h0.71 M9.881,2.26V0 M9.106,0h1.486" id="path27"/>
+			</g>
+			<g class="label-logo" stroke-width="0.5" transform="translate(47 80)" id="g30">
+				<path class="label-logo-d1" d="M4.5,1v4.224 M4.5,5.224h2.052 M6.552,5.224L7.276,4.5 M7.276,4.5V1.724 M7.276,1.724L6.552,1 M6.552,1H4.5 M8.724,2.448L10.172,1 M10.172,1v4.224 M8.724,5.224H11.5" id="path28"/>
+				<path class="label-logo-mini" d="M12.8,4.6V2.53 M12.8,2.53h0.54 M13.34,2.53l0.45,0.54 M13.79,3.07V4.6 M13.79,3.07l0.54-0.54 M14.33,2.53l0.54,0.54 M14.87,3.07V4.6 M15.95,2.53h0.54 M16.49,2.53V4.6 M15.95,4.6h1.08 M16.49,1v0.54 M18.11,4.6V2.53 M18.11,2.53h1.53 M19.64,2.53l0.54,0.54 M20.18,3.07V4.6 M21.26,2.53h0.54 M21.8,2.53V4.6 M21.26,4.6h0.99 M21.8,1v0.54" id="path29"/>
+				<path class="label-logo-wemos_cc" d="M7.175,10.619h-0.76 M6.415,10.619L6,10.205 M6,10.205v-0.83 M6,9.375l0.415-0.346 M6.415,9.029h0.76 M7.175,9.029L7.59,9.375 M7.59,9.375V9.79 M7.59,9.79H6 M8.519,10.619V8.2 M8.519,8.2l0.829,0.829 M9.348,9.029L10.109,8.2 M10.109,8.2v2.419 M11.453,10.619h0.829 M12.282,10.619l0.346-0.414 M12.628,10.205v-0.83 M12.628,9.375l-0.346-0.346 M12.282,9.029h-0.829 M11.453,9.029l-0.415,0.346 M11.038,9.375v0.83 M11.038,10.205l0.415,0.414 M13.626,10.619h1.175 M14.801,10.619l0.415-0.414 M15.216,10.205L14.801,9.79 M14.801,9.79h-0.829 M13.972,9.79l-0.346-0.415 M13.626,9.375l0.346-0.346 M13.972,9.029h1.244 M16.145,10.619v-0.414 M16.145,10.205h0.415 M16.56,10.205v0.414 M16.56,10.619h-0.415 M19.079,9.029h-1.244 M17.835,9.029L17.42,9.375 M17.42,9.375v0.83 M17.42,10.205l0.415,0.414 M17.835,10.619h1.244 M21.598,9.029h-1.244 M20.354,9.029l-0.346,0.346 M20.008,9.375v0.83 M20.008,10.205l0.346,0.414 M20.354,10.619h1.244 M4.15,7c2.5,3.5-0.5,5.2-1.2,3.2c-0.6,2-3.8,0.6-1.8-3.2" id="path30"/>
+			</g>
+		</g>
+
+		<g class="centered" transform="translate(0.2835 0)" id="g35">
+			<g class="pads" id="g34">
+				<g class="pads-left" transform="translate(0 17)" id="g32">
+					<circle id="connector0pin" class="pad-rst" cx="3.6" cy="3.6" r="2.05" fill="none" stroke="#9A916C" stroke-width="1.5"/>
+					<circle id="connector1pin" class="pad-a0" cx="3.6" cy="10.8" r="2.05" fill="none" stroke="#9A916C" stroke-width="1.5"/>
+					<circle id="connector2pin" class="pad-d0" cx="3.6" cy="18" r="2.05" fill="none" stroke="#9A916C" stroke-width="1.5"/>
+					<circle id="connector3pin" class="pad-d5" cx="3.6" cy="25.2" r="2.05" fill="none" stroke="#9A916C" stroke-width="1.5"/>
+					<circle id="connector4pin" class="pad-d6" cx="3.6" cy="32.4" r="2.05" fill="none" stroke="#9A916C" stroke-width="1.5"/>
+					<circle id="connector5pin" class="pad-d7" cx="3.6" cy="39.6" r="2.05" fill="none" stroke="#9A916C" stroke-width="1.5"/>
+					<circle id="connector6pin" class="pad-d8" cx="3.6" cy="46.8" r="2.05" fill="none" stroke="#9A916C" stroke-width="1.5"/>
+					<circle id="connector7pin" class="pad-3v3" cx="3.6" cy="54" r="2.05" fill="none" stroke="#9A916C" stroke-width="1.5"/>
+				</g>
+				<g class="pads-right" transform="translate(64.8 17)" id="g33">
+					<circle id="connector8pin" class="pad-5v" cx="3.6" cy="54" r="2.05" fill="none" stroke="#9A916C" stroke-width="1.5"/>
+					<circle id="connector9pin" class="pad-g" cx="3.6" cy="46.8" r="2.05" fill="none" stroke="#9A916C" stroke-width="1.5"/>
+					<circle id="connector10pin" class="pad-d4" cx="3.6" cy="39.6" r="2.05" fill="none" stroke="#9A916C" stroke-width="1.5"/>
+					<circle id="connector11pin" class="pad-d3" cx="3.6" cy="32.4" r="2.05" fill="none" stroke="#9A916C" stroke-width="1.5"/>
+					<circle id="connector12pin" class="pad-d2" cx="3.6" cy="25.2" r="2.05" fill="none" stroke="#9A916C" stroke-width="1.5"/>
+					<circle id="connector13pin" class="pad-d1" cx="3.6" cy="18" r="2.05" fill="none" stroke="#9A916C" stroke-width="1.5"/>
+					<circle id="connector14pin" class="pad-rx" cx="3.6" cy="10.8" r="2.05" fill="none" stroke="#9A916C" stroke-width="1.5"/>
+					<circle id="connector15pin" class="pad-tx" cx="3.6" cy="3.6" r="2.05" fill="none" stroke="#9A916C" stroke-width="1.5"/>
+				</g>
+			</g>
+		</g>
+
+		<g class="components" id="g57">
+			<g class="reset-button" id="g36">
+				<rect fill="#000000" opacity="1" x="2.6" y="83" width="3" height="7" id="rect35"/>
+			</g>
+			<g class="reset-pads" fill="#9A916C" id="g40">
+				<g class="t" id="g37">
+					<circle class="pad" cx="8" cy="84" r="1.5" id="circle36"/>
+					<circle class="pin" fill="#333333" cx="8" cy="84" r="0.75" id="circle37"/>
+				</g>
+				<g class="b" id="g39">
+					<circle class="pad" cx="8" cy="89" r="1.5" id="circle38"/>
+					<circle class="pin" fill="#333333" cx="8" cy="89" r="0.75" id="circle39"/>
+				</g>
+			</g>
+			<g class="usb-pads" fill="#9A916C" id="g56">
+				<g class="bl" id="g43">
+					<circle class="pad-a" cx="26" cy="89" r="1.5" id="circle40"/>
+					<circle class="pad-b" cx="26" cy="90" r="1.5" id="circle41"/>
+					<circle class="pad-c" cx="26" cy="89.5" r="1.5" id="circle42"/>
+					<circle class="pin" fill="#333333" cx="26" cy="89.5" r="0.75" id="circle43"/>
+				</g>
+				<g class="br" id="g47">
+					<circle class="pad-a" cx="43" cy="89" r="1.5" id="circle44"/>
+					<circle class="pad-b" cx="43" cy="90" r="1.5" id="circle45"/>
+					<circle class="pad-c" cx="43" cy="89.5" r="1.5" id="circle46"/>
+					<circle class="pin" fill="#333333" cx="43" cy="89.5" r="0.75" id="circle47"/>
+				</g>
+				<g class="tl" id="g51">
+					<circle class="pad-a" cx="28" cy="80" r="1.5" id="circle48"/>
+					<circle class="pad-b" cx="29" cy="80" r="1.5" id="circle49"/>
+					<circle class="pad-c" cx="28.5" cy="80" r="1.5" id="circle50"/>
+					<circle class="pin" fill="#333333" cx="28.5" cy="80" r="0.75" id="circle51"/>
+				</g>
+				<g class="tr" id="g55">
+					<circle class="pad-a" cx="41" cy="80" r="1.5" id="circle52"/>
+					<circle class="pad-b" cx="40" cy="80" r="1.5" id="circle53"/>
+					<circle class="pad-c" cx="40.5" cy="80" r="1.5" id="circle54"/>
+					<circle class="pin" fill="#333333" cx="40.5" cy="80" r="0.75" id="circle55"/>
+				</g>
+			</g>
+		</g>
+
+		<g class="centered" transform="translate(0.2835 0)" id="g188">
+			<g class="ESP8266" transform="translate(13.323 0)" id="g187">
+				<g class="pcb" id="g58">
+					<path d="M45.35,23.244V0H0v23.243c0.47,0,0.851,0.381,0.851,0.851S0.47,24.944,0,24.944v3.968c0.47,0,0.851,0.381,0.851,0.851S0.47,30.613,0,30.613v3.968c0.47,0,0.851,0.381,0.851,0.851S0.47,36.282,0,36.282v3.968c0.47,0,0.851,0.381,0.851,0.851c0,0.47-0.381,0.85-0.851,0.85v3.968c0.47,0,0.851,0.381,0.851,0.85c0,0.47-0.381,0.851-0.851,0.851v3.968c0.47,0,0.851,0.381,0.851,0.85S0.47,53.289,0,53.289v3.968c0.47,0,0.851,0.381,0.851,0.85S0.47,58.958,0,58.958v3.968c0.47,0,0.851,0.381,0.851,0.85S0.47,64.628,0,64.628v3.402h7.682c-0.008-0.048-0.029-0.091-0.029-0.141c0-0.47,0.381-0.851,0.851-0.851c0.47,0,0.85,0.381,0.85,0.851c0,0.05-0.02,0.094-0.029,0.141h4.025c-0.008-0.048-0.029-0.091-0.029-0.141c0-0.47,0.381-0.851,0.85-0.851c0.47,0,0.851,0.381,0.851,0.851c0,0.05-0.02,0.094-0.029,0.141h4.025c-0.008-0.048-0.029-0.091-0.029-0.141c0-0.47,0.381-0.851,0.85-0.851s0.851,0.381,0.851,0.851c0,0.05-0.02,0.094-0.029,0.141h4.025c-0.008-0.048-0.029-0.091-0.029-0.141c0-0.47,0.381-0.851,0.85-0.851s0.851,0.381,0.851,0.851c0,0.05-0.02,0.094-0.029,0.141h4.025c-0.008-0.048-0.029-0.091-0.029-0.141c0-0.47,0.381-0.851,0.85-0.851s0.851,0.381,0.851,0.851c0,0.05-0.02,0.094-0.029,0.141h4.025c-0.008-0.048-0.029-0.091-0.029-0.141c0-0.47,0.381-0.851,0.851-0.851s0.851,0.381,0.851,0.851c0,0.05-0.02,0.094-0.029,0.141h7.679v-3.404c-0.468-0.002-0.846-0.381-0.846-0.85s0.379-0.847,0.846-0.85v-3.97c-0.468-0.002-0.846-0.381-0.846-0.85s0.379-0.847,0.846-0.85v-3.97c-0.468-0.002-0.846-0.381-0.846-0.85s0.379-0.847,0.846-0.85v-3.97c-0.468-0.002-0.846-0.381-0.846-0.85s0.379-0.847,0.846-0.85v-3.97c-0.468-0.002-0.846-0.381-0.846-0.85s0.379-0.847,0.846-0.85v-3.97c-0.468-0.002-0.846-0.381-0.846-0.85c0-0.468,0.379-0.847,0.846-0.85v-3.97c-0.468-0.002-0.846-0.381-0.846-0.85c0-0.468,0.379-0.847,0.846-0.85v-3.97c-0.468-0.002-0.846-0.381-0.846-0.85S44.882,23.246,45.35,23.244z M2.835,64.628c-0.47,0-0.851-0.381-0.851-0.851s0.381-0.85,0.851-0.85s0.85,0.381,0.85,0.85S3.305,64.628,2.835,64.628z M2.835,58.958c-0.47,0-0.851-0.381-0.851-0.851s0.381-0.85,0.851-0.85s0.85,0.381,0.85,0.85S3.305,58.958,2.835,58.958z M2.835,53.289c-0.47,0-0.851-0.381-0.851-0.851s0.381-0.85,0.851-0.85s0.85,0.381,0.85,0.85S3.305,53.289,2.835,53.289z M2.835,47.62c-0.47,0-0.851-0.381-0.851-0.851c0-0.47,0.381-0.85,0.851-0.85s0.85,0.381,0.85,0.85C3.685,47.24,3.305,47.62,2.835,47.62z M2.835,41.951c-0.47,0-0.851-0.381-0.851-0.85c0-0.47,0.381-0.851,0.851-0.851s0.85,0.381,0.85,0.851C3.685,41.571,3.305,41.951,2.835,41.951z M2.835,36.282c-0.47,0-0.851-0.381-0.851-0.85s0.381-0.851,0.851-0.851s0.85,0.381,0.85,0.851S3.305,36.282,2.835,36.282z M2.835,30.613c-0.47,0-0.851-0.381-0.851-0.85s0.381-0.851,0.851-0.851s0.85,0.381,0.85,0.851S3.305,30.613,2.835,30.613z M2.835,24.944c-0.47,0-0.851-0.381-0.851-0.85s0.381-0.851,0.851-0.851s0.85,0.381,0.85,0.851S3.305,24.944,2.835,24.944z M42.519,64.627c-0.47,0-0.85-0.381-0.85-0.851s0.381-0.851,0.85-0.851s0.851,0.381,0.851,0.851S42.989,64.627,42.519,64.627z M42.519,58.958c-0.47,0-0.85-0.381-0.85-0.851s0.381-0.851,0.85-0.851s0.851,0.381,0.851,0.851S42.989,58.958,42.519,58.958z M42.519,53.289c-0.47,0-0.85-0.381-0.85-0.851s0.381-0.85,0.85-0.85s0.851,0.381,0.851,0.85S42.989,53.289,42.519,53.289z M42.519,47.62c-0.47,0-0.85-0.381-0.85-0.851s0.381-0.85,0.85-0.85s0.851,0.381,0.851,0.85S42.989,47.62,42.519,47.62z M42.519,41.951c-0.47,0-0.85-0.381-0.85-0.851s0.381-0.85,0.85-0.85s0.851,0.381,0.851,0.85S42.989,41.951,42.519,41.951z M42.519,36.282c-0.47,0-0.85-0.381-0.85-0.851c0-0.47,0.381-0.85,0.85-0.85s0.851,0.381,0.851,0.85C43.37,35.901,42.989,36.282,42.519,36.282z M42.519,30.613c-0.47,0-0.85-0.381-0.85-0.85c0-0.47,0.381-0.851,0.85-0.851s0.851,0.381,0.851,0.851C43.37,30.232,42.989,30.613,42.519,30.613z M42.519,24.944c-0.47,0-0.85-0.381-0.85-0.85s0.381-0.851,0.85-0.851s0.851,0.381,0.851,0.851S42.989,24.944,42.519,24.944z" id="path57"/>
+				</g>
+				<g class="pads" fill="#9A916C" id="g80">
+					<g class="pads-left" id="g65">
+						<path class="pad1-rst" d="M0,22.435v0.808c0.47,0,0.851,0.381,0.851,0.851S0.47,24.944,0,24.944v0.808h4.479v-3.317H0z M2.835,24.944c-0.47,0-0.851-0.381-0.851-0.85s0.381-0.851,0.851-0.851s0.85,0.381,0.85,0.851S3.305,24.944,2.835,24.944z" id="path58"/>
+						<path class="pad2-adc" d="M0,28.104v0.808c0.47,0,0.851,0.381,0.851,0.851S0.47,30.613,0,30.613v0.808h4.479v-3.317H0z M2.835,30.613c-0.47,0-0.851-0.381-0.851-0.85s0.381-0.851,0.851-0.851s0.85,0.381,0.85,0.851S3.305,30.613,2.835,30.613z" id="path59"/>
+						<path class="pad3-en" d="M0,33.773v0.808c0.47,0,0.851,0.381,0.851,0.851S0.47,36.282,0,36.282v0.808h4.479v-3.317H0z M2.835,36.282c-0.47,0-0.851-0.381-0.851-0.85s0.381-0.851,0.851-0.851s0.85,0.381,0.85,0.851S3.305,36.282,2.835,36.282z" id="path60"/>
+						<path class="pad4-gpio16" d="M0,39.443v0.808c0.47,0,0.851,0.381,0.851,0.851c0,0.47-0.381,0.85-0.851,0.85v0.808h4.479v-3.317H0z M2.835,41.951c-0.47,0-0.851-0.381-0.851-0.85c0-0.47,0.381-0.851,0.851-0.851s0.85,0.381,0.85,0.851C3.685,41.571,3.305,41.951,2.835,41.951z" id="path61"/>
+						<path class="pad5-gpio14" d="M0,45.112v0.808c0.47,0,0.851,0.381,0.851,0.85c0,0.47-0.381,0.851-0.851,0.851v0.808h4.479v-3.317H0z M2.835,47.62c-0.47,0-0.851-0.381-0.851-0.851c0-0.47,0.381-0.85,0.851-0.85s0.85,0.381,0.85,0.85C3.685,47.24,3.305,47.62,2.835,47.62z" id="path62"/>
+						<path class="pad6-gpio12" d="M0,50.78v0.808c0.47,0,0.851,0.381,0.851,0.85S0.47,53.289,0,53.289v0.808h4.479V50.78H0z M2.835,53.289c-0.47,0-0.851-0.381-0.851-0.851s0.381-0.85,0.851-0.85s0.85,0.381,0.85,0.85S3.305,53.289,2.835,53.289z" id="path63"/>
+						<path class="pad7-gpio13" d="M0,56.449v0.808c0.47,0,0.851,0.381,0.851,0.85S0.47,58.958,0,58.958v0.808h4.479v-3.317H0z M2.835,58.958c-0.47,0-0.851-0.381-0.851-0.851s0.381-0.85,0.851-0.85s0.85,0.381,0.85,0.85S3.305,58.958,2.835,58.958z" id="path64"/>
+						<path class="pad8-vcc" d="M0,62.118v0.808c0.47,0,0.851,0.381,0.851,0.85S0.47,64.628,0,64.628v0.808h4.479v-3.317H0z M2.835,64.628c-0.47,0-0.851-0.381-0.851-0.851s0.381-0.85,0.851-0.85s0.85,0.381,0.85,0.85S3.305,64.628,2.835,64.628z" id="path65"/>
+					</g>
+					<g class="pads-bot" id="g71">
+						<path class="pad9-cso" d="M6.846,66.387v1.644h0.837c-0.008-0.048-0.029-0.092-0.029-0.142c0-0.47,0.381-0.851,0.851-0.851c0.47,0,0.85,0.381,0.85,0.851c0,0.05-0.02,0.094-0.029,0.142h0.837v-1.644H6.846z" id="path66"/>
+						<path class="pad10-miso" d="M12.515,66.387v1.644h0.837c-0.008-0.048-0.029-0.092-0.029-0.142c0-0.47,0.381-0.851,0.85-0.851c0.47,0,0.851,0.381,0.851,0.851c0,0.05-0.02,0.094-0.029,0.142h0.837v-1.644H12.515z" id="path67"/>
+						<path class="pad11-gpio9" d="M18.183,66.387v1.644h0.837c-0.008-0.048-0.029-0.092-0.029-0.142c0-0.47,0.381-0.851,0.85-0.851s0.851,0.381,0.851,0.851c0,0.05-0.02,0.094-0.029,0.142H21.5v-1.644H18.183z" id="path68"/>
+						<path class="pad12-gpio10" d="M23.852,66.387v1.644h0.837c-0.008-0.048-0.029-0.092-0.029-0.142c0-0.47,0.381-0.851,0.85-0.851s0.851,0.381,0.851,0.851c0,0.05-0.02,0.094-0.029,0.142h0.837v-1.644H23.852z" id="path69"/>
+						<path class="pad13-mosi" d="M29.521,66.387v1.644h0.837c-0.008-0.048-0.029-0.092-0.029-0.142c0-0.47,0.381-0.851,0.85-0.851s0.851,0.381,0.851,0.851c0,0.05-0.02,0.094-0.029,0.142h0.837v-1.644H29.521z" id="path70"/>
+						<path class="pad14-sclk" d="M35.19,66.387v1.644h0.837c-0.008-0.048-0.029-0.092-0.029-0.142c0-0.47,0.381-0.851,0.851-0.851s0.851,0.381,0.851,0.851c0,0.05-0.02,0.094-0.029,0.142h0.837v-1.644H35.19z" id="path71"/>
+					</g>
+					<g class="pads-right" id="g79">
+						<path class="pad15-gnd" d="M44.503,63.776c0-0.47,0.381-0.851,0.851-0.851v-0.808h-4.479v3.317h4.479v-0.808C44.884,64.627,44.503,64.246,44.503,63.776z M42.519,64.627c-0.47,0-0.85-0.381-0.85-0.851s0.381-0.851,0.85-0.851s0.851,0.381,0.851,0.851S42.989,64.627,42.519,64.627z" id="path72"/>
+						<path class="pad16-gpio15" d="M44.503,58.107c0-0.47,0.381-0.851,0.851-0.851v-0.808h-4.479v3.317h4.479v-0.808C44.884,58.958,44.503,58.577,44.503,58.107z M42.519,58.958c-0.47,0-0.85-0.381-0.85-0.851s0.381-0.851,0.85-0.851s0.851,0.381,0.851,0.851S42.989,58.958,42.519,58.958z" id="path73"/>
+						<path class="pad17-gpio2" d="M44.503,52.438c0-0.47,0.381-0.85,0.851-0.85V50.78h-4.479v3.317h4.479v-0.808C44.884,53.289,44.503,52.908,44.503,52.438z M42.519,53.289c-0.47,0-0.85-0.381-0.85-0.851s0.381-0.85,0.85-0.85s0.851,0.381,0.851,0.85S42.989,53.289,42.519,53.289z" id="path74"/>
+						<path class="pad18-gpio0" d="M44.503,46.769c0-0.47,0.381-0.85,0.851-0.85v-0.808h-4.479v3.317h4.479V47.62C44.884,47.62,44.503,47.239,44.503,46.769z M42.519,47.62c-0.47,0-0.85-0.381-0.85-0.851s0.381-0.85,0.85-0.85s0.851,0.381,0.851,0.85S42.989,47.62,42.519,47.62z" id="path75"/>
+						<path class="pad19-gpio4" d="M44.503,41.1c0-0.47,0.381-0.85,0.851-0.85v-0.808h-4.479v3.317h4.479v-0.808C44.884,41.951,44.503,41.57,44.503,41.1z M42.519,41.951c-0.47,0-0.85-0.381-0.85-0.851s0.381-0.85,0.85-0.85s0.851,0.381,0.851,0.85S42.989,41.951,42.519,41.951z" id="path76"/>
+						<path class="pad20-gpio5" d="M44.503,35.431c0-0.47,0.381-0.85,0.851-0.85v-0.808h-4.479v3.317h4.479v-0.808C44.884,36.282,44.503,35.901,44.503,35.431z M42.519,36.282c-0.47,0-0.85-0.381-0.85-0.851c0-0.47,0.381-0.85,0.85-0.85s0.851,0.381,0.851,0.85C43.37,35.901,42.989,36.282,42.519,36.282z" id="path77"/>
+						<path class="pad21-rxd0" d="M44.503,29.763c0-0.47,0.381-0.851,0.851-0.851v-0.808h-4.479v3.317h4.479v-0.808C44.884,30.613,44.503,30.232,44.503,29.763z M42.519,30.613c-0.47,0-0.85-0.381-0.85-0.85c0-0.47,0.381-0.851,0.85-0.851s0.851,0.381,0.851,0.851C43.37,30.232,42.989,30.613,42.519,30.613z" id="path78"/>
+						<path class="pad22-txd0" d="M44.503,24.094c0-0.47,0.381-0.851,0.851-0.851v-0.808h-4.479v3.317h4.479v-0.808C44.884,24.944,44.503,24.563,44.503,24.094z M42.519,24.944c-0.47,0-0.85-0.381-0.85-0.85s0.381-0.851,0.85-0.851s0.851,0.381,0.851,0.851S42.989,24.944,42.519,24.944z" id="path79"/>
+					</g>
+				</g>
+				<g class="antenna" fill="#9A916C" id="g81">
+					<polygon points="43.301,15.289 42.081,15.289 42.081,3.269 36.961,3.269 36.961,10.969 28.617,10.969 28.617,3.269 23.357,3.269 23.357,10.969 15.077,10.969 15.077,3.269 9.961,3.269 9.961,15.286 8.741,15.286 8.741,3.269 3.697,3.269 3.697,15.289 2.049,15.289 2.049,2.049 16.297,2.049 16.297,9.749 22.137,9.749 22.137,2.049 29.837,2.049 29.837,9.749 35.741,9.749 35.741,2.049 43.301,2.049" id="polygon80"/>
+				</g>
+				<g class="led" id="g84">
+					<g class="silk" fill="#FFFFFF" id="g82">
+						<polygon points="37.079,19.868 37.079,16.967 40.239,16.967 40.239,16.75 36.844,16.75 36.844,20.085 40.239,20.085 40.239,19.868" id="polygon81"/>
+						<polygon points="41.036,16.75 41.036,16.967 44.196,16.967 44.196,19.868 41.036,19.868 41.036,20.085 44.431,20.085 44.431,16.75" id="polygon82"/>
+					</g>
+					<rect class="led-pad-left" x="37.312" y="17.218" transform="matrix(-1 -1.216450e-10 1.216450e-10 -1 77.023 36.835)" fill="#9A916C" width="2.4" height="2.4" id="rect82"/>
+					<rect class="led-pad-right" x="41.563" y="17.218" transform="matrix(-1 -1.216450e-10 1.216450e-10 -1 85.527 36.835)" fill="#9A916C" width="2.4" height="2.4" id="rect83"/>
+					<path class="led-outer" fill="#CDCCCC" d="M43.07,18.418c0-0.313,0.254-0.567,0.567-0.567v-0.433h-6v0.433c0.313,0,0.567,0.254,0.567,0.567c0,0.313-0.254,0.567-0.567,0.567v0.433h6v-0.433C43.324,18.985,43.07,18.731,43.07,18.418z" id="path83"/>
+					<rect class="led-blue" x="38.637" y="17.418" fill="#3D55A5" width="4" height="2" id="rect84"/>
+				</g>
+				<g class="holes" opacity="0.5" fill="#333333" stroke="#9A916C" stroke-width="0.2" stroke-linecap="round" id="g133">
+					<g class="holes-right" id="g91">
+						<circle cx="43.7" cy="60.9" r="0.55" id="circle84"/>
+						<circle cx="43.7" cy="55.3" r="0.55" id="circle85"/>
+						<circle cx="43.7" cy="49.6" r="0.55" id="circle86"/>
+						<circle cx="43.7" cy="43.9" r="0.55" id="circle87"/>
+						<circle cx="43.7" cy="38.3" r="0.55" id="circle88"/>
+						<circle cx="43.7" cy="32.6" r="0.55" id="circle89"/>
+						<circle cx="43.7" cy="26.9" r="0.55" id="circle90"/>
+						<circle cx="43.7" cy="21.2" r="0.55" id="circle91"/>
+					</g>
+					<g class="holes-left" id="g98">
+						<circle cx="1.7" cy="60.9" r="0.55" id="circle92"/>
+						<circle cx="1.7" cy="55.3" r="0.55" id="circle93"/>
+						<circle cx="1.6" cy="49.6" r="0.55" id="circle94"/>
+						<circle cx="1.7" cy="43.9" r="0.55" id="circle95"/>
+						<circle cx="1.7" cy="38.3" r="0.55" id="circle96"/>
+						<circle cx="1.7" cy="32.6" r="0.55" id="circle97"/>
+						<circle cx="1.6" cy="26.9" r="0.55" id="circle98"/>
+					</g>
+					<g class="holes-top" id="g102">
+						<circle cx="1.65" cy="18.15" r="0.55" id="circle99"/>
+						<circle cx="3.35" cy="18.15" r="0.55" id="circle100"/>
+						<circle cx="5.05" cy="18.15" r="0.55" id="circle101"/>
+						<circle cx="6.75" cy="18.15" r="0.55" id="circle102"/>
+					</g>
+					<g class="holes-bot" id="g106">
+						<circle cx="1.65" cy="19.85" r="0.55" id="circle103"/>
+						<circle cx="3.35" cy="19.85" r="0.55" id="circle104"/>
+						<circle cx="5.05" cy="19.85" r="0.55" id="circle105"/>
+						<circle cx="6.75" cy="19.85" r="0.55" id="circle106"/>
+					</g>
+					<g class="holes-top-2" id="g121">
+						<circle cx="11.65" cy="18.15" r="0.55" id="circle107"/>
+						<circle cx="13.35" cy="18.15" r="0.55" id="circle108"/>
+						<circle cx="15.05" cy="18.15" r="0.55" id="circle109"/>
+						<circle cx="16.75" cy="18.15" r="0.55" id="circle110"/>
+						<circle cx="18.45" cy="18.15" r="0.55" id="circle111"/>
+						<circle cx="20.15" cy="18.15" r="0.55" id="circle112"/>
+						<circle cx="21.85" cy="18.15" r="0.55" id="circle113"/>
+						<circle cx="23.55" cy="18.15" r="0.55" id="circle114"/>
+						<circle cx="25.25" cy="18.15" r="0.55" id="circle115"/>
+						<circle cx="26.95" cy="18.15" r="0.55" id="circle116"/>
+						<circle cx="28.65" cy="18.15" r="0.55" id="circle117"/>
+						<circle cx="30.35" cy="18.15" r="0.55" id="circle118"/>
+						<circle cx="32.05" cy="18.15" r="0.55" id="circle119"/>
+						<circle cx="33.75" cy="18.15" r="0.55" id="circle120"/>
+						<circle cx="35.45" cy="18.15" r="0.55" id="circle121"/>
+					</g>
+					<g class="holes-bot-2" id="g132">
+						<circle cx="11.65" cy="19.85" r="0.55" id="circle122"/>
+						<circle cx="13.35" cy="19.85" r="0.55" id="circle123"/>
+						<circle cx="15.05" cy="19.85" r="0.55" id="circle124"/>
+						<circle cx="16.75" cy="19.85" r="0.55" id="circle125"/>
+						<circle cx="18.45" cy="19.85" r="0.55" id="circle126"/>
+						<circle cx="20.15" cy="19.85" r="0.55" id="circle127"/>
+						<circle cx="21.85" cy="19.85" r="0.55" id="circle128"/>
+						<circle cx="23.55" cy="19.85" r="0.55" id="circle129"/>
+						<circle cx="25.25" cy="19.85" r="0.55" id="circle130"/>
+						<circle cx="26.95" cy="19.85" r="0.55" id="circle131"/>
+						<circle cx="28.65" cy="19.85" r="0.55" id="circle132"/>
+					</g>
+				</g>
+				<g class="cover" fill="#FFFFFF" id="g186">
+					<rect class="main" x="5.575" y="21.26" fill="#999999" width="34.2" height="43.2" id="rect133"/>
+					<g class="shadows" id="g134">
+						<polygon class="bottom-right" fill="#CCCCCC" points="39.275,21.891 39.275,63.96 6.075,63.96 6.075,63.828 5.354,64.739 5.575,64.96 39.775,64.96 40.275,64.46 40.275,21.26 39.996,20.981" id="polygon133"/>
+						<polygon class="top-left" fill="#666666" points="6.075,21.76 39.275,21.76 39.275,21.891 39.996,20.981 39.775,20.76 5.575,20.76 5.075,21.26 5.075,64.46 5.354,64.739 6.075,63.828" id="polygon134"/>
+					</g>
+					<g class="wemos-logo" id="g141">
+						<path class="wemos-logo-w" d="M37.964,27.034v0.624c-0.335,0.243-0.742,0.439-1.129,0.17c-2.053-1.03-4.391-1.664-6.696-1.322c-0.912,0.168-1.92,0.477-2.449,1.301c-0.522,0.877-0.163,1.995,0.419,2.748c0.295,0.424,0.851,0.443,1.294,0.619c0.465,0.136,0.505,0.856,0.151,1.129c-0.525,0.279-1.172,0.365-1.58,0.832c-0.651,0.677-0.832,1.856-0.189,2.598c0.632,0.692,1.617,0.905,2.516,0.95c1.684,0.052,3.393-0.365,4.847-1.221c0.63-0.355,1.101-0.929,1.731-1.279c0.484-0.12,0.935,0.426,0.697,0.875c-0.432,0.867-1.337,1.365-2.161,1.8c-1.922,0.888-4.081,1.467-6.204,1.12c-1.51-0.273-3-1.368-3.212-2.974v-1.064c0.179-0.866,0.66-1.63,1.327-2.204c-0.636-0.722-1.18-1.557-1.327-2.526v-0.768c0.092-0.776,0.421-1.535,1.008-2.064c1.024-0.95,2.456-1.281,3.812-1.38h1.357c1.667,0.234,3.309,0.66,4.862,1.31C37.411,26.456,37.714,26.727,37.964,27.034z" id="path134"/>
+						<path class="wemos-logo-e" d="M30.546,40.415c-0.594-1.423-2.767-1.727-3.769-0.591c-0.701,0.897-0.551,2.15-0.207,3.159c0.308,0.007,0.617,0.017,0.925,0.026c-0.428-0.86-0.587-2.387,0.643-2.636c0.041,1.009,0.007,2.019,0.021,3.028c0.617-0.017,1.297,0.006,1.815-0.385C30.795,42.456,30.888,41.275,30.546,40.415z M29.883,41.45c0.011,0.514-0.538,0.675-0.937,0.789c-0.017-0.621-0.017-1.239-0.002-1.86C29.402,40.548,29.967,40.875,29.883,41.45z" id="path135"/>
+						<path class="wemos-logo-m" d="M32.315,44.339c0.007,0.649,0.006,1.297,0.006,1.946c-1.436,0.548-2.869,1.109-4.324,1.604c1.451,0.518,2.888,1.067,4.324,1.623c0,0.63,0,1.258,0,1.888c-1.974-0.004-3.948-0.002-5.922,0c0.002-0.445,0.002-0.89,0.011-1.335c1.626,0.011,3.255,0.03,4.879,0.03c-1.681-0.419-3.258-1.155-4.888-1.727c0-0.353,0-0.707-0.002-1.06c1.626-0.613,3.217-1.35,4.903-1.783c-1.628,0.009-3.26,0.022-4.892,0.041c-0.007-0.408-0.009-0.815-0.009-1.223C28.372,44.35,30.343,44.354,32.315,44.339z" id="path136"/>
+						<path class="wemos-logo-o" d="M30.208,53.854c0.639,1.191-0.555,2.815-1.886,2.44c-1.338-0.29-1.742-2.24-0.654-3.056C28.449,52.5,29.823,52.885,30.208,53.854z" id="path137"/>
+						<path class="wemos-logo-wifi-fan-3" d="M35.339,49.289c1.166,1.163,2.034,2.658,2.253,4.307c0.368,2.311-0.557,4.701-2.226,6.307c-0.297-0.288-0.596-0.572-0.895-0.856c1.273-1.202,2.026-2.954,1.931-4.711c-0.064-1.585-0.817-3.088-1.952-4.182C34.745,49.865,35.044,49.577,35.339,49.289z" id="path138"/>
+						<path class="wemos-logo-wifi-fan-2" d="M33.79,50.734c1.256,1.138,1.918,2.894,1.669,4.578c-0.123,1.217-0.793,2.29-1.608,3.172c-0.327-0.323-0.662-0.639-1.002-0.948c0.884-0.869,1.41-2.116,1.243-3.363c-0.082-0.959-0.594-1.815-1.252-2.496C33.16,51.368,33.477,51.053,33.79,50.734z" id="path139"/>
+						<path class="wemos-logo-wifi-fan-1" d="M32.214,52.241c0.565,0.634,1.024,1.417,1.024,2.288c0.049,0.92-0.4,1.778-1.011,2.436c-0.318-0.312-0.643-0.617-0.972-0.916c0.791-0.776,0.809-2.101-0.013-2.862C31.571,52.876,31.896,52.562,32.214,52.241z" id="path140"/>
+						<path class="wemos-logo-s" d="M30.378,58.056c0.497,0.77,0.361,1.742,0.206,2.595c-0.323,0.002-0.649,0.004-0.972,0.011c0.252-0.641,0.439-1.411-0.054-1.995c-0.794,0.563-0.578,1.89-1.591,2.225H27.31c-1.217-0.578-1.159-2.221-0.823-3.32c0.333-0.06,0.673-0.06,1.009-0.08c-0.207,0.578-0.467,1.2-0.288,1.823c0.039,0.275,0.2,0.389,0.482,0.338c0.439-0.572,0.434-1.393,0.98-1.896C29.187,57.355,30.038,57.482,30.378,58.056z" id="path141"/>
+					</g>
+					<g class="words" id="g183">
+						<g class="model" id="g146">
+							<path class="model-m" d="M23.58,25.248v1.018l-1.525,0.393l1.525,0.39v1.018h-2.506v-0.634h1.91l-1.91-0.488V26.37l1.91-0.488h-1.91v-0.634H23.58z" id="path142"/>
+							<path class="model-o" d="M22.325,28.463c0.409,0,0.728,0.114,0.955,0.342c0.229,0.228,0.342,0.545,0.342,0.952c0,0.417-0.111,0.738-0.336,0.964c-0.224,0.226-0.537,0.338-0.94,0.338c-0.293,0-0.533-0.049-0.721-0.148s-0.333-0.241-0.438-0.427c-0.104-0.186-0.156-0.418-0.156-0.696c0-0.283,0.045-0.517,0.135-0.702c0.091-0.185,0.232-0.335,0.428-0.45S22.032,28.463,22.325,28.463z M22.322,29.237c-0.254,0-0.436,0.047-0.546,0.141c-0.11,0.094-0.165,0.222-0.165,0.384c0,0.166,0.054,0.295,0.162,0.386c0.108,0.091,0.303,0.137,0.582,0.137c0.236,0,0.408-0.047,0.518-0.143c0.108-0.095,0.163-0.224,0.163-0.387c0-0.156-0.056-0.282-0.166-0.376C22.76,29.284,22.577,29.237,22.322,29.237z" id="path143"/>
+							<path class="model-d" d="M23.58,31.485v1.15c0,0.227-0.031,0.41-0.093,0.549s-0.149,0.255-0.265,0.346c-0.115,0.091-0.249,0.157-0.402,0.198c-0.152,0.041-0.314,0.062-0.484,0.062c-0.269,0-0.476-0.031-0.623-0.092s-0.271-0.146-0.371-0.254c-0.1-0.108-0.166-0.224-0.199-0.349c-0.046-0.169-0.068-0.323-0.068-0.461v-1.15H23.58z M23.012,32.26h-1.368v0.189c0,0.162,0.018,0.277,0.054,0.345s0.099,0.122,0.188,0.161c0.09,0.039,0.234,0.058,0.436,0.058c0.266,0,0.447-0.043,0.545-0.13s0.146-0.23,0.146-0.431V32.26z" id="path144"/>
+							<path class="model-e" d="M23.58,34.196v2.074h-0.535v-1.299h-0.398v1.205h-0.511v-1.205h-0.494v1.337h-0.567v-2.112H23.58z" id="path145"/>
+							<path class="model-l" d="M23.58,36.725v0.774h-1.889v1.208h-0.617v-1.982H23.58z" id="path146"/>
+						</g>
+						<g class="esp-8266" id="g154">
+							<path class="esp-e" d="M23.58,41.255v2.074h-0.535V42.03h-0.398v1.205h-0.511V42.03h-0.494v1.337h-0.567v-2.112H23.58z" id="path147"/>
+							<path class="esp-s" d="M21.903,43.648l0.046,0.736c-0.119,0.017-0.211,0.049-0.273,0.098c-0.102,0.08-0.152,0.193-0.152,0.342c0,0.11,0.026,0.195,0.078,0.256c0.052,0.06,0.111,0.09,0.18,0.09c0.065,0,0.123-0.029,0.175-0.086s0.1-0.189,0.146-0.396c0.076-0.34,0.178-0.582,0.304-0.727c0.127-0.146,0.288-0.219,0.483-0.219c0.129,0,0.251,0.037,0.365,0.112c0.114,0.074,0.205,0.187,0.271,0.337c0.065,0.149,0.098,0.354,0.098,0.616c0,0.319-0.06,0.563-0.179,0.731s-0.309,0.269-0.568,0.301l-0.042-0.73c0.112-0.02,0.194-0.06,0.246-0.122c0.051-0.062,0.077-0.147,0.077-0.257c0-0.09-0.02-0.158-0.058-0.203c-0.038-0.046-0.085-0.068-0.14-0.068c-0.04,0-0.075,0.019-0.107,0.056c-0.033,0.037-0.063,0.123-0.092,0.26c-0.073,0.339-0.147,0.581-0.222,0.728c-0.075,0.146-0.167,0.253-0.278,0.319c-0.11,0.066-0.233,0.101-0.37,0.101c-0.161,0-0.309-0.045-0.444-0.134s-0.238-0.213-0.309-0.372c-0.07-0.16-0.105-0.361-0.105-0.604c0-0.427,0.082-0.722,0.246-0.886S21.65,43.67,21.903,43.648z" id="path148"/>
+							<path class="esp-p" d="M23.58,46.308v1.287c0,0.28-0.067,0.49-0.2,0.63c-0.134,0.14-0.323,0.209-0.569,0.209c-0.253,0-0.45-0.076-0.593-0.228c-0.143-0.152-0.214-0.385-0.214-0.697v-0.424h-0.93v-0.777H23.58z M22.512,47.085v0.19c0,0.149,0.025,0.254,0.077,0.314s0.118,0.09,0.199,0.09c0.079,0,0.146-0.025,0.2-0.078s0.082-0.151,0.082-0.296v-0.221H22.512z" id="path149"/>
+							<path class="esp-dash" d="M22.257,48.66v1.012h-0.538V48.66H22.257z" id="path150"/>
+							<path class="esp-8" d="M22.421,50.311c0.058-0.109,0.123-0.189,0.194-0.239c0.099-0.068,0.211-0.103,0.339-0.103c0.21,0,0.381,0.098,0.515,0.295c0.103,0.154,0.153,0.357,0.153,0.61c0,0.335-0.063,0.582-0.191,0.742c-0.127,0.16-0.288,0.24-0.481,0.24c-0.113,0-0.219-0.031-0.316-0.096c-0.073-0.048-0.144-0.123-0.212-0.226c-0.065,0.136-0.151,0.237-0.258,0.304c-0.107,0.066-0.226,0.1-0.355,0.1c-0.126,0-0.242-0.028-0.352-0.086c-0.108-0.058-0.192-0.128-0.252-0.212s-0.103-0.188-0.131-0.312c-0.027-0.125-0.042-0.258-0.042-0.399c0-0.266,0.031-0.468,0.094-0.608c0.063-0.14,0.155-0.247,0.277-0.319c0.122-0.073,0.258-0.109,0.408-0.109c0.147,0,0.271,0.034,0.374,0.103C22.286,50.062,22.365,50.168,22.421,50.311z M21.835,50.585c-0.11,0-0.201,0.034-0.271,0.102c-0.069,0.066-0.104,0.144-0.104,0.23c0,0.083,0.035,0.157,0.106,0.224s0.161,0.1,0.271,0.1c0.111,0,0.201-0.034,0.272-0.101c0.07-0.066,0.105-0.144,0.105-0.231c0-0.087-0.034-0.162-0.103-0.227S21.951,50.585,21.835,50.585z M22.913,50.623c-0.087,0-0.156,0.026-0.209,0.081c-0.054,0.054-0.08,0.126-0.08,0.216c0,0.08,0.026,0.146,0.079,0.197c0.052,0.051,0.12,0.076,0.203,0.076c0.087,0,0.157-0.026,0.211-0.08c0.055-0.054,0.081-0.122,0.081-0.205c0-0.084-0.026-0.153-0.079-0.206S22.997,50.623,22.913,50.623z" id="path151"/>
+							<path class="esp-2" d="M21.074,54.264v-2.089c0.206,0.024,0.4,0.097,0.582,0.218c0.182,0.122,0.396,0.35,0.644,0.684c0.151,0.203,0.267,0.334,0.345,0.391c0.079,0.058,0.153,0.086,0.225,0.086c0.076,0,0.141-0.028,0.195-0.085c0.054-0.057,0.081-0.127,0.081-0.213c0-0.089-0.028-0.161-0.084-0.218s-0.154-0.094-0.296-0.113l0.057-0.697c0.196,0.027,0.35,0.077,0.459,0.15c0.11,0.072,0.194,0.176,0.253,0.309s0.088,0.316,0.088,0.551c0,0.245-0.027,0.436-0.083,0.571c-0.057,0.137-0.142,0.243-0.258,0.321c-0.115,0.078-0.245,0.117-0.389,0.117c-0.152,0-0.299-0.045-0.438-0.134c-0.139-0.09-0.292-0.252-0.458-0.488c-0.097-0.14-0.165-0.233-0.203-0.281c-0.039-0.047-0.09-0.103-0.152-0.166v1.087H21.074z" id="path152"/>
+							<path class="esp-6" d="M23.016,56.575l-0.086-0.692c0.098-0.018,0.166-0.049,0.205-0.091c0.04-0.043,0.061-0.096,0.061-0.158c0-0.113-0.058-0.201-0.171-0.264c-0.082-0.045-0.258-0.079-0.526-0.101c0.084,0.083,0.146,0.169,0.187,0.257c0.041,0.087,0.062,0.188,0.062,0.304c0,0.224-0.08,0.412-0.24,0.566c-0.159,0.154-0.361,0.231-0.606,0.231c-0.165,0-0.315-0.039-0.452-0.117s-0.24-0.186-0.311-0.324s-0.105-0.312-0.105-0.521c0-0.251,0.043-0.452,0.129-0.604c0.085-0.151,0.222-0.272,0.409-0.363c0.188-0.09,0.436-0.136,0.744-0.136c0.452,0,0.783,0.096,0.993,0.286c0.211,0.189,0.315,0.453,0.315,0.791c0,0.199-0.022,0.356-0.069,0.473c-0.046,0.115-0.113,0.211-0.202,0.288C23.262,56.478,23.15,56.535,23.016,56.575z M21.899,55.294c-0.136,0-0.241,0.034-0.318,0.103s-0.115,0.151-0.115,0.251c0,0.091,0.034,0.167,0.104,0.229c0.069,0.062,0.173,0.093,0.311,0.093c0.142,0,0.249-0.032,0.323-0.096c0.074-0.064,0.11-0.144,0.11-0.237c0-0.098-0.035-0.179-0.107-0.244C22.136,55.326,22.033,55.294,21.899,55.294z" id="path153"/>
+							<path class="esp-6" d="M23.016,58.91l-0.086-0.692c0.098-0.018,0.166-0.049,0.205-0.091c0.04-0.043,0.061-0.096,0.061-0.158c0-0.113-0.058-0.201-0.171-0.264c-0.082-0.045-0.258-0.079-0.526-0.101c0.084,0.083,0.146,0.169,0.187,0.257c0.041,0.087,0.062,0.188,0.062,0.304c0,0.224-0.08,0.412-0.24,0.566c-0.159,0.154-0.361,0.231-0.606,0.231c-0.165,0-0.315-0.039-0.452-0.117s-0.24-0.186-0.311-0.324s-0.105-0.312-0.105-0.521c0-0.251,0.043-0.452,0.129-0.604c0.085-0.151,0.222-0.272,0.409-0.363c0.188-0.09,0.436-0.136,0.744-0.136c0.452,0,0.783,0.096,0.993,0.286c0.211,0.189,0.315,0.453,0.315,0.791c0,0.199-0.022,0.356-0.069,0.473c-0.046,0.115-0.113,0.211-0.202,0.288C23.262,58.812,23.15,58.87,23.016,58.91z M21.899,57.629c-0.136,0-0.241,0.034-0.318,0.103s-0.115,0.151-0.115,0.251c0,0.091,0.034,0.167,0.104,0.229c0.069,0.062,0.173,0.093,0.311,0.093c0.142,0,0.249-0.032,0.323-0.096c0.074-0.064,0.11-0.144,0.11-0.237c0-0.098-0.035-0.179-0.107-0.244C22.136,57.661,22.033,57.629,21.899,57.629z" id="path154"/>
+						</g>
+						<g class="ism" id="g163">
+							<path class="ism-i" d="M19.067,41.246v0.665H16.92v-0.665H19.067z" id="path155"/>
+							<path class="ism-s" d="M17.631,42.271l0.039,0.631c-0.103,0.014-0.181,0.042-0.234,0.084c-0.087,0.068-0.131,0.166-0.131,0.293c0,0.095,0.022,0.167,0.067,0.219c0.044,0.051,0.096,0.077,0.154,0.077c0.056,0,0.105-0.024,0.149-0.073s0.085-0.162,0.125-0.34c0.064-0.291,0.152-0.499,0.26-0.623c0.109-0.125,0.247-0.188,0.415-0.188c0.11,0,0.215,0.032,0.312,0.096c0.099,0.064,0.176,0.16,0.231,0.289c0.057,0.128,0.084,0.305,0.084,0.528c0,0.274-0.051,0.483-0.152,0.627c-0.103,0.145-0.265,0.23-0.487,0.258l-0.036-0.626c0.096-0.017,0.166-0.052,0.211-0.104c0.043-0.054,0.065-0.127,0.065-0.221c0-0.077-0.017-0.135-0.049-0.174c-0.033-0.039-0.073-0.059-0.12-0.059c-0.034,0-0.064,0.016-0.092,0.048c-0.028,0.031-0.055,0.105-0.079,0.223c-0.062,0.29-0.126,0.498-0.189,0.623c-0.064,0.126-0.144,0.217-0.238,0.274c-0.095,0.057-0.2,0.086-0.317,0.086c-0.139,0-0.266-0.038-0.381-0.114c-0.117-0.076-0.205-0.183-0.265-0.319c-0.061-0.137-0.091-0.31-0.091-0.518c0-0.365,0.07-0.618,0.211-0.759S17.414,42.29,17.631,42.271z" id="path156"/>
+							<path class="ism-m" d="M19.067,44.546v0.873l-1.307,0.337l1.307,0.334v0.872H16.92v-0.544h1.638l-1.638-0.419v-0.491l1.638-0.418H16.92v-0.544H19.067z" id="path157"/>
+							<path class="ism-2" d="M16.92,50.035v-1.79c0.177,0.021,0.343,0.083,0.499,0.187c0.155,0.104,0.339,0.299,0.552,0.585c0.129,0.175,0.229,0.287,0.295,0.336c0.068,0.049,0.132,0.073,0.192,0.073c0.065,0,0.121-0.024,0.168-0.072c0.046-0.049,0.069-0.109,0.069-0.183c0-0.076-0.024-0.139-0.072-0.187c-0.048-0.049-0.132-0.081-0.253-0.098l0.048-0.598c0.168,0.023,0.3,0.066,0.394,0.129c0.095,0.062,0.167,0.15,0.217,0.265c0.051,0.113,0.075,0.271,0.075,0.472c0,0.21-0.023,0.373-0.071,0.49c-0.048,0.116-0.121,0.208-0.221,0.275c-0.099,0.066-0.21,0.101-0.333,0.101c-0.131,0-0.256-0.039-0.375-0.115c-0.119-0.077-0.25-0.216-0.393-0.418c-0.083-0.12-0.142-0.201-0.174-0.241c-0.034-0.041-0.077-0.088-0.131-0.143v0.932H16.92z" id="path158"/>
+							<path class="ism-dot" d="M17.518,50.349v0.637H16.92v-0.637H17.518z" id="path159"/>
+							<path class="ism-4" d="M17.321,52.314v-1.087h0.491l1.291,1.087v0.52h-1.319v0.27h-0.463v-0.27H16.92v-0.52H17.321z M17.784,52.314h0.676l-0.676-0.574V52.314z" id="path160"/>
+							<path class="ism-g" d="M17.697,54.466h0.447v1.025h-0.916c-0.134-0.196-0.225-0.369-0.272-0.521c-0.049-0.15-0.073-0.33-0.073-0.537c0-0.255,0.044-0.463,0.131-0.623c0.087-0.161,0.216-0.285,0.389-0.373c0.171-0.089,0.369-0.133,0.592-0.133c0.234,0,0.438,0.048,0.611,0.145c0.173,0.097,0.305,0.238,0.395,0.425c0.069,0.146,0.104,0.342,0.104,0.588c0,0.237-0.021,0.414-0.064,0.532c-0.043,0.117-0.109,0.216-0.199,0.293c-0.091,0.078-0.205,0.136-0.344,0.175l-0.114-0.64c0.081-0.026,0.143-0.071,0.187-0.134c0.042-0.063,0.064-0.144,0.064-0.241c0-0.146-0.051-0.262-0.152-0.348c-0.101-0.087-0.261-0.13-0.479-0.13c-0.232,0-0.398,0.043-0.498,0.131c-0.1,0.087-0.149,0.209-0.149,0.365c0,0.074,0.011,0.146,0.032,0.213s0.058,0.145,0.11,0.231h0.201V54.466z" id="path161"/>
+							<path class="ism-h" d="M19.067,55.889v0.663h-0.751v0.726h0.751v0.666H16.92v-0.666h0.869v-0.726H16.92v-0.663H19.067z" id="path162"/>
+							<path class="ism-z" d="M18.476,58.277v1.443h-0.349l-0.8-0.785v0.833H16.92v-1.55h0.387l0.762,0.746v-0.688H18.476z" id="path163"/>
+						</g>
+						<g class="pa" id="g171">
+							<path class="pa-p" d="M15.067,41.217v1.103c0,0.24-0.058,0.42-0.171,0.54c-0.115,0.119-0.277,0.18-0.488,0.18c-0.217,0-0.387-0.065-0.508-0.195c-0.123-0.131-0.184-0.33-0.184-0.598v-0.363H12.92v-0.666H15.067z M14.152,41.883v0.163c0,0.128,0.021,0.218,0.066,0.27c0.044,0.052,0.101,0.077,0.17,0.077c0.068,0,0.125-0.022,0.172-0.067s0.07-0.129,0.07-0.253v-0.189H14.152z" id="path164"/>
+							<path class="pa-a" d="M13.274,44.451v-0.753l-0.354-0.104v-0.678l2.147,0.807v0.724l-2.147,0.808v-0.695L13.274,44.451z M13.738,44.313l0.772-0.237l-0.772-0.234V44.313z" id="path165"/>
+							<path class="pa-plus" d="M14.229,46.432v0.561h0.563v0.474h-0.563v0.563h-0.474v-0.563h-0.562v-0.474h0.562v-0.561H14.229z" id="path166"/>
+							<path class="pa-2" d="M12.92,50.095v-1.79c0.177,0.021,0.343,0.083,0.499,0.187c0.155,0.104,0.339,0.3,0.552,0.586c0.129,0.175,0.229,0.286,0.295,0.335c0.068,0.049,0.132,0.073,0.192,0.073c0.065,0,0.121-0.024,0.168-0.072c0.046-0.049,0.069-0.109,0.069-0.183c0-0.076-0.024-0.139-0.072-0.187c-0.048-0.049-0.132-0.081-0.253-0.098l0.048-0.598c0.168,0.023,0.3,0.066,0.394,0.129c0.095,0.062,0.167,0.15,0.217,0.265c0.051,0.113,0.075,0.271,0.075,0.473c0,0.21-0.023,0.373-0.071,0.489c-0.048,0.117-0.121,0.209-0.221,0.275c-0.099,0.067-0.21,0.101-0.333,0.101c-0.131,0-0.256-0.038-0.375-0.115c-0.119-0.076-0.25-0.216-0.393-0.418c-0.083-0.12-0.142-0.2-0.174-0.241c-0.034-0.04-0.077-0.088-0.131-0.143v0.932H12.92z" id="path167"/>
+							<path class="pa-5" d="M15.067,50.592v1.416h-0.476v-0.959l-0.322-0.052c0.03,0.066,0.054,0.132,0.07,0.197c0.015,0.064,0.023,0.129,0.023,0.192c0,0.215-0.065,0.39-0.195,0.523s-0.294,0.2-0.49,0.2c-0.14,0-0.272-0.034-0.4-0.104c-0.128-0.068-0.226-0.166-0.293-0.293c-0.067-0.126-0.102-0.288-0.102-0.485c0-0.142,0.014-0.263,0.041-0.364c0.026-0.101,0.066-0.187,0.12-0.258c0.053-0.07,0.113-0.128,0.181-0.172s0.151-0.08,0.252-0.109l0.066,0.604c-0.098,0.015-0.171,0.049-0.221,0.103c-0.051,0.054-0.076,0.117-0.076,0.191c0,0.083,0.032,0.151,0.095,0.206c0.063,0.054,0.157,0.081,0.282,0.081c0.128,0,0.222-0.027,0.281-0.082s0.09-0.127,0.09-0.218c0-0.058-0.015-0.113-0.043-0.167c-0.021-0.04-0.058-0.084-0.111-0.132l0.073-0.509L15.067,50.592z" id="path168"/>
+							<path class="pa-d" d="M15.067,54.046H12.92v-0.559h0.23c-0.099-0.078-0.164-0.149-0.198-0.214c-0.045-0.086-0.067-0.182-0.067-0.287c0-0.212,0.08-0.374,0.242-0.485c0.16-0.112,0.356-0.168,0.587-0.168c0.258,0,0.455,0.062,0.592,0.186c0.137,0.123,0.205,0.28,0.205,0.471c0,0.093-0.016,0.177-0.047,0.253c-0.031,0.075-0.078,0.143-0.141,0.201h0.744V54.046z M13.702,53.448c0.122,0,0.213-0.026,0.273-0.078c0.06-0.052,0.09-0.117,0.09-0.196c0-0.069-0.029-0.127-0.087-0.174s-0.154-0.07-0.289-0.07c-0.128,0-0.221,0.023-0.279,0.072c-0.06,0.048-0.089,0.108-0.089,0.18c0,0.076,0.029,0.14,0.089,0.19S13.567,53.448,13.702,53.448z" id="path169"/>
+							<path class="pa-b" d="M15.067,54.45v1.242c0,0.207-0.052,0.365-0.153,0.477c-0.104,0.11-0.23,0.166-0.381,0.166c-0.128,0-0.236-0.039-0.327-0.118c-0.061-0.053-0.108-0.13-0.144-0.231c-0.037,0.154-0.101,0.268-0.191,0.34c-0.09,0.073-0.204,0.109-0.34,0.109c-0.111,0-0.212-0.025-0.301-0.077s-0.159-0.123-0.211-0.213c-0.032-0.056-0.056-0.14-0.07-0.252c-0.02-0.149-0.029-0.248-0.029-0.297V54.45H15.067z M13.381,55.119v0.339c0,0.114,0.021,0.194,0.062,0.241c0.04,0.047,0.095,0.07,0.163,0.07c0.063,0,0.114-0.023,0.153-0.069c0.038-0.047,0.058-0.128,0.058-0.244v-0.337H13.381z M14.225,55.119v0.289c0,0.104,0.019,0.175,0.054,0.216c0.036,0.04,0.087,0.061,0.155,0.061c0.062,0,0.111-0.021,0.146-0.061c0.035-0.041,0.053-0.111,0.053-0.212v-0.293H14.225z" id="path170"/>
+							<path class="pa-m" d="M14.476,56.747v0.557h-0.228c0.095,0.08,0.162,0.161,0.203,0.242c0.039,0.082,0.06,0.181,0.06,0.296c0,0.124-0.022,0.223-0.065,0.295c-0.045,0.072-0.11,0.132-0.197,0.178c0.102,0.094,0.171,0.179,0.208,0.256c0.036,0.077,0.055,0.172,0.055,0.285c0,0.167-0.05,0.297-0.148,0.391c-0.1,0.094-0.255,0.141-0.466,0.141H12.92v-0.598h0.887c0.07,0,0.122-0.014,0.156-0.041c0.054-0.04,0.08-0.09,0.08-0.149c0-0.069-0.025-0.126-0.076-0.169s-0.132-0.064-0.244-0.064H12.92v-0.598h0.857c0.067,0,0.114-0.004,0.139-0.012c0.039-0.013,0.07-0.034,0.095-0.066c0.023-0.031,0.036-0.067,0.036-0.109c0-0.069-0.026-0.125-0.078-0.17c-0.052-0.044-0.137-0.065-0.255-0.065H12.92v-0.598H14.476z" id="path171"/>
+						</g>
+						<g class="802" id="g182">
+							<path class="802-8" d="M10.074,41.481c0.05-0.094,0.105-0.162,0.167-0.205c0.084-0.059,0.181-0.088,0.29-0.088c0.18,0,0.326,0.085,0.441,0.254c0.088,0.132,0.131,0.306,0.131,0.522c0,0.287-0.055,0.499-0.164,0.637c-0.109,0.137-0.247,0.206-0.412,0.206c-0.098,0-0.188-0.027-0.271-0.082c-0.062-0.041-0.123-0.105-0.182-0.193c-0.056,0.116-0.13,0.203-0.221,0.26c-0.093,0.058-0.193,0.086-0.305,0.086c-0.108,0-0.208-0.025-0.302-0.074c-0.093-0.05-0.165-0.109-0.216-0.182c-0.051-0.071-0.088-0.161-0.112-0.268c-0.023-0.107-0.036-0.222-0.036-0.343c0-0.228,0.027-0.401,0.081-0.521s0.133-0.211,0.237-0.273s0.221-0.094,0.35-0.094c0.127,0,0.233,0.029,0.32,0.088C9.959,41.27,10.026,41.359,10.074,41.481z M9.572,41.718c-0.096,0-0.173,0.028-0.232,0.086c-0.061,0.058-0.09,0.124-0.09,0.198c0,0.071,0.03,0.135,0.091,0.191c0.062,0.057,0.139,0.085,0.232,0.085c0.095,0,0.172-0.028,0.233-0.085c0.06-0.058,0.09-0.124,0.09-0.199c0-0.074-0.029-0.139-0.088-0.193C9.75,41.745,9.672,41.718,9.572,41.718z M10.496,41.75c-0.074,0-0.134,0.022-0.18,0.069c-0.045,0.046-0.068,0.108-0.068,0.186c0,0.068,0.022,0.124,0.068,0.168c0.044,0.044,0.103,0.066,0.174,0.066c0.074,0,0.135-0.023,0.181-0.069c0.047-0.046,0.069-0.104,0.069-0.176c0-0.072-0.022-0.131-0.067-0.176C10.627,41.772,10.568,41.75,10.496,41.75z" id="path172"/>
+							<path class="802-0" d="M10.002,43.124c0.408,0,0.694,0.073,0.857,0.221c0.163,0.146,0.244,0.37,0.244,0.671c0,0.145-0.018,0.264-0.053,0.356c-0.036,0.093-0.082,0.168-0.14,0.227c-0.057,0.059-0.117,0.105-0.18,0.139c-0.063,0.034-0.137,0.061-0.221,0.081c-0.16,0.04-0.327,0.061-0.501,0.061c-0.39,0-0.675-0.066-0.855-0.198S8.883,44.322,8.883,44c0-0.181,0.029-0.327,0.087-0.438s0.142-0.202,0.253-0.273c0.08-0.052,0.188-0.093,0.325-0.121C9.685,43.138,9.836,43.124,10.002,43.124z M10.001,43.716c-0.273,0-0.46,0.024-0.561,0.072c-0.1,0.049-0.149,0.118-0.149,0.21c0,0.061,0.021,0.113,0.063,0.158c0.042,0.044,0.109,0.076,0.201,0.098c0.092,0.021,0.234,0.031,0.429,0.031c0.285,0,0.478-0.023,0.575-0.072c0.099-0.048,0.147-0.121,0.147-0.218c0-0.099-0.05-0.17-0.15-0.214C10.457,43.737,10.271,43.716,10.001,43.716z" id="path173"/>
+							<path class="802-2" d="M8.92,46.871v-1.79c0.177,0.021,0.343,0.083,0.499,0.187c0.155,0.104,0.339,0.299,0.552,0.585c0.129,0.175,0.229,0.287,0.295,0.336c0.068,0.049,0.132,0.073,0.192,0.073c0.065,0,0.121-0.024,0.168-0.072c0.046-0.049,0.069-0.109,0.069-0.183c0-0.076-0.024-0.139-0.072-0.187c-0.048-0.049-0.132-0.081-0.253-0.098l0.048-0.598c0.168,0.023,0.3,0.066,0.394,0.129c0.095,0.062,0.167,0.15,0.217,0.265c0.051,0.113,0.075,0.271,0.075,0.472c0,0.21-0.023,0.373-0.071,0.49c-0.048,0.116-0.121,0.208-0.221,0.275c-0.099,0.066-0.21,0.101-0.333,0.101c-0.131,0-0.256-0.039-0.375-0.115c-0.119-0.077-0.25-0.216-0.393-0.418c-0.083-0.12-0.142-0.201-0.174-0.241c-0.034-0.041-0.077-0.088-0.131-0.143v0.932H8.92z" id="path174"/>
+							<path class="802-dot" d="M9.518,47.185v0.637H8.92v-0.637H9.518z" id="path175"/>
+							<path class="802-1" d="M11.104,49.477H8.92v-0.604h1.432c-0.075-0.098-0.135-0.192-0.181-0.283c-0.046-0.092-0.09-0.206-0.132-0.344h0.489c0.065,0.203,0.144,0.361,0.235,0.474s0.205,0.2,0.34,0.264V49.477z" id="path176"/>
+							<path class="802-1" d="M11.104,51.478H8.92v-0.604h1.432c-0.075-0.098-0.135-0.192-0.181-0.283c-0.046-0.092-0.09-0.206-0.132-0.344h0.489c0.065,0.203,0.144,0.361,0.235,0.474s0.205,0.2,0.34,0.264V51.478z" id="path177"/>
+							<path class="802-b" d="M11.067,52.187v0.603h-0.744c0.062,0.06,0.109,0.127,0.141,0.203c0.031,0.075,0.047,0.159,0.047,0.251c0,0.189-0.068,0.346-0.204,0.47c-0.137,0.124-0.332,0.187-0.587,0.187c-0.17,0-0.319-0.028-0.449-0.085c-0.129-0.057-0.226-0.136-0.29-0.235c-0.063-0.101-0.096-0.211-0.096-0.333c0-0.104,0.022-0.2,0.067-0.287c0.035-0.065,0.101-0.137,0.198-0.214H8.92v-0.559H11.067z M9.702,52.784c-0.134,0-0.23,0.025-0.291,0.076c-0.06,0.05-0.09,0.113-0.09,0.19c0,0.071,0.029,0.132,0.089,0.18c0.059,0.049,0.158,0.072,0.298,0.072c0.123,0,0.213-0.023,0.271-0.07c0.058-0.048,0.087-0.105,0.087-0.173c0-0.081-0.03-0.146-0.09-0.198C9.915,52.811,9.824,52.784,9.702,52.784z" id="path178"/>
+							<path class="802-slash" d="M11.104,54.542v0.305l-2.221-0.539v-0.302L11.104,54.542z" id="path179"/>
+							<path class="802-g" d="M10.476,56.101v0.559h-1.47L8.938,56.66c-0.098,0-0.19-0.021-0.279-0.062c-0.088-0.041-0.159-0.097-0.215-0.165C8.39,56.363,8.35,56.276,8.325,56.17c-0.024-0.105-0.036-0.227-0.036-0.363c0-0.312,0.047-0.527,0.141-0.645c0.094-0.116,0.219-0.175,0.376-0.175c0.02,0,0.046,0.001,0.079,0.003l-0.066,0.579c-0.053,0.015-0.09,0.037-0.111,0.067c-0.029,0.044-0.045,0.099-0.045,0.165c0,0.086,0.023,0.15,0.068,0.192c0.047,0.043,0.127,0.064,0.24,0.064h0.236c-0.069-0.059-0.12-0.117-0.15-0.176c-0.05-0.092-0.074-0.191-0.074-0.298c0-0.208,0.092-0.376,0.273-0.504c0.129-0.091,0.299-0.136,0.511-0.136c0.242,0,0.427,0.059,0.554,0.176s0.19,0.271,0.19,0.46c0,0.121-0.021,0.221-0.062,0.299c-0.041,0.079-0.109,0.152-0.203,0.221H10.476z M9.721,55.54c-0.112,0-0.195,0.023-0.249,0.071c-0.055,0.048-0.081,0.111-0.081,0.189c0,0.074,0.027,0.136,0.084,0.187c0.056,0.05,0.141,0.075,0.254,0.075s0.2-0.026,0.26-0.079c0.061-0.053,0.09-0.117,0.09-0.193s-0.027-0.137-0.082-0.183C9.94,55.562,9.849,55.54,9.721,55.54z" id="path180"/>
+							<path class="802-slash" d="M11.104,57.377v0.305l-2.221-0.54v-0.301L11.104,57.377z" id="path181"/>
+							<path class="802-n" d="M10.476,57.853v0.556h-0.253c0.103,0.083,0.177,0.167,0.222,0.252c0.044,0.085,0.066,0.188,0.066,0.311c0,0.165-0.049,0.294-0.147,0.388c-0.098,0.093-0.25,0.14-0.455,0.14H8.92v-0.6h0.855c0.098,0,0.167-0.018,0.207-0.054c0.041-0.036,0.061-0.087,0.061-0.152c0-0.072-0.027-0.131-0.082-0.176s-0.152-0.067-0.294-0.067H8.92v-0.597H10.476z" id="path182"/>
+						</g>
+					</g>
+					<g class="fcc-logo" transform="scale(0.01 0.01) translate(1900 2750) rotate(90)" id="g185">
+						<path class="fcc-logo-f" d="M-59.586,362.388V222.066H80.822h216.211V81.653h-356.62C-137.163,81.653-200,144.49-200,222.066V1000h140.413V600.674h280.818V476.521H-59.586V362.388z" id="path183"/>
+						<path class="fcc-logo-c-outer" d="M938.019,730.976v-0.17c-55.172,72.939-141.925,120.868-240.477,120.868c-167.023,0-302.466-135.355-302.466-302.548c0-167.028,135.442-302.466,302.466-302.466c98.551,0,185.304,47.841,240.477,120.868h171.403C1039.511,209.261,881.669,98.5,697.542,98.5c-248.98,0-450.709,201.811-450.709,450.791C246.833,798.188,448.65,1000,697.542,1000c184.209,0,341.969-110.761,411.962-269.024H938.019z" id="path184"/>
+						<path class="fcc-logo-c-inner" d="M694.257,418.655c40.346,0,75.89,18.698,99.898,47.42h160.371c-35.375-110.591-137.884-191.283-260.269-191.283c-151.524,0-274.417,122.889-274.417,274.417c0,151.611,122.893,274.499,274.417,274.499c122.384,0,224.807-80.687,260.187-191.283H794.069v-0.164c-23.92,28.722-59.547,47.42-99.811,47.42c-72.014,0-130.471-58.37-130.471-130.553C563.786,477.108,622.243,418.655,694.257,418.655z" id="path185"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+
+<g class="centered" transform="translate(0.2835 0)" id="g254">
+	<g class="female-headers" id="g253">
+		<g class="female-headers-left" transform="translate(0 17) rotate(90 3.6 3.6)" id="g220">
+			<g class="female-headers-left-1x08" id="g219">
+				<rect x="0" y="0" fill="#404040" width="57.6" height="7.2" id="rect188"/>
+				<rect id="female-RST" x="2.21" y="2.209" width="2.781" height="2.782"/>
+				<polygon fill="#2A2A29" points="1.185,1.184 2.208,2.209 4.991,2.209 6.017,1.184" id="polygon188"/>
+				<polygon fill="#474747" points="6.017,1.184 4.991,2.212 4.991,4.993 6.017,6.016" id="polygon189"/>
+				<polygon fill="#595959" points="6.016,6.016 4.99,4.993 2.208,4.993 1.185,6.016" id="polygon190"/>
+				<polygon fill="#373737" points="1.183,6.016 2.208,4.991 2.208,2.209 1.183,1.184" id="polygon191"/>
+				<rect id="female-A0" x="9.41" y="2.209" width="2.781" height="2.782"/>
+				<polygon fill="#2A2A29" points="8.384,1.184 9.408,2.209 12.192,2.209 13.217,1.184" id="polygon192"/>
+				<polygon fill="#474747" points="13.217,1.184 12.192,2.212 12.192,4.993 13.217,6.016" id="polygon193"/>
+				<polygon fill="#595959" points="13.215,6.016 12.191,4.993 9.408,4.993 8.384,6.016" id="polygon194"/>
+				<polygon fill="#373737" points="8.382,6.016 9.408,4.991 9.408,2.209 8.382,1.184" id="polygon195"/>
+				<rect id="female-D0" x="16.611" y="2.209" width="2.781" height="2.782"/>
+				<polygon fill="#2A2A29" points="15.584,1.184 16.609,2.209 19.392,2.209 20.416,1.184" id="polygon196"/>
+				<polygon fill="#474747" points="20.416,1.184 19.392,2.212 19.392,4.993 20.416,6.016" id="polygon197"/>
+				<polygon fill="#595959" points="20.415,6.016 19.391,4.993 16.609,4.993 15.584,6.016" id="polygon198"/>
+				<polygon fill="#373737" points="15.582,6.016 16.609,4.991 16.609,2.209 15.582,1.184" id="polygon199"/>
+				<rect id="female-D5" x="23.811" y="2.209" width="2.781" height="2.782"/>
+				<polygon fill="#2A2A29" points="22.784,1.184 23.809,2.209 26.592,2.209 27.616,1.184" id="polygon200"/>
+				<polygon fill="#474747" points="27.616,1.184 26.592,2.212 26.592,4.993 27.616,6.016" id="polygon201"/>
+				<polygon fill="#595959" points="27.615,6.016 26.59,4.993 23.809,4.993 22.784,6.016" id="polygon202"/>
+				<polygon fill="#373737" points="22.782,6.016 23.809,4.991 23.809,2.209 22.782,1.184" id="polygon203"/>
+				<rect id="female-D6" x="31.01" y="2.209" width="2.781" height="2.782"/>
+				<polygon fill="#2A2A29" points="29.985,1.184 31.008,2.209 33.791,2.209 34.817,1.184" id="polygon204"/>
+				<polygon fill="#474747" points="34.817,1.184 33.791,2.212 33.791,4.993 34.817,6.016" id="polygon205"/>
+				<polygon fill="#595959" points="34.816,6.016 33.79,4.993 31.008,4.993 29.985,6.016" id="polygon206"/>
+				<polygon fill="#373737" points="29.983,6.016 31.008,4.991 31.008,2.209 29.983,1.184" id="polygon207"/>
+				<rect id="female-D7" x="38.21" y="2.209" width="2.781" height="2.782"/>
+				<polygon fill="#2A2A29" points="37.185,1.184 38.208,2.209 40.991,2.209 42.017,1.184" id="polygon208"/>
+				<polygon fill="#474747" points="42.017,1.184 40.991,2.212 40.991,4.993 42.017,6.016" id="polygon209"/>
+				<polygon fill="#595959" points="42.016,6.016 40.99,4.993 38.208,4.993 37.185,6.016" id="polygon210"/>
+				<polygon fill="#373737" points="37.183,6.016 38.208,4.991 38.208,2.209 37.183,1.184" id="polygon211"/>
+				<rect id="female-D8" x="45.41" y="2.209" width="2.781" height="2.782"/>
+				<polygon fill="#2A2A29" points="44.384,1.184 45.408,2.209 48.192,2.209 49.217,1.184" id="polygon212"/>
+				<polygon fill="#474747" points="49.217,1.184 48.192,2.212 48.192,4.993 49.217,6.016" id="polygon213"/>
+				<polygon fill="#595959" points="49.215,6.016 48.191,4.993 45.408,4.993 44.384,6.016" id="polygon214"/>
+				<polygon fill="#373737" points="44.382,6.016 45.408,4.991 45.408,2.209 44.382,1.184" id="polygon215"/>
+				<rect id="female-3V3" x="52.611" y="2.209" width="2.781" height="2.782"/>
+				<polygon fill="#2A2A29" points="51.584,1.184 52.609,2.209 55.392,2.209 56.416,1.184" id="polygon216"/>
+				<polygon fill="#474747" points="56.416,1.184 55.392,2.212 55.392,4.993 56.416,6.016" id="polygon217"/>
+				<polygon fill="#595959" points="56.415,6.016 55.391,4.993 52.609,4.993 51.584,6.016" id="polygon218"/>
+				<polygon fill="#373737" points="51.582,6.016 52.609,4.991 52.609,2.209 51.582,1.184" id="polygon219"/>
+			</g>
+		</g>
+		<g class="female-headers-right" transform="translate(64.8 17) rotate(90 3.6 3.6)" id="g252">
+			<g class="female-headers-right-1x08" id="g251">
+				<rect x="0" y="0" fill="#404040" width="57.6" height="7.2" id="rect220"/>
+				<rect id="female-5V" x="52.611" y="2.209" width="2.781" height="2.782"/>
+				<polygon fill="#2A2A29" points="51.584,1.184 52.609,2.209 55.392,2.209 56.416,1.184" id="polygon220"/>
+				<polygon fill="#474747" points="56.416,1.184 55.392,2.212 55.392,4.993 56.416,6.016" id="polygon221"/>
+				<polygon fill="#595959" points="56.415,6.016 55.391,4.993 52.609,4.993 51.584,6.016" id="polygon222"/>
+				<polygon fill="#373737" points="51.582,6.016 52.609,4.991 52.609,2.209 51.582,1.184" id="polygon223"/>
+				<rect id="female-G" x="45.41" y="2.209" width="2.781" height="2.782"/>
+				<polygon fill="#2A2A29" points="44.384,1.184 45.408,2.209 48.192,2.209 49.217,1.184" id="polygon224"/>
+				<polygon fill="#474747" points="49.217,1.184 48.192,2.212 48.192,4.993 49.217,6.016" id="polygon225"/>
+				<polygon fill="#595959" points="49.215,6.016 48.191,4.993 45.408,4.993 44.384,6.016" id="polygon226"/>
+				<polygon fill="#373737" points="44.382,6.016 45.408,4.991 45.408,2.209 44.382,1.184" id="polygon227"/>
+				<rect id="female-D4" x="38.21" y="2.209" width="2.781" height="2.782"/>
+				<polygon fill="#2A2A29" points="37.185,1.184 38.208,2.209 40.991,2.209 42.017,1.184" id="polygon228"/>
+				<polygon fill="#474747" points="42.017,1.184 40.991,2.212 40.991,4.993 42.017,6.016" id="polygon229"/>
+				<polygon fill="#595959" points="42.016,6.016 40.99,4.993 38.208,4.993 37.185,6.016" id="polygon230"/>
+				<polygon fill="#373737" points="37.183,6.016 38.208,4.991 38.208,2.209 37.183,1.184" id="polygon231"/>
+				<rect id="female-D3" x="31.01" y="2.209" width="2.781" height="2.782"/>
+				<polygon fill="#2A2A29" points="29.985,1.184 31.008,2.209 33.791,2.209 34.817,1.184" id="polygon232"/>
+				<polygon fill="#474747" points="34.817,1.184 33.791,2.212 33.791,4.993 34.817,6.016" id="polygon233"/>
+				<polygon fill="#595959" points="34.816,6.016 33.79,4.993 31.008,4.993 29.985,6.016" id="polygon234"/>
+				<polygon fill="#373737" points="29.983,6.016 31.008,4.991 31.008,2.209 29.983,1.184" id="polygon235"/>
+				<rect id="female-D2" x="23.811" y="2.209" width="2.781" height="2.782"/>
+				<polygon fill="#2A2A29" points="22.784,1.184 23.809,2.209 26.592,2.209 27.616,1.184" id="polygon236"/>
+				<polygon fill="#474747" points="27.616,1.184 26.592,2.212 26.592,4.993 27.616,6.016" id="polygon237"/>
+				<polygon fill="#595959" points="27.615,6.016 26.59,4.993 23.809,4.993 22.784,6.016" id="polygon238"/>
+				<polygon fill="#373737" points="22.782,6.016 23.809,4.991 23.809,2.209 22.782,1.184" id="polygon239"/>
+				<rect id="female-D1" x="16.611" y="2.209" width="2.781" height="2.782"/>
+				<polygon fill="#2A2A29" points="15.584,1.184 16.609,2.209 19.392,2.209 20.416,1.184" id="polygon240"/>
+				<polygon fill="#474747" points="20.416,1.184 19.392,2.212 19.392,4.993 20.416,6.016" id="polygon241"/>
+				<polygon fill="#595959" points="20.415,6.016 19.391,4.993 16.609,4.993 15.584,6.016" id="polygon242"/>
+				<polygon fill="#373737" points="15.582,6.016 16.609,4.991 16.609,2.209 15.582,1.184" id="polygon243"/>
+				<rect id="female-RX" x="9.41" y="2.209" width="2.781" height="2.782"/>
+				<polygon fill="#2A2A29" points="8.384,1.184 9.408,2.209 12.192,2.209 13.217,1.184" id="polygon244"/>
+				<polygon fill="#474747" points="13.217,1.184 12.192,2.212 12.192,4.993 13.217,6.016" id="polygon245"/>
+				<polygon fill="#595959" points="13.215,6.016 12.191,4.993 9.408,4.993 8.384,6.016" id="polygon246"/>
+				<polygon fill="#373737" points="8.382,6.016 9.408,4.991 9.408,2.209 8.382,1.184" id="polygon247"/>
+				<rect id="female-TX" x="2.21" y="2.209" width="2.781" height="2.782"/>
+				<polygon fill="#2A2A29" points="1.185,1.184 2.208,2.209 4.991,2.209 6.017,1.184" id="polygon248"/>
+				<polygon fill="#474747" points="6.017,1.184 4.991,2.212 4.991,4.993 6.017,6.016" id="polygon249"/>
+				<polygon fill="#595959" points="6.016,6.016 4.99,4.993 2.208,4.993 1.185,6.016" id="polygon250"/>
+				<polygon fill="#373737" points="1.183,6.016 2.208,4.991 2.208,2.209 1.183,1.184" id="polygon251"/>
+			</g>
+		</g>
+	</g>
+</g>
+</g><circle cx="3.9223955" cy="27.774614" r="1" class="connection_point" id="circle255" data-pin-name="pin1"/><circle cx="3.9223955" cy="20.574614" r="1" class="connection_point" id="circle254" data-pin-name="pin2"/><circle cx="3.9223955" cy="34.974613" r="1" class="connection_point" id="circle256" data-pin-name="pin3"/><circle cx="3.9223955" cy="42.174614" r="1" class="connection_point" id="circle257" data-pin-name="pin4"/><circle cx="3.9223955" cy="49.374611" r="1" class="connection_point" id="circle258" data-pin-name="pin5"/><circle cx="3.9223955" cy="56.574612" r="1" class="connection_point" id="circle259" data-pin-name="pin6"/><circle cx="3.9223955" cy="63.774612" r="1" class="connection_point" id="circle260" data-pin-name="pin7"/><circle cx="3.9223955" cy="70.974617" r="1" class="connection_point" id="circle261" data-pin-name="pin8"/><circle cx="68.699997" cy="70.974617" r="1" class="connection_point" id="circle262" data-pin-name="pin9"/><circle cx="68.699997" cy="63.774612" r="1" class="connection_point" id="circle263" data-pin-name="pin10"/><circle cx="68.699997" cy="56.574612" r="1" class="connection_point" id="circle264" data-pin-name="pin11"/><circle cx="68.699997" cy="49.374611" r="1" class="connection_point" id="circle265" data-pin-name="pin12"/><circle cx="68.699997" cy="42.174614" r="1" class="connection_point" id="circle266" data-pin-name="pin13"/><circle cx="68.699997" cy="34.974613" r="1" class="connection_point" id="circle267" data-pin-name="pin14"/><circle cx="68.699997" cy="27.774614" r="1" class="connection_point" id="circle268" data-pin-name="pin15"/><circle cx="68.699997" cy="20.574614" r="1" class="connection_point" id="circle269" data-pin-name="pin16"/><text class="component-reference component-text moveable-text locked" font-size="4.5px" x="62.56699999999999" y="5" style="display: none;"/><text class="component-value component-text moveable-text locked" font-size="4.5px" x="62.56699999999999" y="10" style="display: none;"/></g><g class="wireGroup wire-color-black" id="wireGroup_49" transform="translate(2620, 2347.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H22.5" id="wireGroup_49-1"/><path class="wire" d="M22.5,0 c0,0 2.5,0 2.5,2.5" id="wireGroup_49-2"/><path class="wire" d="M25,2.5 V 232.5" id="wireGroup_49-3"/><path class="wire" d="M25,232.5 c0,0 0,2.5 -2.5,2.5" id="wireGroup_49-4"/><path class="wire" d="M22.5,235 L -80,235" id="wireGroup_49-5"/></g><g class="wireGroup wire-color-black" id="wireGroup_53" transform="translate(2412.5, 2420) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L-112.5,0" id="wireGroup_53-1"/></g><g class="wireGroup wire-color-black" id="wireGroup_56" transform="translate(2520, 2452.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M40,-7.5 L 125,-7.5" id="wireGroup_56-1"/></g><g class="wireGroup wire-color-blue" id="wireGroup_59" transform="translate(2435, 2412.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H42.5" id="wireGroup_59-1"/><path class="wire" d="M42.5,0 c0,0 2.5,0 2.5,-2.5" id="wireGroup_59-2"/><path class="wire" d="M45,-2.5 L45,-45" id="wireGroup_59-3"/></g><g class="wireGroup wire-color-blue" id="wireGroup_60" transform="translate(2435, 2440) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H42.5" id="wireGroup_60-1"/><path class="wire" d="M42.5,0 c0,0 2.5,0 2.5,-2.5" id="wireGroup_60-2"/><path class="wire" d="M45,-2.5 L45,-30" id="wireGroup_60-3"/></g><g class="wireGroup wire-color-blue" id="wireGroup_61" transform="translate(2435, 2485) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H42.5" id="wireGroup_61-1"/><path class="wire" d="M42.5,0 c0,0 2.5,0 2.5,-2.5" id="wireGroup_61-2"/><path class="wire" d="M45,-2.5 L45,-47.5" id="wireGroup_61-3"/></g><g class="wireGroup wire-color-black" id="wireGroup_65" transform="translate(2435, 2462.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L210,0" id="wireGroup_65-1"/></g><g class="wireGroup wire-color-black" id="wireGroup_66" transform="translate(2435, 2390) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L210,0" id="wireGroup_66-1"/></g><g class="wireGroup wire-color-blue" id="wireGroup_67" transform="translate(2435, 2367.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L45,0" id="wireGroup_67-1"/></g><g class="wireGroup wire-color-blue" id="wireGroup_68" transform="translate(2620, 2355) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H15" id="wireGroup_68-1"/><path class="wire" d="M15,0 c0,0 2.5,0 2.5,2.5" id="wireGroup_68-2"/><path class="wire" d="M17.5,2.5 V27.5" id="wireGroup_68-3"/><path class="wire" d="M17.5,27.5 c0,0 0,2.5 -2.5,2.5" id="wireGroup_68-4"/><path class="wire" d="M15,30 L-140,30" id="wireGroup_68-5"/></g><g class="wireGroup wire-color-green" id="wireGroup_69" transform="translate(2555, 2347.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H-100" id="wireGroup_69-1"/><path class="wire" d="M-100,0 c0,0 -2.5,0 -2.5,2.5" id="wireGroup_69-2"/><path class="wire" d="M-102.5,2.5 V32.5" id="wireGroup_69-3"/><path class="wire" d="M-102.5,32.5 c0,0 0,2.5 -2.5,2.5" id="wireGroup_69-4"/><path class="wire" d="M-105,35 L-120,35" id="wireGroup_69-5"/></g><g class="wireGroup wire-color-green" id="wireGroup_70" transform="translate(2435, 2420) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H12.5" id="wireGroup_70-1"/><path class="wire" d="M12.5,0 c0,0 2.5,0 2.5,2.5" id="wireGroup_70-2"/><path class="wire" d="M15,2.5 V32.5" id="wireGroup_70-3"/><path class="wire" d="M15,32.5 c0,0 0,2.5 -2.5,2.5" id="wireGroup_70-4"/><path class="wire" d="M12.5,35 L0,35" id="wireGroup_70-5"/></g><g class="wireGroup wire-color-purple" id="wireGroup_71" transform="translate(2555, 2332.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H-92.5" id="wireGroup_71-1"/><path class="wire" d="M-92.5,0 c0,0 -2.5,0 -2.5,2.5" id="wireGroup_71-2"/><path class="wire" d="M-95,2.5 V62.5" id="wireGroup_71-3"/><path class="wire" d="M-95,62.5 c0,0 0,2.5 -2.5,2.5" id="wireGroup_71-4"/><path class="wire" d="M-97.5,65 L-120,65" id="wireGroup_71-5"/></g><g class="wireGroup wire-color-purple" id="wireGroup_72" transform="translate(2435, 2470) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H22.5" id="wireGroup_72-1"/><path class="wire" d="M22.5,0 c0,0 2.5,0 2.5,-2.5" id="wireGroup_72-2"/><path class="wire" d="M25,-2.5 L25,-75" id="wireGroup_72-3"/></g><g class="wireGroup wire-color-orange" id="wireGroup_73" transform="translate(2555, 2340) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H-82.5" id="wireGroup_73-1"/><path class="wire" d="M-82.5,0 c0,0 -2.5,0 -2.5,2.5" id="wireGroup_73-2"/><path class="wire" d="M-85,2.5 V62.5" id="wireGroup_73-3"/><path class="wire" d="M-85,62.5 c0,0 0,2.5 -2.5,2.5" id="wireGroup_73-4"/><path class="wire" d="M-87.5,65 L-120,65" id="wireGroup_73-5"/></g><g class="wireGroup wire-color-orange" id="wireGroup_74" transform="translate(2435, 2477.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H32.5" id="wireGroup_74-1"/><path class="wire" d="M32.5,0 c0,0 2.5,0 2.5,-2.5" id="wireGroup_74-2"/><path class="wire" d="M35,-2.5 L35,-75" id="wireGroup_74-3"/></g><g class="wireGroup wire-color-purple" id="wireGroup_77" transform="translate(2512.5, 2452.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M40,-7.5 H -10" id="wireGroup_77-1"/><path class="wire" d="M-10,-7.5 c0,0 -2.5,0 -2.5,-2.5" id="wireGroup_77-2"/><path class="wire" d="M-12.5,-10 V-25" id="wireGroup_77-3"/><path class="wire" d="M-12.5,-25 c0,0 0,-2.5 -2.5,-2.5" id="wireGroup_77-4"/><path class="wire" d="M-15,-27.5 L-52.5,-27.5" id="wireGroup_77-5"/></g><g data-source-id="5d0404ae323cd19b22ae29cba2409f24" data-source-name="Light-Emitting Diode Yellow (alternative)" data-variant-group="LED_yellow" data-width="20" data-height="25" class="component" id="part_79" transform="translate(2320,2220) scale(1,1) rotate(0,0,0)"><rect class="helper-box" x="2.5" y="2.5" width="15" height="21" fill="none"/>
+ <line x1="7.5" x2="7.5" y1="22.5" y2="15" fill="none" stroke="#7b7d86" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+ <polyline points="15 22.5 12.5 20 12.5 15" fill="none" stroke="#7b7d86" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+ <circle cx="10" cy="10" r="7.5" fill="#FAB66E"/>
+ <circle cx="10" cy="10" r="6.2" fill="#FBDD71"/>
+ <line x1="6.2" x2="13.8" y1="11.2" y2="8.8" fill="none" stroke="#FAB66E" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".75"/>
+ <circle class="connection_point" cx="7.5" cy="22.5" r="1" fill="#7b7d86" data-pin-name="pin1"/>
+ <circle class="connection_point" cx="15" cy="22.5" r="1" fill="#7b7d86" data-pin-name="pin2"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="15" y="-5" style="display: none;">D6</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="15" y="0" style="display: none;"/></g><g data-source-id="a6c96ea42fa8ba5c728d15ea6d62188b" data-source-name="Light-Emitting Diode Orange (alternative)" data-variant-group="LED_orange" data-width="20" data-height="25" class="component" id="part_80" transform="translate(2320,2247.5) scale(1,1) rotate(0,0,0)"><rect class="helper-box" x="2.5" y="2.5" width="15" height="21" fill="none"/>
+ <line x1="7.5" x2="7.5" y1="22.5" y2="15" fill="none" stroke="#7b7d86" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+ <polyline points="15 22.5 12.5 20 12.5 15" fill="none" stroke="#7b7d86" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+ <circle cx="10" cy="10" r="7.5" fill="#D99D5B"/>
+ <circle cx="10" cy="10" r="6.2" fill="#F7A541"/>
+ <line x1="6.2" x2="13.8" y1="11.2" y2="8.8" fill="none" stroke="#D99D5B" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".75"/>
+ <circle class="connection_point" cx="7.5" cy="22.5" r="1" fill="#7b7d86" data-pin-name="pin1"/>
+ <circle class="connection_point" cx="15" cy="22.5" r="1" fill="#7b7d86" data-pin-name="pin2"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="15" y="-5" style="display: none;">D1</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="15" y="0" style="display: none;"/></g><g class="wireGroup wire-color-red" id="wireGroup_81" transform="translate(2555, 2317.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H-15" id="wireGroup_81-1"/><path class="wire" d="M-15,0 c0,0 -2.5,0 -2.5,-2.5" id="wireGroup_81-2"/><path class="wire" d="M-17.5,-2.5 V -72.5" id="wireGroup_81-3"/><path class="wire" d="M-17.5,-72.5 c0,0 0,-2.5 -2.5,-2.5" id="wireGroup_81-4"/><path class="wire" d="M-20,-75 L -220,-75" id="wireGroup_81-5"/></g><g class="wireGroup wire-color-red" id="wireGroup_82" transform="translate(2480, 2267.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M-145,2.5 H 47.5" id="wireGroup_82-1"/><path class="wire" d="M47.5,2.5 c0,0 2.5,0 2.5,2.5" id="wireGroup_82-2"/><path class="wire" d="M50,5 V55" id="wireGroup_82-3"/><path class="wire" d="M50,55 c0,0 0,2.5 2.5,2.5" id="wireGroup_82-4"/><path class="wire" d="M52.5,57.5 L75,57.5" id="wireGroup_82-5"/></g><g class="wireGroup wire-color-black" id="wireGroup_86" transform="translate(2412.5, 2492.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H-2.5" id="wireGroup_86-1"/><path class="wire" d="M-2.5,0 c0,0 -2.5,0 -2.5,2.5" id="wireGroup_86-2"/><path class="wire" d="M-5,2.5 L-5,90" id="wireGroup_86-3"/></g><g data-source-id="9b1a2ec8ec760224e855c5494b1ddadd" data-source-name="Light-Emitting Diode Red (Top view)" data-variant-group="LED_red" data-width="15" data-height="15" class="component" id="part_90" transform="translate(2325,2280) scale(1,1) rotate(0,0,0)"><rect class="helper-box" x="0" y="-0.0000011920928955078125" width="13.751062393188477" height="14.995436668395996" fill="none"/>
+ <path id="path2" d="m13.6 9.03c-0.59 2.96-3.01 5.33-5.98 5.85s-5.83-0.76-7.44-2.97c-0.12-0.17-0.18-0.38-0.18-0.59v-7.64c0-0.21 0.06-0.42 0.18-0.59 1.36-1.88 3.58-3.09 6.07-3.09 4.64 0 8.3 4.22 7.35 9.03z" fill="#cc5e4e" stroke-width="0"/>
+ <circle id="circle4" cx="6.25" cy="7.5" r="6.25" fill="#e86b59" stroke-width="0"/>
+ <circle class="connection_point" id="circle6" cx="2.5" cy="7.5" r="1.62" fill="#99473b" stroke-width="0" data-pin-name="pin1"/>
+ <path id="path8" d="m2.5 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#cc5e4e" stroke-width="0"/>
+ <circle class="connection_point" id="circle10" cx="10" cy="7.5" r="1.62" fill="#99473b" stroke-width="0" data-pin-name="pin2"/>
+ <path id="path12" d="m10 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#cc5e4e" stroke-width="0"/>
+ <line id="line14" x1="3.75" x2="8.75" y1="10.56" y2="4.44" fill="none" stroke="#cc5e4e" stroke-linecap="round" stroke-linejoin="round" stroke-width=".75"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="10" y="-5" style="display: none;">D12</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="10" y="0" style="display: none;"/></g><g data-source-id="9b1a2ec8ec760224e855c5494b1ddadd" data-source-name="Light-Emitting Diode Red (Top view)" data-variant-group="LED_red" data-width="15" data-height="15" class="component" id="part_91" transform="translate(2325,2297.5) scale(1,1) rotate(0,0,0)"><rect class="helper-box" x="0" y="-0.0000011920928955078125" width="13.751062393188477" height="14.995436668395996" fill="none"/>
+ <path id="path2" d="m13.6 9.03c-0.59 2.96-3.01 5.33-5.98 5.85s-5.83-0.76-7.44-2.97c-0.12-0.17-0.18-0.38-0.18-0.59v-7.64c0-0.21 0.06-0.42 0.18-0.59 1.36-1.88 3.58-3.09 6.07-3.09 4.64 0 8.3 4.22 7.35 9.03z" fill="#cc5e4e" stroke-width="0"/>
+ <circle id="circle4" cx="6.25" cy="7.5" r="6.25" fill="#e86b59" stroke-width="0"/>
+ <circle class="connection_point" id="circle6" cx="2.5" cy="7.5" r="1.62" fill="#99473b" stroke-width="0" data-pin-name="pin1"/>
+ <path id="path8" d="m2.5 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#cc5e4e" stroke-width="0"/>
+ <circle class="connection_point" id="circle10" cx="10" cy="7.5" r="1.62" fill="#99473b" stroke-width="0" data-pin-name="pin2"/>
+ <path id="path12" d="m10 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#cc5e4e" stroke-width="0"/>
+ <line id="line14" x1="3.75" x2="8.75" y1="10.56" y2="4.44" fill="none" stroke="#cc5e4e" stroke-linecap="round" stroke-linejoin="round" stroke-width=".75"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="10" y="-5" style="display: none;">D5</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="10" y="0" style="display: none;"/></g><g data-source-id="9b1a2ec8ec760224e855c5494b1ddadd" data-source-name="Light-Emitting Diode Red (Top view)" data-variant-group="LED_red" data-width="15" data-height="15" class="component" id="part_92" transform="translate(2325,2315) scale(1,1) rotate(0,0,0)"><rect class="helper-box" x="0" y="-0.0000011920928955078125" width="13.751062393188477" height="14.995436668395996" fill="none"/>
+ <path id="path2" d="m13.6 9.03c-0.59 2.96-3.01 5.33-5.98 5.85s-5.83-0.76-7.44-2.97c-0.12-0.17-0.18-0.38-0.18-0.59v-7.64c0-0.21 0.06-0.42 0.18-0.59 1.36-1.88 3.58-3.09 6.07-3.09 4.64 0 8.3 4.22 7.35 9.03z" fill="#cc5e4e" stroke-width="0"/>
+ <circle id="circle4" cx="6.25" cy="7.5" r="6.25" fill="#e86b59" stroke-width="0"/>
+ <circle class="connection_point" id="circle6" cx="2.5" cy="7.5" r="1.62" fill="#99473b" stroke-width="0" data-pin-name="pin1"/>
+ <path id="path8" d="m2.5 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#cc5e4e" stroke-width="0"/>
+ <circle class="connection_point" id="circle10" cx="10" cy="7.5" r="1.62" fill="#99473b" stroke-width="0" data-pin-name="pin2"/>
+ <path id="path12" d="m10 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#cc5e4e" stroke-width="0"/>
+ <line id="line14" x1="3.75" x2="8.75" y1="10.56" y2="4.44" fill="none" stroke="#cc5e4e" stroke-linecap="round" stroke-linejoin="round" stroke-width=".75"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="10" y="-5" style="display: none;">D7</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="10" y="0" style="display: none;"/></g><g data-source-id="9b1a2ec8ec760224e855c5494b1ddadd" data-source-name="Light-Emitting Diode Red (Top view)" data-variant-group="LED_red" data-width="15" data-height="15" class="component" id="part_93" transform="translate(2325,2332.5) scale(1,1) rotate(0,0,0)"><rect class="helper-box" x="0" y="-0.0000011920928955078125" width="13.751062393188477" height="14.995436668395996" fill="none"/>
+ <path id="path2" d="m13.6 9.03c-0.59 2.96-3.01 5.33-5.98 5.85s-5.83-0.76-7.44-2.97c-0.12-0.17-0.18-0.38-0.18-0.59v-7.64c0-0.21 0.06-0.42 0.18-0.59 1.36-1.88 3.58-3.09 6.07-3.09 4.64 0 8.3 4.22 7.35 9.03z" fill="#cc5e4e" stroke-width="0"/>
+ <circle id="circle4" cx="6.25" cy="7.5" r="6.25" fill="#e86b59" stroke-width="0"/>
+ <circle class="connection_point" id="circle6" cx="2.5" cy="7.5" r="1.62" fill="#99473b" stroke-width="0" data-pin-name="pin1"/>
+ <path id="path8" d="m2.5 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#cc5e4e" stroke-width="0"/>
+ <circle class="connection_point" id="circle10" cx="10" cy="7.5" r="1.62" fill="#99473b" stroke-width="0" data-pin-name="pin2"/>
+ <path id="path12" d="m10 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#cc5e4e" stroke-width="0"/>
+ <line id="line14" x1="3.75" x2="8.75" y1="10.56" y2="4.44" fill="none" stroke="#cc5e4e" stroke-linecap="round" stroke-linejoin="round" stroke-width=".75"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="10" y="-5" style="display: none;">D8</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="10" y="0" style="display: none;"/></g><g data-source-id="9b1a2ec8ec760224e855c5494b1ddadd" data-source-name="Light-Emitting Diode Red (Top view)" data-variant-group="LED_red" data-width="15" data-height="15" class="component" id="part_94" transform="translate(2325,2350) scale(1,1) rotate(0,0,0)"><rect class="helper-box" x="0" y="-0.0000011920928955078125" width="13.751062393188477" height="14.995436668395996" fill="none"/>
+ <path id="path2" d="m13.6 9.03c-0.59 2.96-3.01 5.33-5.98 5.85s-5.83-0.76-7.44-2.97c-0.12-0.17-0.18-0.38-0.18-0.59v-7.64c0-0.21 0.06-0.42 0.18-0.59 1.36-1.88 3.58-3.09 6.07-3.09 4.64 0 8.3 4.22 7.35 9.03z" fill="#cc5e4e" stroke-width="0"/>
+ <circle id="circle4" cx="6.25" cy="7.5" r="6.25" fill="#e86b59" stroke-width="0"/>
+ <circle class="connection_point" id="circle6" cx="2.5" cy="7.5" r="1.62" fill="#99473b" stroke-width="0" data-pin-name="pin1"/>
+ <path id="path8" d="m2.5 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#cc5e4e" stroke-width="0"/>
+ <circle class="connection_point" id="circle10" cx="10" cy="7.5" r="1.62" fill="#99473b" stroke-width="0" data-pin-name="pin2"/>
+ <path id="path12" d="m10 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#cc5e4e" stroke-width="0"/>
+ <line id="line14" x1="3.75" x2="8.75" y1="10.56" y2="4.44" fill="none" stroke="#cc5e4e" stroke-linecap="round" stroke-linejoin="round" stroke-width=".75"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="10" y="-5" style="display: none;">D9</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="10" y="0" style="display: none;"/></g><g data-source-id="9b1a2ec8ec760224e855c5494b1ddadd" data-source-name="Light-Emitting Diode Red (Top view)" data-variant-group="LED_red" data-width="15" data-height="15" class="component" id="part_95" transform="translate(2325,2367.5) scale(1,1) rotate(0,0,0)"><rect class="helper-box" x="0" y="-0.0000011920928955078125" width="13.751062393188477" height="14.995436668395996" fill="none"/>
+ <path id="path2" d="m13.6 9.03c-0.59 2.96-3.01 5.33-5.98 5.85s-5.83-0.76-7.44-2.97c-0.12-0.17-0.18-0.38-0.18-0.59v-7.64c0-0.21 0.06-0.42 0.18-0.59 1.36-1.88 3.58-3.09 6.07-3.09 4.64 0 8.3 4.22 7.35 9.03z" fill="#cc5e4e" stroke-width="0"/>
+ <circle id="circle4" cx="6.25" cy="7.5" r="6.25" fill="#e86b59" stroke-width="0"/>
+ <circle class="connection_point" id="circle6" cx="2.5" cy="7.5" r="1.62" fill="#99473b" stroke-width="0" data-pin-name="pin1"/>
+ <path id="path8" d="m2.5 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#cc5e4e" stroke-width="0"/>
+ <circle class="connection_point" id="circle10" cx="10" cy="7.5" r="1.62" fill="#99473b" stroke-width="0" data-pin-name="pin2"/>
+ <path id="path12" d="m10 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#cc5e4e" stroke-width="0"/>
+ <line id="line14" x1="3.75" x2="8.75" y1="10.56" y2="4.44" fill="none" stroke="#cc5e4e" stroke-linecap="round" stroke-linejoin="round" stroke-width=".75"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="10" y="-5" style="display: none;">D10</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="10" y="0" style="display: none;"/></g><g data-source-id="9b1a2ec8ec760224e855c5494b1ddadd" data-source-name="Light-Emitting Diode Red (Top view)" data-variant-group="LED_red" data-width="15" data-height="15" class="component" id="part_96" transform="translate(2325,2385) scale(1,1) rotate(0,0,0)"><rect class="helper-box" x="0" y="-0.0000011920928955078125" width="13.751062393188477" height="14.995436668395996" fill="none"/>
+ <path id="path2" d="m13.6 9.03c-0.59 2.96-3.01 5.33-5.98 5.85s-5.83-0.76-7.44-2.97c-0.12-0.17-0.18-0.38-0.18-0.59v-7.64c0-0.21 0.06-0.42 0.18-0.59 1.36-1.88 3.58-3.09 6.07-3.09 4.64 0 8.3 4.22 7.35 9.03z" fill="#cc5e4e" stroke-width="0"/>
+ <circle id="circle4" cx="6.25" cy="7.5" r="6.25" fill="#e86b59" stroke-width="0"/>
+ <circle class="connection_point" id="circle6" cx="2.5" cy="7.5" r="1.62" fill="#99473b" stroke-width="0" data-pin-name="pin1"/>
+ <path id="path8" d="m2.5 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#cc5e4e" stroke-width="0"/>
+ <circle class="connection_point" id="circle10" cx="10" cy="7.5" r="1.62" fill="#99473b" stroke-width="0" data-pin-name="pin2"/>
+ <path id="path12" d="m10 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#cc5e4e" stroke-width="0"/>
+ <line id="line14" x1="3.75" x2="8.75" y1="10.56" y2="4.44" fill="none" stroke="#cc5e4e" stroke-linecap="round" stroke-linejoin="round" stroke-width=".75"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="10" y="-5" style="display: none;">D11</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="10" y="0" style="display: none;"/></g><g data-source-id="9b1a2ec8ec760224e855c5494b1ddadd" data-source-name="Light-Emitting Diode Red (Top view)" data-variant-group="LED_red" data-width="15" data-height="15" class="component" id="part_97" transform="translate(2325,2402.5) scale(1,1) rotate(0,0,0)"><rect class="helper-box" x="0" y="-0.0000011920928955078125" width="13.751062393188477" height="14.995436668395996" fill="none"/>
+ <path id="path2" d="m13.6 9.03c-0.59 2.96-3.01 5.33-5.98 5.85s-5.83-0.76-7.44-2.97c-0.12-0.17-0.18-0.38-0.18-0.59v-7.64c0-0.21 0.06-0.42 0.18-0.59 1.36-1.88 3.58-3.09 6.07-3.09 4.64 0 8.3 4.22 7.35 9.03z" fill="#cc5e4e" stroke-width="0"/>
+ <circle id="circle4" cx="6.25" cy="7.5" r="6.25" fill="#e86b59" stroke-width="0"/>
+ <circle class="connection_point" id="circle6" cx="2.5" cy="7.5" r="1.62" fill="#99473b" stroke-width="0" data-pin-name="pin1"/>
+ <path id="path8" d="m2.5 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#cc5e4e" stroke-width="0"/>
+ <circle class="connection_point" id="circle10" cx="10" cy="7.5" r="1.62" fill="#99473b" stroke-width="0" data-pin-name="pin2"/>
+ <path id="path12" d="m10 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#cc5e4e" stroke-width="0"/>
+ <line id="line14" x1="3.75" x2="8.75" y1="10.56" y2="4.44" fill="none" stroke="#cc5e4e" stroke-linecap="round" stroke-linejoin="round" stroke-width=".75"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="10" y="-5" style="display: none;">D13</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="10" y="0" style="display: none;"/></g><g class="wireGroup wire-color-red" id="wireGroup_98" transform="translate(2335, 2287.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H105" id="wireGroup_98-1"/><path class="wire" d="M105,0 c0,0 2.5,0 2.5,2.5" id="wireGroup_98-2"/><path class="wire" d="M107.5,2.5 V85" id="wireGroup_98-3"/><path class="wire" d="M107.5,85 c0,0 0,2.5 -2.5,2.5" id="wireGroup_98-4"/><path class="wire" d="M105,87.5 L100,87.5" id="wireGroup_98-5"/></g><g class="wireGroup wire-color-red" id="wireGroup_99" transform="translate(2412.5, 2367.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 V-60" id="wireGroup_99-1"/><path class="wire" d="M0,-60 c0,0 0,-2.5 -2.5,-2.5" id="wireGroup_99-2"/><path class="wire" d="M-2.5,-62.5 L-77.5,-62.5" id="wireGroup_99-3"/></g><g class="wireGroup wire-color-red" id="wireGroup_100" transform="translate(2412.5, 2375) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H-5" id="wireGroup_100-1"/><path class="wire" d="M-5,0 c0,0 -2.5,0 -2.5,-2.5" id="wireGroup_100-2"/><path class="wire" d="M-7.5,-2.5 V-50" id="wireGroup_100-3"/><path class="wire" d="M-7.5,-50 c0,0 0,-2.5 -2.5,-2.5" id="wireGroup_100-4"/><path class="wire" d="M-10,-52.5 L-77.5,-52.5" id="wireGroup_100-5"/></g><g class="wireGroup wire-color-red" id="wireGroup_101" transform="translate(2412.5, 2382.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H-12.5" id="wireGroup_101-1"/><path class="wire" d="M-12.5,0 c0,0 -2.5,0 -2.5,-2.5" id="wireGroup_101-2"/><path class="wire" d="M-15,-2.5 V-40" id="wireGroup_101-3"/><path class="wire" d="M-15,-40 c0,0 0,-2.5 -2.5,-2.5" id="wireGroup_101-4"/><path class="wire" d="M-17.5,-42.5 L-77.5,-42.5" id="wireGroup_101-5"/></g><g class="wireGroup wire-color-red" id="wireGroup_102" transform="translate(2412.5, 2390) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H-20" id="wireGroup_102-1"/><path class="wire" d="M-20,0 c0,0 -2.5,0 -2.5,-2.5" id="wireGroup_102-2"/><path class="wire" d="M-22.5,-2.5 V-30" id="wireGroup_102-3"/><path class="wire" d="M-22.5,-30 c0,0 0,-2.5 -2.5,-2.5" id="wireGroup_102-4"/><path class="wire" d="M-25,-32.5 L-77.5,-32.5" id="wireGroup_102-5"/></g><g class="wireGroup wire-color-red" id="wireGroup_103" transform="translate(2412.5, 2397.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H-27.5" id="wireGroup_103-1"/><path class="wire" d="M-27.5,0 c0,0 -2.5,0 -2.5,-2.5" id="wireGroup_103-2"/><path class="wire" d="M-30,-2.5 V-20" id="wireGroup_103-3"/><path class="wire" d="M-30,-20 c0,0 0,-2.5 -2.5,-2.5" id="wireGroup_103-4"/><path class="wire" d="M-32.5,-22.5 L-77.5,-22.5" id="wireGroup_103-5"/></g><g class="wireGroup wire-color-red" id="wireGroup_104" transform="translate(2412.5, 2405) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H-35" id="wireGroup_104-1"/><path class="wire" d="M-35,0 c0,0 -2.5,0 -2.5,-2.5" id="wireGroup_104-2"/><path class="wire" d="M-37.5,-2.5 V-10" id="wireGroup_104-3"/><path class="wire" d="M-37.5,-10 c0,0 0,-2.5 -2.5,-2.5" id="wireGroup_104-4"/><path class="wire" d="M-40,-12.5 L-77.5,-12.5" id="wireGroup_104-5"/></g><g class="wireGroup wire-color-red" id="wireGroup_106" transform="translate(2335, 2410) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H32.5" id="wireGroup_106-1"/><path class="wire" d="M32.5,0 c0,0 2.5,0 2.5,2.5" id="wireGroup_106-2"/><path class="wire" d="M35,2.5 V0" id="wireGroup_106-3"/><path class="wire" d="M35,0 c0,0 0,2.5 2.5,2.5" id="wireGroup_106-4"/><path class="wire" d="M37.5,2.5 L77.5,2.5" id="wireGroup_106-5"/></g><g class="wireGroup wire-color-black" id="wireGroup_107" transform="translate(2327.5, 2287.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L-27.5,0" id="wireGroup_107-1"/></g><g class="wireGroup wire-color-black" id="wireGroup_108" transform="translate(2327.5, 2305) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L-27.5,0" id="wireGroup_108-1"/></g><g class="wireGroup wire-color-black" id="wireGroup_109" transform="translate(2327.5, 2322.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L-27.5,0" id="wireGroup_109-1"/></g><g class="wireGroup wire-color-black" id="wireGroup_110" transform="translate(2327.5, 2340) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L-27.5,0" id="wireGroup_110-1"/></g><g class="wireGroup wire-color-black" id="wireGroup_111" transform="translate(2327.5, 2357.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L-27.5,0" id="wireGroup_111-1"/></g><g class="wireGroup wire-color-black" id="wireGroup_112" transform="translate(2327.5, 2375) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L-27.5,0" id="wireGroup_112-1"/></g><g class="wireGroup wire-color-black" id="wireGroup_113" transform="translate(2327.5, 2392.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L-27.5,0" id="wireGroup_113-1"/></g><g class="wireGroup wire-color-black" id="wireGroup_114" transform="translate(2327.5, 2410) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L-27.5,0" id="wireGroup_114-1"/></g><g data-source-id="a210eead4e2556e2b19f81daebfe7f44" data-source-name="Light-Emitting Diode Green (Top view)" data-variant-group="LED_green" data-width="15" data-height="15" class="component" id="part_115" transform="translate(2325,2422.5) scale(1,1) rotate(0,0,0)"><rect class="helper-box" x="0" y="-0.0000011920928955078125" width="13.751062393188477" height="14.995436668395996" fill="none"/>
+ <path id="path2" d="m13.6 9.03c-0.59 2.96-3.01 5.33-5.98 5.85s-5.83-0.76-7.44-2.97c-0.12-0.17-0.18-0.38-0.18-0.59v-7.64c0-0.21 0.06-0.42 0.18-0.59 1.36-1.88 3.58-3.09 6.07-3.09 4.64 0 8.3 4.22 7.35 9.03z" fill="#67b262" stroke-width="0"/>
+ <circle id="circle4" cx="6.25" cy="7.5" r="6.25" fill="#83c480" stroke-width="0"/>
+ <circle class="connection_point" id="circle6" cx="2.5" cy="7.5" r="1.62" fill="#578c54" stroke-width="0" data-pin-name="pin1"/>
+ <path id="path8" d="m2.5 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#67b262" stroke-width="0"/>
+ <circle class="connection_point" id="circle10" cx="10" cy="7.5" r="1.62" fill="#578c54" stroke-width="0" data-pin-name="pin2"/>
+ <path id="path12" d="m10 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#67b262" stroke-width="0"/>
+ <line id="line14" x1="7.09" x2="5.41" y1="11.36" y2="3.64" fill="none" stroke="#67b262" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".75"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="10" y="-5" style="display: none;">D14</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="10" y="0" style="display: none;"/></g><g class="wireGroup wire-color-red" id="wireGroup_116" transform="translate(2435, 2447.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H2.5" id="wireGroup_116-1"/><path class="wire" d="M2.5,0 c0,0 2.5,0 2.5,-2.5" id="wireGroup_116-2"/><path class="wire" d="M5,-2.5 V-15" id="wireGroup_116-3"/><path class="wire" d="M5,-15 c0,0 0,-2.5 -2.5,-2.5" id="wireGroup_116-4"/><path class="wire" d="M2.5,-17.5 L-100,-17.5" id="wireGroup_116-5"/></g><g data-source-id="a210eead4e2556e2b19f81daebfe7f44" data-source-name="Light-Emitting Diode Green (Top view)" data-variant-group="LED_green" data-width="15" data-height="15" class="component" id="part_117" transform="translate(2325,2440) scale(1,1) rotate(0,0,0)"><rect class="helper-box" x="0" y="-0.0000011920928955078125" width="13.751062393188477" height="14.995436668395996" fill="none"/>
+ <path id="path2" d="m13.6 9.03c-0.59 2.96-3.01 5.33-5.98 5.85s-5.83-0.76-7.44-2.97c-0.12-0.17-0.18-0.38-0.18-0.59v-7.64c0-0.21 0.06-0.42 0.18-0.59 1.36-1.88 3.58-3.09 6.07-3.09 4.64 0 8.3 4.22 7.35 9.03z" fill="#67b262" stroke-width="0"/>
+ <circle id="circle4" cx="6.25" cy="7.5" r="6.25" fill="#83c480" stroke-width="0"/>
+ <circle class="connection_point" id="circle6" cx="2.5" cy="7.5" r="1.62" fill="#578c54" stroke-width="0" data-pin-name="pin1"/>
+ <path id="path8" d="m2.5 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#67b262" stroke-width="0"/>
+ <circle class="connection_point" id="circle10" cx="10" cy="7.5" r="1.62" fill="#578c54" stroke-width="0" data-pin-name="pin2"/>
+ <path id="path12" d="m10 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#67b262" stroke-width="0"/>
+ <line id="line14" x1="7.09" x2="5.41" y1="11.36" y2="3.64" fill="none" stroke="#67b262" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".75"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="10" y="-5" style="display: none;">D15</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="10" y="0" style="display: none;"/></g><g data-source-id="a210eead4e2556e2b19f81daebfe7f44" data-source-name="Light-Emitting Diode Green (Top view)" data-variant-group="LED_green" data-width="15" data-height="15" class="component" id="part_118" transform="translate(2325,2457.5) scale(1,1) rotate(0,0,0)"><rect class="helper-box" x="0" y="-0.0000011920928955078125" width="13.751062393188477" height="14.995436668395996" fill="none"/>
+ <path id="path2" d="m13.6 9.03c-0.59 2.96-3.01 5.33-5.98 5.85s-5.83-0.76-7.44-2.97c-0.12-0.17-0.18-0.38-0.18-0.59v-7.64c0-0.21 0.06-0.42 0.18-0.59 1.36-1.88 3.58-3.09 6.07-3.09 4.64 0 8.3 4.22 7.35 9.03z" fill="#67b262" stroke-width="0"/>
+ <circle id="circle4" cx="6.25" cy="7.5" r="6.25" fill="#83c480" stroke-width="0"/>
+ <circle class="connection_point" id="circle6" cx="2.5" cy="7.5" r="1.62" fill="#578c54" stroke-width="0" data-pin-name="pin1"/>
+ <path id="path8" d="m2.5 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#67b262" stroke-width="0"/>
+ <circle class="connection_point" id="circle10" cx="10" cy="7.5" r="1.62" fill="#578c54" stroke-width="0" data-pin-name="pin2"/>
+ <path id="path12" d="m10 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#67b262" stroke-width="0"/>
+ <line id="line14" x1="7.09" x2="5.41" y1="11.36" y2="3.64" fill="none" stroke="#67b262" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".75"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="10" y="-5" style="display: none;">D16</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="10" y="0" style="display: none;"/></g><g data-source-id="a210eead4e2556e2b19f81daebfe7f44" data-source-name="Light-Emitting Diode Green (Top view)" data-variant-group="LED_green" data-width="15" data-height="15" class="component" id="part_119" transform="translate(2325,2475) scale(1,1) rotate(0,0,0)"><rect class="helper-box" x="0" y="-0.0000011920928955078125" width="13.751062393188477" height="14.995436668395996" fill="none"/>
+ <path id="path2" d="m13.6 9.03c-0.59 2.96-3.01 5.33-5.98 5.85s-5.83-0.76-7.44-2.97c-0.12-0.17-0.18-0.38-0.18-0.59v-7.64c0-0.21 0.06-0.42 0.18-0.59 1.36-1.88 3.58-3.09 6.07-3.09 4.64 0 8.3 4.22 7.35 9.03z" fill="#67b262" stroke-width="0"/>
+ <circle id="circle4" cx="6.25" cy="7.5" r="6.25" fill="#83c480" stroke-width="0"/>
+ <circle class="connection_point" id="circle6" cx="2.5" cy="7.5" r="1.62" fill="#578c54" stroke-width="0" data-pin-name="pin1"/>
+ <path id="path8" d="m2.5 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#67b262" stroke-width="0"/>
+ <circle class="connection_point" id="circle10" cx="10" cy="7.5" r="1.62" fill="#578c54" stroke-width="0" data-pin-name="pin2"/>
+ <path id="path12" d="m10 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#67b262" stroke-width="0"/>
+ <line id="line14" x1="7.09" x2="5.41" y1="11.36" y2="3.64" fill="none" stroke="#67b262" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".75"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="10" y="-5" style="display: none;">D17</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="10" y="0" style="display: none;"/></g><g data-source-id="a210eead4e2556e2b19f81daebfe7f44" data-source-name="Light-Emitting Diode Green (Top view)" data-variant-group="LED_green" data-width="15" data-height="15" class="component" id="part_120" transform="translate(2325,2492.5) scale(1,1) rotate(0,0,0)"><rect class="helper-box" x="0" y="-0.0000011920928955078125" width="13.751062393188477" height="14.995436668395996" fill="none"/>
+ <path id="path2" d="m13.6 9.03c-0.59 2.96-3.01 5.33-5.98 5.85s-5.83-0.76-7.44-2.97c-0.12-0.17-0.18-0.38-0.18-0.59v-7.64c0-0.21 0.06-0.42 0.18-0.59 1.36-1.88 3.58-3.09 6.07-3.09 4.64 0 8.3 4.22 7.35 9.03z" fill="#67b262" stroke-width="0"/>
+ <circle id="circle4" cx="6.25" cy="7.5" r="6.25" fill="#83c480" stroke-width="0"/>
+ <circle class="connection_point" id="circle6" cx="2.5" cy="7.5" r="1.62" fill="#578c54" stroke-width="0" data-pin-name="pin1"/>
+ <path id="path8" d="m2.5 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#67b262" stroke-width="0"/>
+ <circle class="connection_point" id="circle10" cx="10" cy="7.5" r="1.62" fill="#578c54" stroke-width="0" data-pin-name="pin2"/>
+ <path id="path12" d="m10 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#67b262" stroke-width="0"/>
+ <line id="line14" x1="7.09" x2="5.41" y1="11.36" y2="3.64" fill="none" stroke="#67b262" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".75"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="10" y="-5" style="display: none;">D18</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="10" y="0" style="display: none;"/></g><g data-source-id="a210eead4e2556e2b19f81daebfe7f44" data-source-name="Light-Emitting Diode Green (Top view)" data-variant-group="LED_green" data-width="15" data-height="15" class="component" id="part_121" transform="translate(2325,2510) scale(1,1) rotate(0,0,0)"><rect class="helper-box" x="0" y="-0.0000011920928955078125" width="13.751062393188477" height="14.995436668395996" fill="none"/>
+ <path id="path2" d="m13.6 9.03c-0.59 2.96-3.01 5.33-5.98 5.85s-5.83-0.76-7.44-2.97c-0.12-0.17-0.18-0.38-0.18-0.59v-7.64c0-0.21 0.06-0.42 0.18-0.59 1.36-1.88 3.58-3.09 6.07-3.09 4.64 0 8.3 4.22 7.35 9.03z" fill="#67b262" stroke-width="0"/>
+ <circle id="circle4" cx="6.25" cy="7.5" r="6.25" fill="#83c480" stroke-width="0"/>
+ <circle class="connection_point" id="circle6" cx="2.5" cy="7.5" r="1.62" fill="#578c54" stroke-width="0" data-pin-name="pin1"/>
+ <path id="path8" d="m2.5 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#67b262" stroke-width="0"/>
+ <circle class="connection_point" id="circle10" cx="10" cy="7.5" r="1.62" fill="#578c54" stroke-width="0" data-pin-name="pin2"/>
+ <path id="path12" d="m10 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#67b262" stroke-width="0"/>
+ <line id="line14" x1="7.09" x2="5.41" y1="11.36" y2="3.64" fill="none" stroke="#67b262" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".75"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="10" y="-5" style="display: none;">D19</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="10" y="0" style="display: none;"/></g><g data-source-id="a210eead4e2556e2b19f81daebfe7f44" data-source-name="Light-Emitting Diode Green (Top view)" data-variant-group="LED_green" data-width="15" data-height="15" class="component" id="part_122" transform="translate(2325,2527.5) scale(1,1) rotate(0,0,0)"><rect class="helper-box" x="0" y="-0.0000011920928955078125" width="13.751062393188477" height="14.995436668395996" fill="none"/>
+ <path id="path2" d="m13.6 9.03c-0.59 2.96-3.01 5.33-5.98 5.85s-5.83-0.76-7.44-2.97c-0.12-0.17-0.18-0.38-0.18-0.59v-7.64c0-0.21 0.06-0.42 0.18-0.59 1.36-1.88 3.58-3.09 6.07-3.09 4.64 0 8.3 4.22 7.35 9.03z" fill="#67b262" stroke-width="0"/>
+ <circle id="circle4" cx="6.25" cy="7.5" r="6.25" fill="#83c480" stroke-width="0"/>
+ <circle class="connection_point" id="circle6" cx="2.5" cy="7.5" r="1.62" fill="#578c54" stroke-width="0" data-pin-name="pin1"/>
+ <path id="path8" d="m2.5 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#67b262" stroke-width="0"/>
+ <circle class="connection_point" id="circle10" cx="10" cy="7.5" r="1.62" fill="#578c54" stroke-width="0" data-pin-name="pin2"/>
+ <path id="path12" d="m10 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#67b262" stroke-width="0"/>
+ <line id="line14" x1="7.09" x2="5.41" y1="11.36" y2="3.64" fill="none" stroke="#67b262" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".75"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="10" y="-5" style="display: none;">D20</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="10" y="0" style="display: none;"/></g><g data-source-id="a210eead4e2556e2b19f81daebfe7f44" data-source-name="Light-Emitting Diode Green (Top view)" data-variant-group="LED_green" data-width="15" data-height="15" class="component" id="part_123" transform="translate(2325,2545) scale(1,1) rotate(0,0,0)"><rect class="helper-box" x="0" y="-0.0000011920928955078125" width="13.751062393188477" height="14.995436668395996" fill="none"/>
+ <path id="path2" d="m13.6 9.03c-0.59 2.96-3.01 5.33-5.98 5.85s-5.83-0.76-7.44-2.97c-0.12-0.17-0.18-0.38-0.18-0.59v-7.64c0-0.21 0.06-0.42 0.18-0.59 1.36-1.88 3.58-3.09 6.07-3.09 4.64 0 8.3 4.22 7.35 9.03z" fill="#67b262" stroke-width="0"/>
+ <circle id="circle4" cx="6.25" cy="7.5" r="6.25" fill="#83c480" stroke-width="0"/>
+ <circle class="connection_point" id="circle6" cx="2.5" cy="7.5" r="1.62" fill="#578c54" stroke-width="0" data-pin-name="pin1"/>
+ <path id="path8" d="m2.5 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#67b262" stroke-width="0"/>
+ <circle class="connection_point" id="circle10" cx="10" cy="7.5" r="1.62" fill="#578c54" stroke-width="0" data-pin-name="pin2"/>
+ <path id="path12" d="m10 6.25c0.69 0 1.25 0.56 1.25 1.25s-0.56 1.25-1.25 1.25-1.25-0.56-1.25-1.25 0.56-1.25 1.25-1.25m0-0.75c-1.1 0-2 0.9-2 2s0.9 2 2 2 2-0.9 2-2-0.9-2-2-2z" fill="#67b262" stroke-width="0"/>
+ <line id="line14" x1="7.09" x2="5.41" y1="11.36" y2="3.64" fill="none" stroke="#67b262" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".75"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="10" y="-5" style="display: none;">D21</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="10" y="0" style="display: none;"/></g><g class="wireGroup wire-color-red" id="wireGroup_124" transform="translate(2412.5, 2440) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H-67.5" id="wireGroup_124-1"/><path class="wire" d="M-67.5,0 c0,0 -2.5,0 -2.5,2.5" id="wireGroup_124-2"/><path class="wire" d="M-70,2.5 V5" id="wireGroup_124-3"/><path class="wire" d="M-70,5 c0,0 0,2.5 -2.5,2.5" id="wireGroup_124-4"/><path class="wire" d="M-72.5,7.5 L-77.5,7.5" id="wireGroup_124-5"/></g><g class="wireGroup wire-color-red" id="wireGroup_125" transform="translate(2412.5, 2447.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H-62.5" id="wireGroup_125-1"/><path class="wire" d="M-62.5,0 c0,0 -2.5,0 -2.5,2.5" id="wireGroup_125-2"/><path class="wire" d="M-65,2.5 V15" id="wireGroup_125-3"/><path class="wire" d="M-65,15 c0,0 0,2.5 -2.5,2.5" id="wireGroup_125-4"/><path class="wire" d="M-67.5,17.5 L-77.5,17.5" id="wireGroup_125-5"/></g><g class="wireGroup wire-color-red" id="wireGroup_126" transform="translate(2412.5, 2455) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H-57.5" id="wireGroup_126-1"/><path class="wire" d="M-57.5,0 c0,0 -2.5,0 -2.5,2.5" id="wireGroup_126-2"/><path class="wire" d="M-60,2.5 V25" id="wireGroup_126-3"/><path class="wire" d="M-60,25 c0,0 0,2.5 -2.5,2.5" id="wireGroup_126-4"/><path class="wire" d="M-62.5,27.5 L-77.5,27.5" id="wireGroup_126-5"/></g><g class="wireGroup wire-color-red" id="wireGroup_127" transform="translate(2412.5, 2462.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H-52.5" id="wireGroup_127-1"/><path class="wire" d="M-52.5,0 c0,0 -2.5,0 -2.5,2.5" id="wireGroup_127-2"/><path class="wire" d="M-55,2.5 V35" id="wireGroup_127-3"/><path class="wire" d="M-55,35 c0,0 0,2.5 -2.5,2.5" id="wireGroup_127-4"/><path class="wire" d="M-57.5,37.5 L-77.5,37.5" id="wireGroup_127-5"/></g><g class="wireGroup wire-color-red" id="wireGroup_128" transform="translate(2412.5, 2470) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H-47.5" id="wireGroup_128-1"/><path class="wire" d="M-47.5,0 c0,0 -2.5,0 -2.5,2.5" id="wireGroup_128-2"/><path class="wire" d="M-50,2.5 V45" id="wireGroup_128-3"/><path class="wire" d="M-50,45 c0,0 0,2.5 -2.5,2.5" id="wireGroup_128-4"/><path class="wire" d="M-52.5,47.5 L-77.5,47.5" id="wireGroup_128-5"/></g><g class="wireGroup wire-color-red" id="wireGroup_129" transform="translate(2412.5, 2477.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H-40" id="wireGroup_129-1"/><path class="wire" d="M-40,0 c0,0 -2.5,0 -2.5,2.5" id="wireGroup_129-2"/><path class="wire" d="M-42.5,2.5 V55" id="wireGroup_129-3"/><path class="wire" d="M-42.5,55 c0,0 0,2.5 -2.5,2.5" id="wireGroup_129-4"/><path class="wire" d="M-45,57.5 L-77.5,57.5" id="wireGroup_129-5"/></g><g class="wireGroup wire-color-red" id="wireGroup_130" transform="translate(2412.5, 2485) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H-32.5" id="wireGroup_130-1"/><path class="wire" d="M-32.5,0 c0,0 -2.5,0 -2.5,2.5" id="wireGroup_130-2"/><path class="wire" d="M-35,2.5 V65" id="wireGroup_130-3"/><path class="wire" d="M-35,65 c0,0 0,2.5 -2.5,2.5" id="wireGroup_130-4"/><path class="wire" d="M-37.5,67.5 L-77.5,67.5" id="wireGroup_130-5"/></g><g class="wireGroup wire-color-black" id="wireGroup_131" transform="translate(2327.5, 2552.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L-27.5,0" id="wireGroup_131-1"/></g><g class="wireGroup wire-color-black" id="wireGroup_132" transform="translate(2327.5, 2535) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L-27.5,0" id="wireGroup_132-1"/></g><g class="wireGroup wire-color-black" id="wireGroup_133" transform="translate(2327.5, 2517.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L-27.5,0" id="wireGroup_133-1"/></g><g class="wireGroup wire-color-black" id="wireGroup_134" transform="translate(2327.5, 2500) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L-27.5,0" id="wireGroup_134-1"/></g><g class="wireGroup wire-color-black" id="wireGroup_135" transform="translate(2327.5, 2482.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L-27.5,0" id="wireGroup_135-1"/></g><g class="wireGroup wire-color-black" id="wireGroup_136" transform="translate(2327.5, 2465) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L-27.5,0" id="wireGroup_136-1"/></g><g class="wireGroup wire-color-black" id="wireGroup_137" transform="translate(2327.5, 2447.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L-27.5,0" id="wireGroup_137-1"/></g><g class="wireGroup wire-color-black" id="wireGroup_139" transform="translate(2327.5, 2430) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L-27.5,0" id="wireGroup_139-1"/></g><g data-source-id="f602d742d033557ca922d3a0195c3b33" data-source-name="Resistor 1k" data-width="10" data-height="35" class="component" id="part_141" transform="translate(2505,2197.5) scale(1,1) rotate(90,5,17.5)"><rect class="helper-box" x="1.2499899864196777" y="1.5" width="7.500010013580322" height="32" fill="none"/>
+  <metadata>
+		<handlevalueas>resistor-bands</handlevalueas>
+	</metadata>
+	<defs>
+    <clipPath id="clippath">
+      <path d="m2.25,7.5h5.5c.55228,0,1,.44772,1,1v2.51393c0,.15525-.03615.30836-.10557.44721l-1.03886,2.07771c-.06943.13886-.10557.29197-.10557.44721v7.02786c0,.15525.03614.30836.10557.44721l1.03885,2.07771c.06943.13886.10557.29197.10557.44721v2.51393c0,.55228-.44772,1-1,1H2.24999c-.55228,0-1-.44772-1-1v-2.51393c0-.15525.03615-.30836.10557-.44721l1.03886-2.07771c.06943-.13886.10557-.29197.10557-.44721v-7.02786c0-.15525-.03614-.30836-.10557-.44721l-1.03885-2.07771c-.06943-.13886-.10557-.29197-.10557-.44721v-2.51393c0-.55228.44772-1,1-1Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <path class="draggable1" d="m5 7.5v-5" fill="none" stroke="#7b7d86" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+  <path class="draggable2" d="m5 27.5v5" fill="none" stroke="#7b7d86" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+  <path d="m2.25,7.5h5.5c.55228,0,1,.44772,1,1v2.51393c0,.15525-.03615.30836-.10557.44721l-1.03886,2.07771c-.06943.13886-.10557.29197-.10557.44721v7.02786c0,.15525.03614.30836.10557.44721l1.03885,2.07771c.06943.13886.10557.29197.10557.44721v2.51393c0,.55228-.44772,1-1,1H2.24999c-.55228,0-1-.44772-1-1v-2.51393c0-.15525.03615-.30836.10557-.44721l1.03886-2.07771c.06943-.13886.10557-.29197.10557-.44721v-7.02786c0-.15525-.03614-.30836-.10557-.44721l-1.03885-2.07771c-.06943-.13886-.10557-.29197-.10557-.44721v-2.51393c0-.55228.44772-1,1-1Z" fill="#fab66e"/>
+  <g clip-path="url(#clippath)" fill="none" stroke-miterlimit="10">
+    <line x1="8.75" x2="1.25" y1="25" y2="25" stroke="#fbdd71"/>
+    <g stroke-width="2">
+      <line class="colorband-1" x1="8.75" x2="1.25" y1="11.25" y2="11.25" stroke="#bf6030"/>
+      <line class="colorband-2" x1="8.75" x2="1.25" y1="15" y2="15" stroke="#2d3142"/>
+      <line class="colorband-3" x1="8.75" x2="1.25" y1="18.75" y2="18.75" stroke="#bf6030"/>
+    </g>
+  </g>
+  <circle class="connection_point draggable" data-draggable-path="draggable1" cx="5" cy="2.5" r="1" fill="#7b7d86" data-pin-name="pin1"/>
+  <circle class="connection_point draggable" data-draggable-path="draggable2" cx="5" cy="32.5" r="1" fill="#7b7d86" data-pin-name="pin2"/>
+<text class="component-reference component-text moveable-text locked" font-size="4.5px" x="10" y="16.5" style="display: none;">R2</text><text class="component-value component-text moveable-text locked" font-size="4.5px" x="10" y="21.5" style="display: none;">100</text></g><g class="wireGroup wire-color-black" id="wireGroup_142" transform="translate(2620, 2347.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H22.5" id="wireGroup_142-1"/><path class="wire" d="M22.5,0 c0,0 2.5,0 2.5,-2.5" id="wireGroup_142-2"/><path class="wire" d="M25,-2.5 V -130" id="wireGroup_142-3"/><path class="wire" d="M25,-130 c0,0 0,-2.5 -2.5,-2.5" id="wireGroup_142-4"/><path class="wire" d="M22.5,-132.5 L -95,-132.5" id="wireGroup_142-5"/></g><g class="wireGroup wire-color-black" id="wireGroup_143" transform="translate(2407.5, 2215) scale(1,1) rotate(0,0,0)"><path class="wire" d="M87.5,0 H -95" id="wireGroup_143-1"/><path class="wire" d="M-95,0 c0,0 -2.5,0 -2.5,2.5" id="wireGroup_143-2"/><path class="wire" d="M-97.5,2.5 L-97.5,55" id="wireGroup_143-3"/></g><g class="wireGroup wire-color-black" id="wireGroup_144" transform="translate(2510, 2582.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 H-207.5" id="wireGroup_144-1"/><path class="wire" d="M-207.5,0 c0,0 -2.5,0 -2.5,-2.5" id="wireGroup_144-2"/><path class="wire" d="M-210,-2.5 L-210,-295" id="wireGroup_144-3"/></g><g class="wireGroup wire-color-black" id="wireGroup_145" transform="translate(2327.5, 2270) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L-17.5,0" id="wireGroup_145-1"/></g><g class="wireGroup wire-color-black" id="wireGroup_146" transform="translate(2327.5, 2242.5) scale(1,1) rotate(0,0,0)"><path class="wire" d="M0,0 L-17.5,0" id="wireGroup_146-1"/></g><text class="moveable-text textObject" font-family="Nunito-Medium, Nunito" font-size="8px" fill="#2d3142" x="0" y="0" transform="translate(2500,2207.5) scale(1,1) rotate(0,0,0)" id="layout_text_147">100R</text><text class="moveable-text textObject" font-family="Nunito-Medium, Nunito" font-size="8px" fill="#2d3142" x="-1.2748088360240217" y="-15.722642310960055" transform="translate(2515.798598130841, 2592.679269328802) scale(1,1) rotate(0,0,0)" id="layout_text_148">470R</text><text class="moveable-text textObject" font-family="Nunito-Medium, Nunito" font-size="8px" fill="#2d3142" x="-21.246813933729754" y="35.69464740866624" transform="translate(2568.0657604078165, 2418.030458793543) scale(1,1) rotate(0,0,0)" id="layout_text_149">10uF</text></g><g transform="translate(107.5, 411.911865234375)" opacity="0.35">
+ <g transform="translate(-2.5 -2.5)">
+  <g transform="matrix(.5 0 0 .5 68.316 2.5)">
+   <path d="m-125.48 22q-0.38133 0-0.58933-0.19067-0.19067-0.208-0.19067-0.58933v-10.66q0-0.38133 0.19067-0.572 0.208-0.208 0.58933-0.208h3.3453q2.964 0 4.576 1.56 1.612 1.56 1.612 4.5413 0 1.4907-0.41599 2.6347-0.39867 1.1267-1.196 1.9067-0.79733 0.78-1.9413 1.1787t-2.6347 0.39867zm0.64133-1.2133h2.6q1.2133 0 2.0973-0.312 0.90133-0.312 1.4907-0.91866 0.60667-0.60667 0.90133-1.5253 0.29467-0.936 0.29467-2.1493 0-2.444-1.196-3.6573-1.196-1.2307-3.588-1.2307h-2.6zm15.045 1.3693q-1.3347 0-2.3053-0.52-0.95333-0.53733-1.4907-1.508-0.52-0.97066-0.52-2.3227 0-1.3173 0.52-2.288 0.52-0.988 1.4213-1.5427 0.91867-0.55466 2.1147-0.55466 0.84933 0 1.5253 0.29467 0.676 0.27733 1.144 0.81466 0.48534 0.53733 0.728 1.3 0.26 0.76267 0.26 1.716 0 0.27733-0.156 0.416-0.156 0.12133-0.45066 0.12133h-6.032v-0.91866h5.7026l-0.27733 0.22533q0-0.936-0.27733-1.5773-0.27733-0.65866-0.81467-1.0053-0.51999-0.34667-1.3173-0.34667-0.88399 0-1.508 0.416-0.60667 0.39867-0.91867 1.1267-0.312 0.71067-0.312 1.664v0.104q0 1.5947 0.76267 2.4267 0.78 0.832 2.2013 0.832 0.58933 0 1.1613-0.156 0.58933-0.156 1.144-0.52 0.24266-0.156 0.43333-0.13867 0.208 0 0.32933 0.12133 0.12133 0.104 0.156 0.27733 0.052 0.156-0.0347 0.34667-0.0693 0.19067-0.29466 0.32933-0.572 0.416-1.352 0.64133t-1.5427 0.22533zm8.268 0q-0.78 0-1.5773-0.19067-0.78-0.19067-1.456-0.65866-0.17334-0.12133-0.24267-0.27733-0.0693-0.17333-0.052-0.32933 0.0347-0.17333 0.13867-0.29467 0.12133-0.12133 0.27733-0.13867 0.17333-0.03467 0.38133 0.06933 0.676 0.416 1.3 0.58933 0.64133 0.156 1.2653 0.156 0.988 0 1.4907-0.364 0.50267-0.364 0.50267-0.988 0-0.48533-0.32933-0.76266-0.32934-0.29467-1.04-0.45067l-1.5773-0.34667q-1.092-0.22533-1.6293-0.78-0.52-0.55466-0.52-1.4387 0-0.78 0.39866-1.3347 0.416-0.572 1.1613-0.884 0.74533-0.312 1.7333-0.312 0.76266 0 1.4387 0.208 0.69333 0.19067 1.248 0.624 0.17333 0.12133 0.22533 0.29467 0.06933 0.156 0.01733 0.32933-0.03467 0.156-0.156 0.27733-0.12133 0.104-0.29467 0.12133-0.17333 0.01733-0.364-0.104-0.52-0.34667-1.0573-0.50267-0.53734-0.17333-1.0573-0.17333-0.97067 0-1.4733 0.38133-0.50266 0.38133-0.50266 1.0053 0 0.48533 0.312 0.79733t0.97066 0.45067l1.5773 0.32933q1.1267 0.24267 1.6813 0.78 0.572 0.52 0.572 1.4213 0 1.144-0.91866 1.82-0.91867 0.676-2.444 0.676zm6.188-0.06933q-0.34667 0-0.52-0.19067-0.17333-0.208-0.17333-0.572v-7.0893q0-0.364 0.17333-0.55467t0.52-0.19067q0.32933 0 0.52 0.19067t0.19067 0.55467v7.0893q0 0.364-0.19067 0.572-0.17333 0.19067-0.52 0.19067zm0-10.539q-0.43333 0-0.676-0.22533-0.24267-0.24267-0.24267-0.64133 0-0.416 0.24267-0.624 0.24267-0.22533 0.676-0.22533 0.45067 0 0.676 0.22533 0.24267 0.208 0.24267 0.624 0 0.39867-0.24267 0.64133-0.22533 0.22533-0.676 0.22533zm7.0547 13.728q-0.91866 0-1.8027-0.22533-0.86666-0.208-1.5773-0.676-0.208-0.12133-0.27733-0.29467-0.052-0.17333-0.01733-0.34667 0.03467-0.156 0.156-0.29467 0.12133-0.12133 0.27733-0.156 0.17333-0.03467 0.34667 0.052 0.76266 0.468 1.456 0.64133t1.3693 0.17333q1.2307 0 1.8547-0.65866 0.64133-0.65867 0.64133-1.9067v-1.9587h0.17333q-0.26 1.0053-1.1093 1.5947-0.832 0.58933-1.9587 0.58933-1.1613 0-2.0107-0.52-0.84933-0.53733-1.3173-1.4907-0.45067-0.95333-0.45067-2.2013 0-0.936 0.26-1.6987 0.26-0.78 0.74533-1.3173 0.50267-0.55467 1.196-0.84933 0.71066-0.312 1.5773-0.312 1.144 0 1.976 0.58933 0.832 0.572 1.0747 1.56l-0.17333 0.208v-1.612q0-0.34667 0.17333-0.52 0.19067-0.19067 0.52-0.19067 0.34667 0 0.52 0.19067 0.17333 0.17333 0.17333 0.52v7.228q0 1.924-0.97066 2.8947-0.95333 0.988-2.8253 0.988zm-0.208-4.6107q0.81466 0 1.404-0.364 0.58933-0.38133 0.90133-1.0747 0.32933-0.69333 0.32933-1.6293 0-1.404-0.71066-2.2187-0.71066-0.832-1.924-0.832-0.79733 0-1.3867 0.38133-0.58933 0.364-0.91866 1.0573-0.312 0.676-0.312 1.612 0 1.404 0.71067 2.236 0.71066 0.832 1.9067 0.832zm7.332 1.456q-0.34667 0-0.52-0.19067t-0.17333-0.53733v-7.228q0-0.34667 0.17333-0.52 0.17333-0.19067 0.50266-0.19067 0.32933 0 0.50267 0.19067 0.19067 0.17333 0.19067 0.52v1.4907l-0.19067-0.208q0.364-1.0053 1.1787-1.508 0.832-0.52 1.9067-0.52 1.0053 0 1.664 0.364 0.676 0.364 1.0053 1.1093 0.32933 0.728 0.32933 1.8547v4.6453q0 0.34667-0.19067 0.53733-0.17333 0.19067-0.50267 0.19067-0.34667 0-0.53733-0.19067-0.17333-0.19067-0.17333-0.53733v-4.5587q0-1.1787-0.468-1.716-0.45067-0.55467-1.456-0.55467-1.1613 0-1.8547 0.728-0.676 0.71066-0.676 1.9067v4.1947q0 0.728-0.71066 0.728zm12.948 0.03467q-1.3347 0-2.3053-0.52-0.95333-0.53733-1.4907-1.508-0.52-0.97066-0.52-2.3227 0-1.3173 0.52-2.288 0.52-0.988 1.4213-1.5427 0.91866-0.55466 2.1147-0.55466 0.84933 0 1.5253 0.29467 0.676 0.27733 1.144 0.81466 0.48533 0.53733 0.728 1.3 0.26 0.76267 0.26 1.716 0 0.27733-0.156 0.416-0.156 0.12133-0.45067 0.12133h-6.032v-0.91866h5.7027l-0.27733 0.22533q0-0.936-0.27733-1.5773-0.27733-0.65866-0.81466-1.0053-0.52-0.34667-1.3173-0.34667-0.884 0-1.508 0.416-0.60667 0.39867-0.91866 1.1267-0.312 0.71067-0.312 1.664v0.104q0 1.5947 0.76266 2.4267 0.78 0.832 2.2013 0.832 0.58933 0 1.1613-0.156 0.58933-0.156 1.144-0.52 0.24267-0.156 0.43333-0.13867 0.208 0 0.32933 0.12133 0.12133 0.104 0.156 0.27733 0.052 0.156-0.03467 0.34667-0.06933 0.19067-0.29467 0.32933-0.572 0.416-1.352 0.64133-0.78 0.22533-1.5427 0.22533zm8.632 0q-1.1267 0-1.976-0.53733-0.832-0.53733-1.3-1.508-0.45067-0.988-0.45067-2.3227 0-1.352 0.45067-2.3227 0.468-0.988 1.3-1.508 0.84933-0.53733 1.976-0.53733 1.144 0 1.9587 0.572 0.81466 0.572 1.092 1.5427h-0.19067v-5.1653q0-0.34667 0.17333-0.52 0.19067-0.19067 0.53733-0.19067 0.32933 0 0.50267 0.19067 0.19067 0.17333 0.19067 0.52v11.024q0 0.34667-0.17333 0.53733t-0.52 0.19067q-0.32933 0-0.52-0.19067-0.17333-0.19067-0.17333-0.53733v-1.6467l0.19067 0.24267q-0.27733 0.988-1.1093 1.5773-0.81466 0.58933-1.9587 0.58933zm0.29467-1.1267q0.78 0 1.3693-0.38133 0.58933-0.38133 0.90133-1.1093 0.32933-0.728 0.32933-1.7507 0-1.5773-0.71066-2.4093-0.69333-0.832-1.8893-0.832-0.79733 0-1.3867 0.38133-0.572 0.364-0.90133 1.092-0.312 0.71066-0.312 1.768 0 1.56 0.71067 2.4093 0.71066 0.832 1.8893 0.832zm15.184 1.092q-0.312 0-0.50267-0.156-0.19067-0.17333-0.312-0.50266l-3.8307-10.937q-0.12133-0.364 0.052-0.60667 0.19067-0.26 0.58933-0.26 0.29467 0 0.468 0.156 0.17333 0.13867 0.29467 0.45067l3.588 10.521h-0.60666l3.6573-10.469q0.12133-0.32933 0.29467-0.48533 0.17333-0.17333 0.468-0.17333 0.27733 0 0.43333 0.17333 0.17333 0.156 0.29467 0.48533l3.6053 10.469h-0.53733l3.6227-10.521q0.08667-0.29467 0.26-0.45067 0.19067-0.156 0.48533-0.156 0.364 0 0.53733 0.24267 0.17333 0.24267 0.03467 0.624l-3.848 10.937q-0.12133 0.32933-0.312 0.50266-0.17333 0.156-0.50267 0.156-0.312 0-0.50266-0.156-0.17333-0.17333-0.312-0.50266l-3.484-10.036h0.38133l-3.5187 10.036q-0.12133 0.32933-0.29467 0.50266-0.17333 0.156-0.50267 0.156zm16.077-0.03467q-0.34667 0-0.52-0.19067-0.17333-0.208-0.17333-0.572v-7.0893q0-0.364 0.17333-0.55467t0.52-0.19067q0.32933 0 0.52 0.19067t0.19067 0.55467v7.0893q0 0.364-0.19067 0.572-0.17333 0.19067-0.52 0.19067zm0-10.539q-0.43333 0-0.676-0.22533-0.24267-0.24267-0.24267-0.64133 0-0.416 0.24267-0.624 0.24267-0.22533 0.676-0.22533 0.45067 0 0.676 0.22533 0.24267 0.208 0.24267 0.624 0 0.39867-0.24267 0.64133-0.22533 0.22533-0.676 0.22533zm6.708 10.608q-0.988 0-1.664-0.34667-0.65866-0.364-0.988-1.04-0.32933-0.69333-0.32933-1.6813v-4.42h-1.1613q-0.29467 0-0.45067-0.13867-0.156-0.156-0.156-0.416 0-0.26 0.156-0.39867 0.156-0.13867 0.45067-0.13867h1.1613v-1.9933q0-0.34667 0.19067-0.52 0.19067-0.19067 0.52-0.19067t0.50267 0.19067q0.19067 0.17333 0.19067 0.52v1.9933h2.184q0.29467 0 0.45066 0.13867 0.156 0.13867 0.156 0.39867 0 0.26-0.156 0.416-0.156 0.13867-0.45066 0.13867h-2.184v4.2813q0 0.988 0.416 1.508 0.416 0.50267 1.352 0.50267 0.32933 0 0.55467-0.06933 0.24267-0.06933 0.39867-0.06933 0.156-0.01733 0.26 0.104 0.104 0.12133 0.104 0.416 0 0.208-0.08667 0.38133-0.06933 0.17333-0.26 0.24267-0.208 0.06933-0.55466 0.12133-0.32933 0.06933-0.60667 0.06933zm3.4859-0.03467q-0.34667 0-0.52-0.19067t-0.17333-0.53733v-11.024q0-0.34667 0.17333-0.52 0.17333-0.19067 0.52-0.19067 0.32933 0 0.52 0.19067 0.19067 0.17333 0.19067 0.52v5.0787h-0.22533q0.364-1.0053 1.1787-1.508 0.832-0.52 1.9067-0.52 1.0053 0 1.664 0.364 0.676 0.364 1.0053 1.1093 0.32933 0.728 0.32933 1.8547v4.6453q0 0.34667-0.19067 0.53733-0.17333 0.19067-0.50267 0.19067-0.34667 0-0.53733-0.19067-0.17333-0.19067-0.17333-0.53733v-4.5587q0-1.1787-0.468-1.716-0.45067-0.55467-1.456-0.55467-1.1613 0-1.8547 0.728-0.676 0.71066-0.676 1.9067v4.1947q0 0.728-0.71066 0.728z" fill="#2d3142" aria-label="Designed With"/>
+   <path d="m16 3.2c-7.0692 0-12.8 5.7308-12.8 12.8 0 7.0692 5.7308 12.8 12.8 12.8 0.8837 0 1.6 0.7163 1.6 1.6 0 0.8836-0.7163 1.6-1.6 1.6-8.8366 0-16-7.1635-16-16 0-8.8366 7.1634-16 16-16 0.8837 0 1.6 0.71634 1.6 1.6 0 0.88366-0.7163 1.6-1.6 1.6z" clip-rule="evenodd" fill="#f7a541" fill-rule="evenodd"/>
+   <path d="m19.121 31.696c-1.0106 0.1999-2.0543 0.3045-3.1208 0.3045-0.8837 0-1.6-0.7163-1.6-1.6s0.7163-1.6 1.6-1.6c0.8569 0 1.6926-0.084 2.4998-0.2437 0.8669-0.1715 1.7086 0.3922 1.8801 1.2591s-0.3922 1.7086-1.2591 1.8801zm3.5505-2.8308c-0.4916-0.7343-0.2948-1.7281 0.4395-2.2197 1.3965-0.935 2.5992-2.1377 3.5342-3.5342 0.4916-0.7343 1.4854-0.9311 2.2197-0.4395 0.7342 0.4916 0.931 1.4854 0.4394 2.2197-1.1677 1.7441-2.669 3.2454-4.4131 4.4131-0.7343 0.4916-1.7281 0.2948-2.2197-0.4394zm7.1441-8.4848c-0.8669-0.1715-1.4306-1.0132-1.2591-1.8801 0.1597-0.8072 0.2437-1.6429 0.2437-2.4998s-0.084-1.6926-0.2437-2.4998c-0.1715-0.8669 0.3922-1.7086 1.2591-1.8801s1.7086 0.3922 1.8801 1.2591c0.1999 1.0106 0.3045 2.0543 0.3045 3.1208s-0.1046 2.1102-0.3045 3.1208c-0.1715 0.8669-1.0132 1.4306-1.8801 1.2591zm-0.9507-11.051c-0.7343 0.4916-1.7281 0.29485-2.2197-0.43944-0.935-1.3966-2.1377-2.5993-3.5342-3.5342-0.7343-0.49159-0.9311-1.4854-0.4395-2.2196 0.4916-0.7343 1.4854-0.93104 2.2197-0.43944 1.7441 1.1677 3.2454 2.669 4.4131 4.4131 0.4916 0.73429 0.2948 1.7281-0.4394 2.2197zm-8.4848-7.1441c-0.1715 0.86685-1.0132 1.4306-1.8801 1.2591-0.8072-0.1597-1.6429-0.24367-2.4998-0.24367-0.8836 0-1.6-0.71635-1.6-1.6 0-0.88366 0.7164-1.6 1.6-1.6 1.0665 9.324e-8 2.1102 0.10457 3.1208 0.30451 0.8669 0.17149 1.4306 1.0132 1.2591 1.8801z" clip-rule="evenodd" fill="#f7a541" fill-rule="evenodd"/>
+   <path d="m16.361 10.4c-3.3665 0-5.9606 2.5799-5.9606 5.5999 0 3.0201 2.5941 5.6 5.9606 5.6 1.6932 0 3.207-0.6609 4.2845-1.7076 0.6339-0.6157 1.6468-0.601 2.2625 0.0328 0.6158 0.6338 0.6011 1.6468-0.0327 2.2625-1.6669 1.6192-3.9775 2.6123-6.5143 2.6123-4.9847 0-9.1606-3.8671-9.1606-8.8 0-4.9328 4.1759-8.8 9.1606-8.8 2.5368 0 4.8474 0.99313 6.5143 2.6124 0.6338 0.6157 0.6485 1.6287 0.0327 2.2625-0.6157 0.6338-1.6286 0.6485-2.2625 0.0328-1.0775-1.0467-2.5913-1.7076-4.2845-1.7076z" clip-rule="evenodd" fill="#f7a541" fill-rule="evenodd"/>
+   <path d="m49.551 23c-3.6394 0-6.5509-2.7762-6.5509-6.8414 0-4.0651 2.9115-6.8413 6.5509-6.8413 1.9921 0 3.4096 0.77342 4.4439 1.9433 0.1533 0.1587 0.2299 0.3966 0.2299 0.6346 0 0.5156-0.4023 0.932-0.9003 0.932-0.2873 0-0.5363-0.119-0.6896-0.3173-0.747-0.8725-1.8388-1.4277-3.0839-1.4277-2.5859 0-4.578 2.1019-4.578 5.0764 0 2.9547 1.9921 5.0765 4.578 5.0765 1.2451 0 2.3369-0.5552 3.1031-1.4277 0.1532-0.1983 0.3831-0.3173 0.6704-0.3173 0.498 0 0.9003 0.4164 0.9003 0.932 0 0.238-0.0766 0.4759-0.2299 0.6346-1.0535 1.1699-2.4518 1.9433-4.4439 1.9433z" fill="#2d3142"/>
+   <path d="m57.192 11.28c-0.5938 0-1.111-0.5156-1.111-1.1502 0-0.63455 0.5172-1.1303 1.111-1.1303 0.613 0 1.111 0.49575 1.111 1.1303 0 0.6346-0.498 1.1502-1.111 1.1502zm0 11.581c-0.4597 0-0.8428-0.3966-0.8428-0.8924v-7.9915c0-0.4957 0.3831-0.8923 0.862-0.8923 0.4597 0 0.8619 0.3966 0.8619 0.8923v7.9915c0 0.4958-0.4022 0.8924-0.8811 0.8924z" fill="#2d3142"/>
+   <path d="m64.957 13.026c0.4981 0 0.7279 0.3966 0.7279 0.8527 0 0.4164-0.3065 0.7734-0.9003 0.8527-0.7662 0.0793-1.8388 0.6544-2.2411 1.3682v5.8697c0 0.4958-0.4022 0.8924-0.8619 0.8924-0.4789 0-0.862-0.3966-0.862-0.8924v-7.9915c0-0.4957 0.3831-0.8923 0.8428-0.8923 0.4789 0 0.8811 0.3966 0.8811 0.8923v0.6743c0.5172-0.7139 1.2451-1.3088 1.9155-1.527 0.2107-0.0594 0.3448-0.0991 0.498-0.0991z" fill="#2d3142"/>
+   <path d="m66.717 17.963c0-2.8754 1.9154-5.017 4.712-5.017 1.3217 0 2.2411 0.4362 2.9499 1.1105 0.1532 0.1388 0.2681 0.3767 0.2681 0.5949 0 0.456-0.3447 0.813-0.7662 0.813-0.2107 0-0.383-0.0793-0.5171-0.1983-0.5364-0.5156-1.1302-0.7337-1.858-0.7337-1.8197 0-2.9882 1.4476-2.9882 3.4306s1.1685 3.4504 2.9882 3.4504c0.7278 0 1.3216-0.2181 1.858-0.7337 0.1149-0.119 0.3064-0.1983 0.498-0.1983 0.4405 0 0.7853 0.3569 0.7853 0.7932 0 0.2379-0.1149 0.4759-0.2681 0.6147-0.7088 0.6742-1.6282 1.1105-2.9499 1.1105-2.7966 0-4.712-2.1615-4.712-5.0368z" fill="#2d3142"/>
+   <path d="m83.882 13.085c0.4789 0 0.8811 0.3966 0.8811 0.8923v7.9915c0 0.4958-0.4022 0.8924-0.8619 0.8924-0.4789 0-0.862-0.3966-0.862-0.8924v-0.5155c-0.6896 0.7932-1.858 1.5467-3.2946 1.5467-1.9729 0-2.9498-1.0312-2.9498-3.0538v-5.9689c0-0.4957 0.3831-0.8923 0.8619-0.8923 0.4597 0 0.862 0.3966 0.862 0.8923v5.374c0 1.5864 0.7662 2.0623 1.9538 2.0623 1.0726 0 2.0495-0.6346 2.5667-1.3484v-6.0879c0-0.4957 0.3831-0.8923 0.8428-0.8923z" fill="#2d3142"/>
+   <path d="m88.337 11.28c-0.5938 0-1.111-0.5156-1.111-1.1502 0-0.63455 0.5172-1.1303 1.111-1.1303 0.6129 0 1.111 0.49575 1.111 1.1303 0 0.6346-0.4981 1.1502-1.111 1.1502zm0 11.581c-0.4597 0-0.8428-0.3966-0.8428-0.8924v-7.9915c0-0.4957 0.3831-0.8923 0.8619-0.8923 0.4598 0 0.862 0.3966 0.862 0.8923v7.9915c0 0.4958-0.4022 0.8924-0.8811 0.8924z" fill="#2d3142"/>
+   <path d="m95.547 21.295c0.4406 0 0.7279 0.3173 0.7279 0.7536 0 0.3371-0.1724 0.575-0.4406 0.6742-0.3256 0.1586-0.7662 0.2776-1.3217 0.2776-1.4557 0-2.2027-0.8527-2.2027-2.3598v-5.8895h-0.8812c-0.4022 0-0.7661-0.3569-0.7661-0.7932 0-0.4164 0.3639-0.7734 0.7661-0.7734h0.8812v-1.8243c0-0.4958 0.3831-0.8924 0.8619-0.8924 0.4597 0 0.862 0.3966 0.862 0.8924v1.8243h1.2067c0.4214 0 0.7662 0.357 0.7662 0.7734 0 0.4363-0.3448 0.7932-0.7662 0.7932h-1.2067v5.4929c0 0.6742 0.3065 1.17 0.9003 1.17 0.3256 0 0.4405-0.119 0.6129-0.119z" fill="#2d3142"/>
+   <path d="m108.81 23c-3.639 0-6.551-2.7762-6.551-6.8414 0-4.0651 2.912-6.8413 6.551-6.8413 1.992 0 3.409 0.77342 4.444 1.9433 0.153 0.1587 0.23 0.3966 0.23 0.6346 0 0.5156-0.403 0.932-0.901 0.932-0.287 0-0.536-0.119-0.689-0.3173-0.747-0.8725-1.839-1.4277-3.084-1.4277-2.586 0-4.578 2.1019-4.578 5.0764 0 2.9547 1.992 5.0765 4.578 5.0765 1.245 0 2.337-0.5552 3.103-1.4277 0.153-0.1983 0.383-0.3173 0.67-0.3173 0.498 0 0.901 0.4164 0.901 0.932 0 0.238-0.077 0.4759-0.23 0.6346-1.054 1.1699-2.452 1.9433-4.444 1.9433z" fill="#2d3142"/>
+   <path d="m119.32 12.946c2.011 0 3.716 0.9122 3.716 3.3513v5.6713c0 0.4958-0.402 0.8924-0.862 0.8924s-0.862-0.3966-0.862-0.8924v-0.2776c-0.709 0.8527-1.781 1.3088-3.026 1.3088-1.533 0-3.218-1.0708-3.218-3.1728 0-2.1813 1.666-3.1331 3.218-3.1331 1.245 0 2.317 0.4164 3.026 1.2691v-1.5864c0-1.1898-0.939-1.9037-2.26-1.9037-0.843 0-1.571 0.2578-2.28 0.8328-0.115 0.0794-0.268 0.1389-0.421 0.1389-0.383 0-0.69-0.3372-0.69-0.7338 0-0.2379 0.115-0.456 0.288-0.575 0.977-0.8131 2.088-1.1898 3.371-1.1898zm-0.383 8.8045c0.958 0 1.858-0.3768 2.375-1.0906v-1.6261c-0.517-0.7139-1.417-1.0907-2.375-1.0907-1.245 0-2.126 0.7734-2.126 1.9037s0.881 1.9037 2.126 1.9037z" fill="#2d3142"/>
+   <path d="m130.8 12.946c1.954 0 2.969 1.0708 2.969 3.0935v5.9291c0 0.4958-0.402 0.8924-0.881 0.8924-0.46 0-0.843-0.3966-0.843-0.8924v-5.3342c0-1.5864-0.785-2.102-1.973-2.102-1.073 0-2.049 0.6742-2.547 1.3881v6.0481c0 0.4958-0.403 0.8924-0.862 0.8924-0.479 0-0.862-0.3966-0.862-0.8924v-7.9915c0-0.4957 0.383-0.8923 0.842-0.8923 0.479 0 0.882 0.3966 0.882 0.8923v0.5354c0.632-0.7535 1.858-1.5665 3.275-1.5665z" fill="#2d3142"/>
+   <path d="m143.38 13.085c0.479 0 0.862 0.3966 0.862 0.8923 0 0.119-0.038 0.238-0.077 0.357l-3.045 7.6742c-0.211 0.5156-0.69 0.8527-1.226 0.8527-0.575 0-1.054-0.3371-1.245-0.8527l-3.065-7.6941c-0.038-0.0991-0.058-0.2181-0.058-0.3371 0-0.4957 0.364-0.8923 0.843-0.8923 0.345 0 0.69 0.2379 0.805 0.5552l2.701 7.0992 2.7-7.0992c0.115-0.3173 0.441-0.5552 0.805-0.5552z" fill="#2d3142"/>
+   <path d="m149.74 12.946c2.011 0 3.716 0.9122 3.716 3.3513v5.6713c0 0.4958-0.403 0.8924-0.862 0.8924-0.46 0-0.862-0.3966-0.862-0.8924v-0.2776c-0.709 0.8527-1.782 1.3088-3.027 1.3088-1.532 0-3.218-1.0708-3.218-3.1728 0-2.1813 1.667-3.1331 3.218-3.1331 1.245 0 2.318 0.4164 3.027 1.2691v-1.5864c0-1.1898-0.939-1.9037-2.261-1.9037-0.842 0-1.57 0.2578-2.279 0.8328-0.115 0.0794-0.268 0.1389-0.421 0.1389-0.384 0-0.69-0.3372-0.69-0.7338 0-0.2379 0.115-0.456 0.287-0.575 0.977-0.8131 2.088-1.1898 3.372-1.1898zm-0.384 8.8045c0.958 0 1.858-0.3768 2.376-1.0906v-1.6261c-0.518-0.7139-1.418-1.0907-2.376-1.0907-1.245 0-2.126 0.7734-2.126 1.9037s0.881 1.9037 2.126 1.9037z" fill="#2d3142"/>
+   <path d="m155.89 21.929c-0.192-0.1388-0.326-0.3768-0.326-0.6346 0-0.4362 0.326-0.7734 0.747-0.7734 0.153 0 0.306 0.0595 0.421 0.1389 0.709 0.5354 1.629 0.9121 2.605 0.9121 1.303 0 1.993-0.5552 1.993-1.3682 0-0.9519-1.054-1.2692-2.242-1.5468-1.57-0.3767-3.409-0.813-3.409-2.8753 0-1.5269 1.264-2.8357 3.524-2.8357 1.284 0 2.299 0.3966 3.084 0.9915 0.173 0.1388 0.307 0.3371 0.307 0.5949 0 0.3966-0.326 0.7337-0.709 0.7337-0.134 0-0.287-0.0595-0.383-0.1388-0.594-0.4561-1.398-0.7337-2.279-0.7337-1.169 0-1.897 0.4759-1.897 1.2493 0 0.8328 0.996 1.1104 2.146 1.3881 1.609 0.3767 3.524 0.8328 3.524 3.034 0 1.6458-1.303 2.9348-3.735 2.9348-1.284 0-2.433-0.3371-3.371-1.0708z" fill="#2d3142"/>
+  </g>
+ </g>
+</g></svg>

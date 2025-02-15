@@ -11,9 +11,15 @@ Ticker onboardLedTicker;
 // Global ticker for fire PWM effect.
 Ticker fireTicker;
 
-// Specify the array of D-pins connected to your external LEDs.
-const int ledPins[] = {D8, D7, D6, D5, D3}; // <-- Change or add pins as needed.
-const int numLeds = sizeof(ledPins) / sizeof(ledPins[0]);
+// Shift register pins.
+const int shiftRegisterLatch = D6; // ST_CP
+const int shiftRegisterClock = D7; // SH_CP
+const int shiftRegisterData = D8;  // DS
+
+const int numShiftLEDs = 16; // two 8-bit registers
+
+// Variable holding current output state for the shift register.
+uint16_t shiftRegisterValue = 0;
 
 // Pin for the pulsating LED.
 const int pulsatingPin = D1;
@@ -38,18 +44,31 @@ const unsigned long fireDuration = 1000; // Fade duration (ms)
 AsyncWebServer server(80);
 AsyncCorsMiddleware *cors = new AsyncCorsMiddleware();
 
+// Helper: Update the shift register outputs.
+// Sends 16 bits (high byte first, then low byte).
+void updateShiftRegister()
+{
+  digitalWrite(shiftRegisterLatch, LOW);
+  shiftOut(shiftRegisterData, shiftRegisterClock, MSBFIRST, highByte(shiftRegisterValue));
+  shiftOut(shiftRegisterData, shiftRegisterClock, MSBFIRST, lowByte(shiftRegisterValue));
+  digitalWrite(shiftRegisterLatch, HIGH);
+}
+
+// Update external LEDs: for each of the 16 outputs, randomly toggle a bit.
 void updateExternalLEDs()
 {
   if (blinkingEnabled)
   {
-    // For each LED, randomly toggle based on blinkingChance.
-    for (int i = 0; i < numLeds; i++)
+    for (int i = 0; i < numShiftLEDs; i++)
     {
       if (random(100) < blinkingChance)
       {
-        digitalWrite(ledPins[i], !digitalRead(ledPins[i]));
+        // Toggle bit i.
+        bool bitVal = bitRead(shiftRegisterValue, i);
+        bitWrite(shiftRegisterValue, i, !bitVal);
       }
     }
+    updateShiftRegister();
   }
 }
 
@@ -90,12 +109,13 @@ void setup()
 {
   Serial.begin(115200);
 
-  // Initialize external LED pins.
-  for (int i = 0; i < numLeds; i++)
-  {
-    pinMode(ledPins[i], OUTPUT);
-    digitalWrite(ledPins[i], LOW);
-  }
+  // Set shift register pins as outputs.
+  pinMode(shiftRegisterLatch, OUTPUT);
+  pinMode(shiftRegisterClock, OUTPUT);
+  pinMode(shiftRegisterData, OUTPUT);
+  // Initialize shift register (all outputs off).
+  shiftRegisterValue = 0;
+  updateShiftRegister();
 
   // Initialize onboard LED.
   pinMode(LED_BUILTIN, OUTPUT);
@@ -137,17 +157,18 @@ void setup()
             {
       blinkingEnabled = true;
       // Start the ticker callback with the current interval.
+      externalLedTicker.detach();
       externalLedTicker.attach_ms(interval, updateExternalLEDs);
       request->send(200, "text/plain", "Blinking started"); });
 
   server.on("/stop", HTTP_GET, [](AsyncWebServerRequest *request)
             {
-      blinkingEnabled = false;
-      externalLedTicker.detach(); // Stop the ticker callback.
-      for (int i = 0; i < numLeds; i++) {
-        digitalWrite(ledPins[i], LOW);
-      }
-      request->send(200, "text/plain", "Blinking stopped"); });
+        blinkingEnabled = false;
+        externalLedTicker.detach();
+        // Turn off all shift register outputs.
+        shiftRegisterValue = 0;
+        updateShiftRegister();
+        request->send(200, "text/plain", "Blinking stopped"); });
 
   server.on("/setfade", HTTP_GET, [](AsyncWebServerRequest *request)
             {
