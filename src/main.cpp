@@ -1,8 +1,9 @@
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
-#include <ESPAsyncWebServer.h> // New async server include
-#include <ESPAsyncTCP.h>       // Required library for async server
-#include <Ticker.h>            // Required library for pulsating LED
+#include <ESPAsyncWebServer.h>    // New async server include
+#include <ESPAsyncTCP.h>          // Required library for async server
+#include <Ticker.h>               // Required library for pulsating LED
+#include <ShiftRegister74HC595.h> // Shift register library
 
 // Global ticker for external LED blinking.
 Ticker externalLedTicker;
@@ -12,47 +13,38 @@ Ticker onboardLedTicker;
 Ticker fireTicker;
 
 // Shift register pins.
+const int shiftRegisterData = D5;  // DS
 const int shiftRegisterLatch = D6; // ST_CP
 const int shiftRegisterClock = D7; // SH_CP
-const int shiftRegisterData = D8;  // DS
 
-const int numShiftLEDs = 16; // two 8-bit registers
+const int numShiftLEDs = 16; // Two cascaded 8-bit registers
+
+ShiftRegister74HC595<2> shiftRegs(shiftRegisterData, shiftRegisterClock, shiftRegisterLatch);
 
 // Variable holding current output state for the shift register.
 uint16_t shiftRegisterValue = 0;
 
 // Pin for the pulsating LED.
-const int pulsatingPin = D1;
+const int pulsatingPin = D3;
 const int pulsatingMaxPWM = 1023;
 
 // New pin for "fire" PWM effect.
 const int firePin = D2;
+const int fireInterval = 20;            // Fade interval (ms)
+const unsigned long fireDuration = 700; // Fade duration (ms)
+unsigned long fireStartTime = 0;
 
 // Timing variables for external LEDs.
-unsigned long interval = 200;
-unsigned long previousMillis = 0;
-int blinkingChance = 30; // in percent
-
-// Other globals.
-int fadeAmount = 5; // PWM step (0-1023)
+unsigned long blinkingInterval = 200;
+unsigned int blinkingChance = 30; // in percent
 bool blinkingEnabled = false;
-bool firingSequence = false;
-unsigned long fireStartTime = 0;
-const unsigned long fireDuration = 1000; // Fade duration (ms)
+
+// Fading LED value
+unsigned int fadeAmount = 0; // PWM step (0-1023)
 
 // Create an async web server on port 80.
 AsyncWebServer server(80);
 AsyncCorsMiddleware *cors = new AsyncCorsMiddleware();
-
-// Helper: Update the shift register outputs.
-// Sends 16 bits (high byte first, then low byte).
-void updateShiftRegister()
-{
-  digitalWrite(shiftRegisterLatch, LOW);
-  shiftOut(shiftRegisterData, shiftRegisterClock, MSBFIRST, highByte(shiftRegisterValue));
-  shiftOut(shiftRegisterData, shiftRegisterClock, MSBFIRST, lowByte(shiftRegisterValue));
-  digitalWrite(shiftRegisterLatch, HIGH);
-}
 
 // Update external LEDs: for each of the 16 outputs, randomly toggle a bit.
 void updateExternalLEDs()
@@ -63,12 +55,9 @@ void updateExternalLEDs()
     {
       if (random(100) < blinkingChance)
       {
-        // Toggle bit i.
-        bool bitVal = bitRead(shiftRegisterValue, i);
-        bitWrite(shiftRegisterValue, i, !bitVal);
+        shiftRegs.set(i, !shiftRegs.get(i));
       }
     }
-    updateShiftRegister();
   }
 }
 
@@ -88,20 +77,16 @@ void updateOnboardLED()
 
 void updateFireSequence()
 {
-  if (firingSequence)
+  unsigned long elapsed = millis() - fireStartTime;
+  if (elapsed < fireDuration)
   {
-    unsigned long elapsed = millis() - fireStartTime;
-    if (elapsed < fireDuration)
-    {
-      int pwmValue = map(fireDuration - elapsed, 0, fireDuration, 0, pulsatingMaxPWM);
-      analogWrite(firePin, pwmValue);
-    }
-    else
-    {
-      analogWrite(firePin, 0); // Turn off fire LED
-      firingSequence = false;
-      fireTicker.detach(); // Stop fire sequence updates
-    }
+    int pwmValue = map(fireDuration - elapsed, 0, fireDuration, 0, pulsatingMaxPWM);
+    analogWrite(firePin, pwmValue);
+  }
+  else
+  {
+    analogWrite(firePin, 0); // Turn off fire LED
+    fireTicker.detach();     // Stop fire sequence updates
   }
 }
 
@@ -113,19 +98,19 @@ void setup()
   pinMode(shiftRegisterLatch, OUTPUT);
   pinMode(shiftRegisterClock, OUTPUT);
   pinMode(shiftRegisterData, OUTPUT);
-  // Initialize shift register (all outputs off).
-  shiftRegisterValue = 0;
-  updateShiftRegister();
 
   // Initialize onboard LED.
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, HIGH);
 
   // Initialize pulsating LED and fire PWM pin.
+  analogWriteRange(pulsatingMaxPWM);
   pinMode(pulsatingPin, OUTPUT);
-  analogWriteRange(1023);
   pinMode(firePin, OUTPUT);
-  digitalWrite(firePin, LOW);
+  analogWrite(firePin, 0);
+  analogWrite(pulsatingPin, 0);
+
+  shiftRegs.setAllLow();
 
   // Seed random number generator.
   randomSeed(analogRead(A0));
@@ -142,32 +127,25 @@ void setup()
   // Setup async web server routes.
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request)
             {
-    String html = "<html><head><title>LED Status</title>";
-    html += "<meta name='viewport' content='width=device-width, initial-scale=1'>";
-    html += "</head><body>";
-    html += "<h1>LED Status</h1>";
-    html += "<p>External LED Blinking: " + String(blinkingEnabled ? "Enabled" : "Disabled") + "</p>";
-    html += "<p>Pulsating LED Fade Amount: " + String(fadeAmount) + "</p>";
-    html += "<p>Blink Interval: " + String(interval) + " ms</p>";
-    html += "<p>Blinking Chance: " + String(blinkingChance) + "%</p>";
-    html += "</body></html>";
-    request->send(200, "text/html", html); });
+    String json = "{\"blinkingEnabled\": " + String(blinkingEnabled ? "true" : "false") + ",";
+    json += "\"fadeAmount\": " + String(fadeAmount) + ",";
+    json += "\"blinkingInterval\": " + String(blinkingInterval) + ",";
+    json += "\"blinkingChance\": " + String(blinkingChance) + "}";
+    request->send(200, "application/json", json); });
 
   server.on("/start", HTTP_GET, [](AsyncWebServerRequest *request)
             {
       blinkingEnabled = true;
       // Start the ticker callback with the current interval.
       externalLedTicker.detach();
-      externalLedTicker.attach_ms(interval, updateExternalLEDs);
+      externalLedTicker.attach_ms(blinkingInterval, updateExternalLEDs);
       request->send(200, "text/plain", "Blinking started"); });
 
   server.on("/stop", HTTP_GET, [](AsyncWebServerRequest *request)
             {
         blinkingEnabled = false;
         externalLedTicker.detach();
-        // Turn off all shift register outputs.
-        shiftRegisterValue = 0;
-        updateShiftRegister();
+        shiftRegs.setAllLow();
         request->send(200, "text/plain", "Blinking stopped"); });
 
   server.on("/setfade", HTTP_GET, [](AsyncWebServerRequest *request)
@@ -183,13 +161,13 @@ void setup()
   server.on("/setinterval", HTTP_GET, [](AsyncWebServerRequest *request)
             {
       if (request->hasArg("interval")) {
-        interval = request->arg("interval").toInt();
+        blinkingInterval = request->arg("interval").toInt();
         // If blinking is active, update the ticker period.
         if (blinkingEnabled) {
           externalLedTicker.detach();
-          externalLedTicker.attach_ms(interval, updateExternalLEDs);
+          externalLedTicker.attach_ms(blinkingInterval, updateExternalLEDs);
         }
-        request->send(200, "text/plain", "Blink interval updated: " + String(interval) + " ms");
+        request->send(200, "text/plain", "Blink interval updated: " + String(blinkingInterval) + " ms");
       } else {
         request->send(400, "text/plain", "Missing interval parameter");
       } });
@@ -205,12 +183,11 @@ void setup()
 
   server.on("/fire", HTTP_GET, [](AsyncWebServerRequest *request)
             {
-      firingSequence = true;
       fireStartTime = millis();
       analogWrite(firePin, pulsatingMaxPWM);
       // Attach the ticker to update fire sequence every 50ms.
       fireTicker.detach();
-      fireTicker.attach_ms(50, updateFireSequence);
+      fireTicker.attach_ms(fireInterval, updateFireSequence);
       request->send(200, "text/plain", "Fire sequence initiated"); });
 
   server.on("/restart", HTTP_GET, [](AsyncWebServerRequest *request)
