@@ -13,34 +13,30 @@ Ticker onboardLedTicker;
 Ticker fireTicker;
 
 // Shift register pins.
-const int shiftRegisterData = D5;  // DS
-const int shiftRegisterLatch = D6; // ST_CP
-const int shiftRegisterClock = D7; // SH_CP
+const int SHIFT_REGISTER_DATA_PIN = D5;  // DS
+const int SHIFT_REGISTER_LATCH_PIN = D6; // ST_CP
+const int SHIFT_REGISTER_CLOCK_PIN = D7; // SH_CP
 
-const int numShiftLEDs = 16; // Two cascaded 8-bit registers
+const int NUM_SHIFT_LEDS = 16; // Two cascaded 8-bit registers
 
-ShiftRegister74HC595<2> shiftRegs(shiftRegisterData, shiftRegisterClock, shiftRegisterLatch);
-
-// Variable holding current output state for the shift register.
-uint16_t shiftRegisterValue = 0;
+ShiftRegister74HC595<2> shiftRegs(SHIFT_REGISTER_DATA_PIN, SHIFT_REGISTER_CLOCK_PIN, SHIFT_REGISTER_LATCH_PIN);
 
 // Pin for the pulsating LED.
-const int pulsatingPin = D3;
-const int pulsatingMaxPWM = 1023;
+const int PULSING_LED_PIN = D3;
+const int PULSING_MAX_PWM = 1023;
+// Fading LED value
+unsigned int pulsePWM = 0; // PWM step (0-1023)
 
 // New pin for "fire" PWM effect.
-const int firePin = D2;
-const int fireInterval = 20;            // Fade interval (ms)
-const unsigned long fireDuration = 700; // Fade duration (ms)
+const int FIRE_LED_PIN = D2;
+const int FIRE_REFRESH_INTERVAL = 20;    // Fade interval (ms)
+const unsigned long FIRE_DURATION = 700; // Fade duration (ms)
 unsigned long fireStartTime = 0;
 
 // Timing variables for external LEDs.
 unsigned long blinkingInterval = 200;
 unsigned int blinkingChance = 30; // in percent
 bool blinkingEnabled = false;
-
-// Fading LED value
-unsigned int fadeAmount = 0; // PWM step (0-1023)
 
 // Create an async web server on port 80.
 AsyncWebServer server(80);
@@ -51,7 +47,7 @@ void updateExternalLEDs()
 {
   if (blinkingEnabled)
   {
-    for (int i = 0; i < numShiftLEDs; i++)
+    for (int i = 0; i < NUM_SHIFT_LEDS; i++)
     {
       if (random(100) < blinkingChance)
       {
@@ -78,15 +74,15 @@ void updateOnboardLED()
 void updateFireSequence()
 {
   unsigned long elapsed = millis() - fireStartTime;
-  if (elapsed < fireDuration)
+  if (elapsed < FIRE_DURATION)
   {
-    int pwmValue = map(fireDuration - elapsed, 0, fireDuration, 0, pulsatingMaxPWM);
-    analogWrite(firePin, pwmValue);
+    int pwmValue = map(FIRE_DURATION - elapsed, 0, FIRE_DURATION, 0, PULSING_MAX_PWM);
+    analogWrite(FIRE_LED_PIN, pwmValue);
   }
   else
   {
-    analogWrite(firePin, 0); // Turn off fire LED
-    fireTicker.detach();     // Stop fire sequence updates
+    analogWrite(FIRE_LED_PIN, 0); // Turn off fire LED
+    fireTicker.detach();          // Stop fire sequence updates
   }
 }
 
@@ -95,20 +91,20 @@ void setup()
   Serial.begin(115200);
 
   // Set shift register pins as outputs.
-  pinMode(shiftRegisterLatch, OUTPUT);
-  pinMode(shiftRegisterClock, OUTPUT);
-  pinMode(shiftRegisterData, OUTPUT);
+  pinMode(SHIFT_REGISTER_LATCH_PIN, OUTPUT);
+  pinMode(SHIFT_REGISTER_CLOCK_PIN, OUTPUT);
+  pinMode(SHIFT_REGISTER_DATA_PIN, OUTPUT);
 
   // Initialize onboard LED.
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, HIGH);
 
   // Initialize pulsating LED and fire PWM pin.
-  analogWriteRange(pulsatingMaxPWM);
-  pinMode(pulsatingPin, OUTPUT);
-  pinMode(firePin, OUTPUT);
-  analogWrite(firePin, 0);
-  analogWrite(pulsatingPin, 0);
+  analogWriteRange(PULSING_MAX_PWM);
+  pinMode(PULSING_LED_PIN, OUTPUT);
+  pinMode(FIRE_LED_PIN, OUTPUT);
+  analogWrite(FIRE_LED_PIN, 0);
+  analogWrite(PULSING_LED_PIN, 0);
 
   shiftRegs.setAllLow();
 
@@ -128,7 +124,7 @@ void setup()
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request)
             {
     String json = "{\"blinkingEnabled\": " + String(blinkingEnabled ? "true" : "false") + ",";
-    json += "\"fadeAmount\": " + String(fadeAmount) + ",";
+    json += "\"fadeAmount\": " + String(pulsePWM) + ",";
     json += "\"blinkingInterval\": " + String(blinkingInterval) + ",";
     json += "\"blinkingChance\": " + String(blinkingChance) + "}";
     request->send(200, "application/json", json); });
@@ -151,9 +147,9 @@ void setup()
   server.on("/setfade", HTTP_GET, [](AsyncWebServerRequest *request)
             {
     if (request->hasArg("fade")) {
-      fadeAmount = request->arg("fade").toInt();
-      analogWrite(pulsatingPin, fadeAmount);
-      request->send(200, "text/plain", "Fade amount updated: " + String(fadeAmount));
+      pulsePWM = request->arg("fade").toInt();
+      analogWrite(PULSING_LED_PIN, pulsePWM);
+      request->send(200, "text/plain", "Fade amount updated: " + String(pulsePWM));
     } else {
       request->send(400, "text/plain", "Missing fade parameter");
     } });
@@ -184,10 +180,10 @@ void setup()
   server.on("/fire", HTTP_GET, [](AsyncWebServerRequest *request)
             {
       fireStartTime = millis();
-      analogWrite(firePin, pulsatingMaxPWM);
+      analogWrite(FIRE_LED_PIN, PULSING_MAX_PWM);
       // Attach the ticker to update fire sequence every 50ms.
       fireTicker.detach();
-      fireTicker.attach_ms(fireInterval, updateFireSequence);
+      fireTicker.attach_ms(FIRE_REFRESH_INTERVAL, updateFireSequence);
       request->send(200, "text/plain", "Fire sequence initiated"); });
 
   server.on("/restart", HTTP_GET, [](AsyncWebServerRequest *request)
