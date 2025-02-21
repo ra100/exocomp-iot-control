@@ -35,7 +35,7 @@ unsigned long fireStartTime = 0;
 
 // Timing variables for external LEDs.
 unsigned long blinkingInterval = 200;
-unsigned int blinkingChance = 30; // in percent
+long int blinkingChance = 30; // in percent
 bool blinkingEnabled = false;
 
 // Create an async web server on port 80.
@@ -86,9 +86,69 @@ void updateFireSequence()
   }
 }
 
+void initLEDCheck()
+{
+  Serial.println("Starting LED check sequence...");
+
+  // Test pulsing LED.
+  Serial.println("Testing pulsating LED");
+  analogWrite(PULSING_LED_PIN, 0);
+  delay(100);
+  analogWrite(PULSING_LED_PIN, PULSING_MAX_PWM / 4);
+  delay(100);
+  analogWrite(PULSING_LED_PIN, (PULSING_MAX_PWM / 4) * 2);
+  delay(100);
+  analogWrite(PULSING_LED_PIN, (PULSING_MAX_PWM / 4) * 3);
+  delay(100);
+  analogWrite(PULSING_LED_PIN, PULSING_MAX_PWM);
+  delay(500);
+
+  // Test fire LED.
+  Serial.println("Testing fire LED");
+  analogWrite(FIRE_LED_PIN, 0);
+  delay(100);
+  analogWrite(FIRE_LED_PIN, PULSING_MAX_PWM / 4);
+  delay(100);
+  analogWrite(FIRE_LED_PIN, (PULSING_MAX_PWM / 4) * 2);
+  delay(100);
+  analogWrite(FIRE_LED_PIN, (PULSING_MAX_PWM / 4) * 3);
+  delay(100);
+  analogWrite(FIRE_LED_PIN, PULSING_MAX_PWM);
+  delay(500);
+
+  shiftRegs.setAllLow();
+  // Test all shift register LEDs.
+  Serial.println("Testing shift register LEDs");
+  for (int i = 0; i < NUM_SHIFT_LEDS; i++)
+  {
+    shiftRegs.set(i, HIGH);
+    delay(100);
+  }
+  delay(500);
+  shiftRegs.setAllLow();
+  analogWrite(PULSING_LED_PIN, 0);
+  analogWrite(FIRE_LED_PIN, 0);
+  delay(300);
+  shiftRegs.setAllHigh();
+  analogWrite(PULSING_LED_PIN, PULSING_MAX_PWM);
+  analogWrite(FIRE_LED_PIN, PULSING_MAX_PWM);
+  delay(300);
+  shiftRegs.setAllLow();
+  analogWrite(PULSING_LED_PIN, 0);
+  analogWrite(FIRE_LED_PIN, 0);
+  delay(300);
+  shiftRegs.setAllHigh();
+  analogWrite(PULSING_LED_PIN, PULSING_MAX_PWM);
+  analogWrite(FIRE_LED_PIN, PULSING_MAX_PWM);
+
+  Serial.println("LED check sequence completed");
+}
+
 void setup()
 {
   Serial.begin(115200);
+
+  initLEDCheck();
 
   // Set shift register pins as outputs.
   pinMode(SHIFT_REGISTER_LATCH_PIN, OUTPUT);
@@ -121,7 +181,7 @@ void setup()
   server.addMiddleware(cors);
 
   // Setup async web server routes.
-  server.on("/", HTTP_GET, [](AsyncWebServerRequest *request)
+  server.on("/status", HTTP_GET, [](AsyncWebServerRequest *request)
             {
     String json = "{\"blinkingEnabled\": " + String(blinkingEnabled ? "true" : "false") + ",";
     json += "\"fadeAmount\": " + String(pulsePWM) + ",";
@@ -197,6 +257,8 @@ void setup()
 
   // Start the onboard LED ticker to update every second.
   onboardLedTicker.attach(0.5, updateOnboardLED);
+  blinkingEnabled = true;
+  externalLedTicker.attach_ms(blinkingInterval, updateExternalLEDs);
 }
 
 void loop()
