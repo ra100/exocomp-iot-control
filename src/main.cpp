@@ -11,6 +11,8 @@ Ticker externalLedTicker;
 Ticker onboardLedTicker;
 // Global ticker for fire PWM effect.
 Ticker fireTicker;
+// Global ticker for demo mode.
+Ticker demoTicker;
 
 // Shift register pins.
 const int SHIFT_REGISTER_DATA_PIN = D5;  // DS
@@ -144,6 +146,53 @@ void initLEDCheck()
   Serial.println("LED check sequence completed");
 }
 
+void startBlinking()
+{
+  blinkingEnabled = true;
+  // Start the ticker callback with the current interval.
+  externalLedTicker.detach();
+  externalLedTicker.attach_ms(blinkingInterval, updateExternalLEDs);
+}
+
+void stopBlinking()
+{
+  blinkingEnabled = false;
+  externalLedTicker.detach();
+  shiftRegs.setAllLow();
+}
+
+void demoTickerCallback()
+{
+  // Randomly update the pulsing LED brightness.
+  int randomPWM = random(0, PULSING_MAX_PWM + 1);
+  analogWrite(PULSING_LED_PIN, randomPWM);
+
+  // With a 10% chance, trigger the fire LED effect.
+  if (random(100) < 10)
+  {
+    fireStartTime = millis();
+    analogWrite(FIRE_LED_PIN, PULSING_MAX_PWM);
+    fireTicker.detach();
+    fireTicker.attach_ms(FIRE_REFRESH_INTERVAL, updateFireSequence);
+  }
+}
+
+void startDemoMode()
+{
+  Serial.println("Demo mode enabled");
+  startBlinking();
+  demoTicker.attach(1.0, demoTickerCallback);
+}
+
+void stopDemoMode()
+{
+  Serial.println("Demo mode disabled");
+  stopBlinking();
+  demoTicker.detach();
+  analogWrite(PULSING_LED_PIN, 0);
+  analogWrite(FIRE_LED_PIN, 0);
+}
+
 void setup()
 {
   Serial.begin(115200);
@@ -191,18 +240,23 @@ void setup()
 
   server.on("/start", HTTP_GET, [](AsyncWebServerRequest *request)
             {
-      blinkingEnabled = true;
-      // Start the ticker callback with the current interval.
-      externalLedTicker.detach();
-      externalLedTicker.attach_ms(blinkingInterval, updateExternalLEDs);
-      request->send(200, "text/plain", "Blinking started"); });
+    startBlinking();
+    request->send(200, "text/plain", "Blinking started"); });
 
   server.on("/stop", HTTP_GET, [](AsyncWebServerRequest *request)
             {
-        blinkingEnabled = false;
-        externalLedTicker.detach();
-        shiftRegs.setAllLow();
-        request->send(200, "text/plain", "Blinking stopped"); });
+    stopBlinking();
+    request->send(200, "text/plain", "Blinking stopped"); });
+
+  server.on("/demoon", HTTP_GET, [](AsyncWebServerRequest *request)
+            {
+    startDemoMode();
+    request->send(200, "text/plain", "Demo started"); });
+
+  server.on("/demooff", HTTP_GET, [](AsyncWebServerRequest *request)
+            {
+    stopDemoMode();
+    request->send(200, "text/plain", "Demo started"); });
 
   server.on("/setfade", HTTP_GET, [](AsyncWebServerRequest *request)
             {
@@ -216,17 +270,17 @@ void setup()
 
   server.on("/setinterval", HTTP_GET, [](AsyncWebServerRequest *request)
             {
-      if (request->hasArg("interval")) {
-        blinkingInterval = request->arg("interval").toInt();
-        // If blinking is active, update the ticker period.
-        if (blinkingEnabled) {
-          externalLedTicker.detach();
-          externalLedTicker.attach_ms(blinkingInterval, updateExternalLEDs);
-        }
-        request->send(200, "text/plain", "Blink interval updated: " + String(blinkingInterval) + " ms");
-      } else {
-        request->send(400, "text/plain", "Missing interval parameter");
-      } });
+    if (request->hasArg("interval")) {
+      blinkingInterval = request->arg("interval").toInt();
+      // If blinking is active, update the ticker period.
+      if (blinkingEnabled) {
+        externalLedTicker.detach();
+        externalLedTicker.attach_ms(blinkingInterval, updateExternalLEDs);
+      }
+      request->send(200, "text/plain", "Blink interval updated: " + String(blinkingInterval) + " ms");
+    } else {
+      request->send(400, "text/plain", "Missing interval parameter");
+    } });
 
   server.on("/setblinkchance", HTTP_GET, [](AsyncWebServerRequest *request)
             {
@@ -239,12 +293,12 @@ void setup()
 
   server.on("/fire", HTTP_GET, [](AsyncWebServerRequest *request)
             {
-      fireStartTime = millis();
-      analogWrite(FIRE_LED_PIN, PULSING_MAX_PWM);
-      // Attach the ticker to update fire sequence every 50ms.
-      fireTicker.detach();
-      fireTicker.attach_ms(FIRE_REFRESH_INTERVAL, updateFireSequence);
-      request->send(200, "text/plain", "Fire sequence initiated"); });
+    fireStartTime = millis();
+    analogWrite(FIRE_LED_PIN, PULSING_MAX_PWM);
+    // Attach the ticker to update fire sequence every 50ms.
+    fireTicker.detach();
+    fireTicker.attach_ms(FIRE_REFRESH_INTERVAL, updateFireSequence);
+    request->send(200, "text/plain", "Fire sequence initiated"); });
 
   server.on("/restart", HTTP_GET, [](AsyncWebServerRequest *request)
             {
@@ -257,8 +311,7 @@ void setup()
 
   // Start the onboard LED ticker to update every second.
   onboardLedTicker.attach(0.5, updateOnboardLED);
-  blinkingEnabled = true;
-  externalLedTicker.attach_ms(blinkingInterval, updateExternalLEDs);
+  startDemoMode();
 }
 
 void loop()

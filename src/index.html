@@ -91,6 +91,11 @@
       </section>
 
       <section>
+        <button id="startDemoButton" type="button">Start Demo</button>
+        <button id="stopDemoButton" type="button">Stop Demo</button>
+      </section>
+
+      <section>
         <button id="restartButton" type="button">Restart Device</button>
       </section>
     </main>
@@ -328,6 +333,23 @@
 
       startMicButton.addEventListener('click', startMicListening)
       stopMicButton.addEventListener('click', stopMicListening)
+
+      const startDemoButton = document.getElementById('startDemoButton')
+      const stopDemoButton = document.getElementById('stopDemoButton')
+
+      startDemoButton.addEventListener('click', () => {
+        fetch(backendInput.value + '/demoon')
+          .then((response) => response.text())
+          .then((text) => console.log('Demo started:', text))
+          .catch((err) => console.error(err))
+      })
+
+      stopDemoButton.addEventListener('click', () => {
+        fetch(backendInput.value + '/demooff')
+          .then((response) => response.text())
+          .then((text) => console.log('Demo stopped:', text))
+          .catch((err) => console.error(err))
+      })
     </script>
   </body>
 </html>
